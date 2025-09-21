@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宮崎の運転代行ならSpeed</title>
+    <style>
+        /* --- 基本設定 --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a; /* ダークな背景色 */
+            color: #ffffff; /* 基本の文字色 */
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- ヘッダー --- */
+        .header {
+            padding: 20px;
+            background-color: #333333;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* --- ファーストビュー --- */
+        .first-view {
+            padding: 40px 20px;
+        }
+        .main-catchcopy {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        .sub-catchcopy {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .phone-button {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background-color: #00bfff; /* 目立つ水色 */
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transition: transform 0.2s;
+        }
+        .phone-button:hover {
+            transform: scale(1.05);
+        }
+        .trust-points {
+            font-size: 16px;
+        }
+
+        /* --- セクション --- */
+        .section {
+            padding: 40px 20px;
+            border-top: 1px solid #444444;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* --- 料金表 --- */
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        .price-table th, .price-table td {
+            border: 1px solid #555555;
+            padding: 15px;
+            font-size: 16px;
+        }
+        .price-table th {
+            background-color: #005f7f; /* 濃い青 */
+            width: 40%;
+        }
+
+        /* --- 選ばれる理由 --- */
+        .reason-box {
+            margin-bottom: 30px;
+        }
+        .reason-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        .reason-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00bfff;
+        }
+        
+        /* --- フッター --- */
+        .footer {
+            padding: 30px 20px;
+            background-color: #000000;
+            font-size: 12px;
+            color: #888888;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>宮崎の運転代行ならSpeed</h1>
+    </header>
+
+    <div class="container">
+        <!-- ファーストビュー -->
+        <section class="first-view">
+            <h2 class="main-catchcopy">宮崎市内でのご飲食後、<br>シーガイア等 観光地ホテルまでお送りします！</h2>
+            <p class="sub-catchcopy">お客様とレンタカーを一緒に、プロのドライバーが安全にご案内します。</p>
+            <a href="tel:08096401844" class="phone-button">📞 タップして今すぐ予約・料金確認</a>
+            <p class="trust-points">✅ プロドライバー対応 ✅ 代行保険完備 ✅ 明朗会計</p>
+        </section>
+
+        <!-- 料金案内 -->
+        <section class="section">
+            <h3 class="section-title">深夜でも追加料金なし！安心の料金体系</h3>
+            <table class="price-table">
+                <tr>
+                    <th>初乗り料金 (最初の1kmまで)</th>
+                    <td>1,600円</td>
+                </tr>
+                <tr>
+                    <th>追加料金 (以降1kmごと)</th>
+                    <td>250円</td>
+                </tr>
+                <tr>
+                    <th>待機料金 (最初の5分まで無料)</th>
+                    <td>以降5分毎200円</td>
+                </tr>
+            </table>
+            <p>明朗会計で安心の価格設定。宮崎市内で最もコストパフォーマンスの高い運転代行を目指しています。</p>
+        </section>
+
+        <!-- 選ばれる3つの理由 -->
+        <section class="section">
+            <h3 class="section-title">運転代行Speedが選ばれる3つの理由</h3>
+            <div class="reason-box">
+                <!-- 画像URLは後で差し替えてください -->
+                <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600" alt="宮崎市内の夜景">
+                <h4 class="reason-title">1. 宮崎市内、平均15分でお迎えにあがります！</h4>
+                <p>GPS配車システムを活用し、お客様から最も近い場所にいるドライバーを迅速に手配します。飲み会が盛り上がった後も、深夜の急なご利用でも、お客様を長くお待たせしません。</p>
+            </div>
+            <div class="reason-box">
+                <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=600" alt="丁寧な接客のイメージ">
+                <h4 class="reason-title">2. 安全運転はもちろん、丁寧な接客をお約束します</h4>
+                <p>当社のドライバーは厳しい研修をクリアしたプロのみです。万が一に備え、代行保険にももちろん加入済み。お客様と大切なお車を安全・確実にお届けします。</p>
+            </div>
+            <div class="reason-box">
+                <img src="https://images.pexels.com/photos/951318/pexels-photo-951318.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ウィスキーと車のキー">
+                <h4 class="reason-title">3. 分かりやすい明朗会計</h4>
+                <p>走行距離に応じたシンプルな料金体系で、どなた様にも安心してご利用いただけます。ご希望であれば、ご乗車前におおよその料金をお伝えすることも可能ですので、お気軽にお申し付けください。</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>運転代行Speed</p>
+        <p>宮崎県宮崎市 [ここに住所を記載]</p>
+        <p>電話番号: <a href="tel:08096401844">080-9640-1844</a></p>
+        <p>
+            <a href="[ご利用についてのURL]">ご利用について</a> |
+            <a href="[求人情報のURL]">求人情報</a>
+        </p>
+        <p>copyright© 2024 運転代行請負Speed All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -3,79 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>宮崎の運転代行ならSpeed</title>
+    <title>宮崎の運転代行ならSpeed｜深夜3時まで営業・10分で到着</title>
+    <meta name="description" content="宮崎市内でのご飲食後、シーガイアのホテルまでお帰りですか？運転代行ならお電話一本！プロのドライバーがお客様とレンタカーを安全・快適にお送りします。">
     <style>
         /* --- 基本設定 --- */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
             margin: 0;
             padding: 0;
-            background-color: #1a1a1a; /* ダークな背景色 */
-            color: #ffffff; /* 基本の文字色 */
+            background-color: #121212; /* より深みのあるダークグレー */
+            color: #e0e0e0; /* 少し柔らかい白 */
             text-align: center;
+            line-height: 1.8;
         }
         .container {
-            max-width: 600px;
+            max-width: 680px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 0 15px;
         }
 
         /* --- ヘッダー --- */
         .header {
-            padding: 20px;
-            background-color: #333333;
+            padding: 15px;
+            background-color: #1f1f1f;
+            border-bottom: 1px solid #333;
         }
         .header h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: bold;
+            color: #ffffff;
         }
 
         /* --- ファーストビュー --- */
         .first-view {
-            padding: 40px 20px;
+            padding: 50px 20px 40px;
         }
         .main-catchcopy {
-            font-size: 28px;
-            font-weight: bold;
+            font-size: 32px;
+            font-weight: 900;
             line-height: 1.4;
             margin-bottom: 15px;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
         .sub-catchcopy {
             font-size: 18px;
             margin-bottom: 30px;
-            opacity: 0.9;
         }
         .phone-button {
-            display: block;
+            display: inline-block;
             width: 100%;
+            max-width: 400px;
             padding: 20px;
-            background-color: #00bfff; /* 目立つ水色 */
+            background: linear-gradient(145deg, #00c6ff, #0072ff); /* 鮮やかなグラデーション */
             color: #ffffff;
-            font-size: 22px;
+            font-size: 24px;
             font-weight: bold;
             text-decoration: none;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transition: transform 0.2s;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 114, 255, 0.4);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            box-sizing: border-box;
         }
         .phone-button:hover {
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 114, 255, 0.5);
         }
         .trust-points {
             font-size: 16px;
+            font-weight: 500;
+            color: #00bfff;
         }
 
         /* --- セクション --- */
         .section {
-            padding: 40px 20px;
-            border-top: 1px solid #444444;
+            padding: 50px 20px;
+            border-top: 1px solid #333;
         }
         .section-title {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         /* --- 料金表 --- */
@@ -83,20 +93,25 @@
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
+            background-color: #1f1f1f;
+            border-radius: 8px;
+            overflow: hidden;
         }
         .price-table th, .price-table td {
-            border: 1px solid #555555;
+            border: 1px solid #444;
             padding: 15px;
-            font-size: 16px;
+            font-size: 18px;
         }
         .price-table th {
-            background-color: #005f7f; /* 濃い青 */
+            background-color: #005f7f;
             width: 40%;
+            font-weight: bold;
         }
 
         /* --- 選ばれる理由 --- */
         .reason-box {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            text-align: left;
         }
         .reason-box img {
             max-width: 100%;
@@ -105,31 +120,49 @@
             margin-bottom: 15px;
         }
         .reason-title {
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             margin-bottom: 10px;
-            color: #00bfff;
+            color: #00c6ff;
+        }
+        .reason-text {
+            font-size: 16px;
         }
         
         /* --- フッター --- */
         .footer {
-            padding: 30px 20px;
+            padding: 40px 20px;
             background-color: #000000;
-            font-size: 12px;
-            color: #888888;
+            font-size: 14px;
+            color: #aaaaaa;
+        }
+        .representative-greeting {
+            max-width: 500px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 8px;
+            font-style: italic;
+        }
+        .representative-greeting .name {
+            display: block;
+            text-align: right;
+            margin-top: 10px;
+            font-style: normal;
         }
         .footer a {
-            color: #ffffff;
+            color: #00bfff;
             text-decoration: none;
             margin: 0 10px;
         }
-
     </style>
 </head>
 <body>
 
     <header class="header">
-        <h1>宮崎の運転代行ならSpeed</h1>
+        <div class="container">
+            <h1>宮崎の運転代行ならSpeed</h1>
+        </div>
     </header>
 
     <div class="container">
@@ -165,33 +198,36 @@
         <section class="section">
             <h3 class="section-title">運転代行Speedが選ばれる3つの理由</h3>
             <div class="reason-box">
-                <!-- 画像URLは後で差し替えてください -->
                 <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600" alt="宮崎市内の夜景">
-                <h4 class="reason-title">1. 宮崎市内、平均15分でお迎えにあがります！</h4>
-                <p>GPS配車システムを活用し、お客様から最も近い場所にいるドライバーを迅速に手配します。飲み会が盛り上がった後も、深夜の急なご利用でも、お客様を長くお待たせしません。</p>
+                <h4 class="reason-title">「今すぐ来てほしい！」に応えます。平均15分でお迎え</h4>
+                <p class="reason-text">GPS配車システムを活用し、お客様から最も近い場所にいるドライバーを迅速に手配。飲み会が盛り上がった後も、深夜の急なご利用でも、お客様を長くお待たせしません。</p>
             </div>
             <div class="reason-box">
                 <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=600" alt="丁寧な接客のイメージ">
-                <h4 class="reason-title">2. 安全運転はもちろん、丁寧な接客をお約束します</h4>
-                <p>当社のドライバーは厳しい研修をクリアしたプロのみです。万が一に備え、代行保険にももちろん加入済み。お客様と大切なお車を安全・確実にお届けします。</p>
+                <h4 class="reason-title">「知らない人の車は不安…」ご安心ください。プロが丁寧に対応</h4>
+                <p class="reason-text">当社のドライバーは厳しい研修をクリアしたプロのみです。万が一に備え、代行保険にももちろん加入済み。お客様と大切なお車を安全・確実にお届けします。</p>
             </div>
             <div class="reason-box">
                 <img src="https://images.pexels.com/photos/951318/pexels-photo-951318.jpeg?auto=compress&cs=tinysrgb&w=600" alt="ウィスキーと車のキー">
-                <h4 class="reason-title">3. 分かりやすい明朗会計</h4>
-                <p>走行距離に応じたシンプルな料金体系で、どなた様にも安心してご利用いただけます。ご希望であれば、ご乗車前におおよその料金をお伝えすることも可能ですので、お気軽にお申し付けください。</p>
+                <h4 class="reason-title">「結局いくら？」の心配なし。安心の明朗会計</h4>
+                <p class="reason-text">走行距離に応じたシンプルな料金体系で、どなた様にも安心してご利用いただけます。ご希望であれば、ご乗車前におおよその料金をお伝えすることも可能ですので、お気軽にお申し付けください。</p>
             </div>
         </section>
     </div>
 
     <footer class="footer">
-        <p>運転代行Speed</p>
-        <p>宮崎県宮崎市 [ここに住所を記載]</p>
-        <p>電話番号: <a href="tel:08096401844">080-9640-1844</a></p>
-        <p>
-            <a href="[ご利用についてのURL]">ご利用について</a> |
-            <a href="[求人情報のURL]">求人情報</a>
-        </p>
-        <p>copyright© 2024 運転代行請負Speed All Rights Reserved.</p>
+        <div class="container">
+            <div class="representative-greeting">
+                <p>宮崎の夜を、もっと安全に、もっと安心して楽しんでいただきたい。その一心で、毎日ハンドルを握っています。どんな些細なことでも、お気軽にご連絡ください。</p>
+                <span class="name">代表 山元 光良</span>
+            </div>
+            <p>運転代行Speed</p>
+            <p>[宮崎県宮崎市大塚台西2丁目1番地3]</p>
+            <p>電話番号: <a href="tel:08096401844">080-9640-1844</a></p>
+            <p>
+            </p>
+            <p>copyright© 2024 運転代行請負Speed All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>

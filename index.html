@@ -4,49 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>宮崎の運転代行ならSpeed｜深夜3時まで・迅速配車</title>
-    <meta name="description" content="【宮崎の運転代行】深夜3時まで営業！橘通りなど宮崎市内のご飲食後はお電話一本で迅速にお迎えに。プロのドライバーが安全にご自宅までご案内します。">
+    <meta name="description" content="【宮崎の運転代行】深夜3時まで営業中！橘通りなど宮崎市内のご飲食後はお電話一本で迅速にお迎えに。プロのドライバーが安全にご自宅までご案内します。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans JP', sans-serif; margin: 0; background-color: #0d1a26; /* 信頼感のある濃紺 */ color: #f0f0f0; text-align: center; line-height: 1.7; }
+        body { font-family: 'Noto Sans JP', sans-serif; margin: 0; background-color: #0d1a26; color: #f0f0f0; text-align: center; line-height: 1.7; }
         .container { max-width: 700px; margin: 0 auto; padding: 0 15px; }
         a { color: #00d2ff; text-decoration: none; }
-
-        /* ヘッダー */
         .header { padding: 15px; background-color: #1a2938; border-bottom: 2px solid #00d2ff; }
         .header h1 { margin: 0; font-size: 22px; font-weight: 700; color: #fff; }
-
-        /* ファーストビュー */
         .first-view { padding: 50px 20px 40px; }
         .main-catchcopy { font-size: 36px; font-weight: 900; line-height: 1.4; margin: 0 0 20px 0; color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
         .sub-catchcopy { font-size: 18px; margin: 0 0 30px 0; color: #cccccc; }
         .phone-button { display: inline-block; width: 100%; max-width: 420px; padding: 25px 20px; background: linear-gradient(145deg, #00d2ff, #3a7bd5); color: #fff; font-size: 26px; font-weight: 700; text-decoration: none; border-radius: 15px; margin-bottom: 30px; box-shadow: 0 6px 20px rgba(58, 123, 213, 0.4); transition: transform 0.2s ease; box-sizing: border-box; }
         .phone-button:hover { transform: translateY(-3px); }
-
-        /* 信頼性セクション */
         .trust-section { background-color: #1a2938; padding: 30px 20px; }
         .trust-title { font-size: 24px; font-weight: 700; margin: 0 0 15px 0; }
         .trust-points { display: flex; justify-content: space-around; max-width: 500px; margin: 0 auto; font-size: 16px; font-weight: 700; }
-        
-        /* LINEセクション */
-        .line-section { padding: 40px 20px; }
-        .line-text { font-size: 18px; margin: 0 0 20px 0; }
-        .line-button { display: inline-block; max-width: 220px; }
-        .line-button img { width: 100%; height: auto; border-radius: 8px;}
-
-        /* 料金セクション */
-        .price-section { padding: 40px 20px; background-color: #0d1a26; border-top: 1px solid #334; }
+        .price-section { padding: 40px 20px; border-top: 1px solid #334; }
         .section-title { font-size: 28px; font-weight: 700; margin-bottom: 30px; }
         .price-table { width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; border-radius: 8px; overflow: hidden; }
         .price-table th, .price-table td { border: 1px solid #444; padding: 15px; font-size: 18px; }
         .price-table th { background-color: #3a7bd5; width: 40%; font-weight: 700; }
-
-        /* フッター */
         .footer { padding: 40px 20px; font-size: 14px; color: #aaa; background-color:#000; }
-        .footer-nav { margin-bottom: 20px; }
-        .footer-nav a { margin: 0 15px; }
     </style>
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "運転代行Speed",
+      "image": "[ここにあなたのロゴ画像のURLを記載]",
+      "url": "[ここに公開後のサイトURLを記載]",
+      "telephone": "+81-80-9640-1844",
+      "description": "宮崎市の運転代行サービス。深夜3時まで営業。宮崎市内でのご飲食後、プロのドライバーが安全にご自宅までお送りします。",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[ここにあなたの住所を記載]",
+        "addressLocality": "宮崎市",
+        "addressRegion": "宮崎県",
+        "postalCode": "[郵便番号]",
+        "addressCountry": "JP"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"],
+        "opens": "19:00",
+        "closes": "03:00"
+      }
+    }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -80,27 +88,13 @@
                 <tr><th>待機料金 (最初の5分無料)</th><td>以降5分毎200円</td></tr>
             </table>
         </section>
-
-        <!-- LINE予約セクション -->
-        <section class="line-section">
-            <h3 class="section-title">事前の予約はLINEが便利です</h3>
-            <p class="line-text">タップして友だち追加後、<br>メッセージで簡単にご予約いただけます。</p>
-            <a href="[あなたのLINE公式アカウントのURL]" class="line-button">
-                <img src="https://scdn.line-apps.com/n/ja_JP/img/line-add-friends/btn_add_ja.png" alt="友だち追加">
-            </a>
-        </section>
     </div>
 
     <footer class="footer">
-        <div class="footer-nav">
-            <a href="[ご利用についてのページのURL]">ご利用について</a> |
-            <a href="[求人情報のページのURL]">求人情報</a>
-        </div>
         <p>運転代行Speed</p>
         <p>[ここにあなたの住所を記載]</p>
         <p>電話番号: <a href="tel:08096401844">080-9640-1844</a></p>
         <p>copyright© 2024 運転代行請負Speed All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>

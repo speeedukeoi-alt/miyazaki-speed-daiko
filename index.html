@@ -7,85 +7,44 @@
     <meta name="description" content="【宮崎の運転代行】深夜3時まで営業中！橘通りなど宮崎市内のご飲食後はお電話一本で迅速にお迎えに。プロのドライバーが安全にご自宅までご案内します。">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-color: #0d1a26;
-            --text-color: #f0f0f0;
-            --accent-color: #00d2ff;
-            --button-grad-start: #00d2ff;
-            --button-grad-end: #3a7bd5;
-        }
-        body { 
-            font-family: 'Noto Sans JP', sans-serif; 
-            margin: 0; 
-            background-color: var(--bg-color); 
-            color: var(--text-color); 
-            text-align: center; 
-            line-height: 1.7; 
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+        :root { --bg-color: #0d1a26; --text-color: #f0f0f0; --accent-color: #00d2ff; --button-grad-start: #00d2ff; --button-grad-end: #3a7bd5; }
+        body { font-family: 'Noto Sans JP', sans-serif; margin: 0; background-color: var(--bg-color); color: var(--text-color); text-align: center; line-height: 1.7; -webkit-font-smoothing: antialiased; }
         .container { max-width: 700px; margin: 0 auto; padding: 0 15px; }
         a { color: var(--accent-color); text-decoration: none; }
-
         .header { padding: 15px; background-color: #1a2938; border-bottom: 2px solid var(--accent-color); }
         .header h1 { margin: 0; font-size: clamp(18px, 4vw, 22px); font-weight: 700; color: #fff; }
-
         .first-view { padding: 15vw 20px 10vw; }
         .main-catchcopy { font-size: clamp(28px, 8vw, 36px); font-weight: 900; line-height: 1.4; margin: 0 0 15px 0; color: #fff; text-shadow: 0 2px 5px rgba(0,0,0,0.5); }
         .sub-catchcopy { font-size: clamp(16px, 4vw, 18px); margin: 0 0 30px 0; color: #cccccc; }
-        
-        .phone-button { 
-            display: inline-block; 
-            width: 100%; 
-            max-width: 420px; 
-            padding: 20px; 
-            background: linear-gradient(145deg, var(--button-grad-start), var(--button-grad-end)); 
-            color: #fff; 
-            font-size: clamp(22px, 6vw, 26px); 
-            font-weight: 700; 
-            text-decoration: none; 
-            border-radius: 15px; 
-            margin-bottom: 25px; 
-            box-shadow: 0 6px 20px rgba(58, 123, 213, 0.4); 
-            transition: transform 0.2s ease; 
-            box-sizing: border-box; 
-        }
-
+        .phone-button { display: inline-block; width: 100%; max-width: 420px; padding: 20px; background: linear-gradient(145deg, var(--button-grad-start), var(--button-grad-end)); color: #fff; font-size: clamp(22px, 6vw, 26px); font-weight: 700; text-decoration: none; border-radius: 15px; margin-bottom: 25px; box-shadow: 0 6px 20px rgba(58, 123, 213, 0.4); transition: transform 0.2s ease; box-sizing: border-box; }
         .trust-section { background-color: #1a2938; padding: 30px 15px; }
         .trust-title { font-size: clamp(20px, 5vw, 24px); font-weight: 700; margin: 0 0 20px 0; }
-        .trust-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; max-width: 500px; margin: 0 auto; font-size: clamp(14px, 3.5vw, 16px); font-weight: 700; }
-        
-        .price-section { padding: 50px 20px; border-top: 1px solid #334; }
+        .trust-points { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px 25px; max-width: 600px; margin: 0 auto; font-size: clamp(14px, 3.5vw, 16px); font-weight: 700; }
+        .section { padding: 50px 20px; border-top: 1px solid #334; }
         .section-title { font-size: clamp(24px, 6vw, 28px); font-weight: 700; margin-bottom: 30px; }
-        .price-table { width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; border-radius: 8px; overflow: hidden; background-color: #1a2938; }
-        .price-table th, .price-table td { border: 1px solid #444; padding: 12px; font-size: clamp(16px, 4vw, 18px); }
-        .price-table th { background-color: #3a7bd5; width: 40%; font-weight: 700; }
-
-        .long-distance-welcome {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: #1a2938;
-            border: 1px solid #3a7bd5;
-            border-radius: 8px;
-        }
-        .long-distance-title {
-            font-size: clamp(20px, 5vw, 22px);
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            color: var(--accent-color);
-        }
-
+        .price-table { width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse; }
+        .price-table tr { border-bottom: 1px solid #444; }
+        .price-table th, .price-table td { padding: 15px 10px; font-size: clamp(16px, 4vw, 18px); text-align: left; vertical-align: middle;}
+        .price-table th { font-weight: 700; width: 50%;}
+        .price-table td { text-align: right; font-weight: 700;}
+        .long-distance-welcome { margin-top: 40px; padding: 20px; background-color: #1a2938; border: 1px solid #3a7bd5; border-radius: 8px; }
+        .long-distance-title { font-size: clamp(20px, 5vw, 22px); font-weight: 700; margin: 0 0 10px 0; color: var(--accent-color); }
+        .reason-box { margin-bottom: 40px; text-align: left; background-color: #1a2938; border-radius: 8px; overflow: hidden; }
+        .reason-box img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .reason-text { padding: 20px; }
+        .reason-text h4 { font-size: 20px; margin: 0 0 5px 0; color: var(--accent-color); }
+        .reason-text p { margin: 0; font-size: 16px; }
         .footer { padding: 40px 20px; font-size: 14px; color: #aaa; background-color:#000; }
     </style>
-    <!-- 構造化データ（郵便番号を修正済み） -->
+    <!-- 構造化データ（ロゴURL、郵便番号を反映済み） -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "運転代行Speed",
-      "image": "[https://github.com/speeedukeoi-alt/miyazaki-speed-daiko/blob/main/SPEED%E3%83%AD%E3%82%B4.png?raw=true]",
+      "image": "https://github.com/speeedukeoi-alt/miyazaki-speed-daiko/blob/main/SPEED%E3%83%AD%E3%82%B4.png?raw=true",
       "url": "https://speeedukeoi-alt.github.io/miyazaki-speed-daiko/",
       "telephone": "+81-80-9640-1844",
       "description": "宮崎市の運転代行サービス。深夜3時まで営業。宮崎市内でのご飲食後、プロのドライバーが安全にご自宅までお送りします。",
@@ -130,17 +89,43 @@
         </section>
         
         <!-- 料金案内 -->
-        <section class="price-section">
+        <section class="section">
             <h3 class="section-title">ご利用料金</h3>
             <table class="price-table">
-                <tr><th>初乗り料金 (1kmまで)</th><td>1,600円</td></tr>
-                <tr><th>追加料金 (以降1kmごと)</th><td>250円</td></tr>
-                <tr><th>待機料金 (最初の5分無料)</th><td>以降5分毎200円</td></tr>
+                <tr><th>初乗り料金<br><small>(1kmまで)</small></th><td>1,600円</td></tr>
+                <tr><th>追加料金<br><small>(以降1kmごと)</small></th><td>250円</td></tr>
+                <tr><th>待機料金<br><small>(最初の5分無料)</small></th><td>以降5分毎200円</td></tr>
             </table>
             
             <div class="long-distance-welcome">
                 <h4 class="long-distance-title">長距離のご利用も大歓迎です！</h4>
                 <p>西都市、田野町、新富町、綾町など、宮崎市外への送迎も承っております。<br>ご乗車前にお見積りも可能ですので、まずはお気軽にお電話でご相談ください。</p>
+            </div>
+        </section>
+
+        <!-- 選ばれる3つの理由 -->
+        <section class="section">
+            <h3 class="section-title">運転代行Speedが選ばれる3つの理由</h3>
+            <div class="reason-box">
+                <img src="https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="迅速なお迎え" loading="lazy">
+                <div class="reason-text">
+                    <h4>1. 宮崎市内、平均15分でお迎え！</h4>
+                    <p>GPS配車システムを活用し、お客様から最も近いドライバーを迅速に手配。深夜の急なご利用でもお待たせしません。</p>
+                </div>
+            </div>
+            <div class="reason-box">
+                <img src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="丁寧な接客" loading="lazy">
+                <div class="reason-text">
+                    <h4>2. 安全運転と、丁寧な接客をお約束</h4>
+                    <p>厳しい研修をクリアしたプロのみが対応。万が一の代行保険にも加入済みで、お客様と大切なお車を安全にお届けします。</p>
+                </div>
+            </div>
+             <div class="reason-box">
+                <img src="https://images.pexels.com/photos/951318/pexels-photo-951318.jpeg?auto=compress&cs=tinysrgb&w=600&h=360&fit=crop" alt="明朗会計" loading="lazy">
+                <div class="reason-text">
+                    <h4>3. 分かりやすい明朗会計</h4>
+                    <p>走行距離に応じたシンプルな料金体系です。ご乗車前におおよその料金をお伝えすることも可能ですので、お気軽にお申し付けください。</p>
+                </div>
             </div>
         </section>
     </div>
@@ -153,4 +138,3 @@
     </footer>
 </body>
 </html>
-

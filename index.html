@@ -19,186 +19,52 @@
             --border-color: #4A5568;
             --font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 174, 239, 0.4); }
-            50% { transform: scale(1.03); box-shadow: 0 0 30px rgba(0, 174, 239, 0.7); }
-            100% { transform: scale(1); box-shadow: 0 0 20px rgba(0, 174, 239, 0.4); }
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: var(--font-family);
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            text-align: center;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        /* --- Hero Section (First View) --- */
-        .hero-section {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            min-height: 100vh;
-            box-sizing: border-box;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #b0c4de;
-            margin: 0;
-        }
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 900;
-            margin: 10px 0;
-            line-height: 1.2;
-        }
-        .hero-title .highlight {
-            color: var(--accent-gold);
-            display: block;
-            font-size: 1.2em;
-        }
-        .call-container {
-            background: linear-gradient(145deg, #1A202C, #2D3748);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-        }
-        .phone-number-label {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #a0aec0;
-            margin: 0 0 5px 0;
-        }
-        .phone-number {
-            display: block;
-            font-size: 2.8rem;
-            font-weight: 900;
-            color: var(--text-color);
-            text-decoration: none;
-            letter-spacing: 1.5px;
-            margin-bottom: 25px;
-            transition: color 0.2s;
-        }
-        .phone-number:hover {
-            color: var(--accent-gold);
-        }
-        .cta-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            width: 100%;
-            padding: 18px;
-            background: var(--cta-blue);
-            color: var(--text-color);
-            font-size: 1.6rem;
-            font-weight: 900;
-            text-decoration: none;
-            border-radius: 12px;
-            border: none;
-            cursor: pointer;
-            box-sizing: border-box;
-            animation: pulse 2s infinite ease-in-out;
-            transition: background-color 0.2s;
-        }
-        .cta-button:hover {
-            background-color: #009ad8;
-        }
-        .cta-subtext {
-            font-size: 0.9rem;
-            color: #a0aec0;
-            margin-top: 15px;
-        }
-        /* --- Content Sections --- */
-        .section {
-            padding: 60px 0;
-        }
-        .section-title {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 30px;
-            color: var(--accent-gold);
-        }
+        html { scroll-behavior: smooth; }
+        body { margin: 0; font-family: var(--font-family); background-color: var(--bg-color); color: var(--text-color); text-align: center; -webkit-font-smoothing: antialiased; word-break: keep-all; }
+        .container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+        a { color: var(--cta-blue); text-decoration: none; }
+
+        /* --- Hero Section (First View) - 最新版のデザイン --- */
+        .hero-section { display: flex; flex-direction: column; justify-content: center; min-height: 100vh; padding: 20px 0; box-sizing: border-box; }
+        .hero-subtitle { font-size: 1.2rem; font-weight: 700; color: #b0c4de; margin: 0; }
+        .hero-title { font-size: clamp(2.5rem, 9vw, 3rem); font-weight: 900; margin: 10px 0; line-height: 1.2; }
+        .hero-title .highlight { color: var(--accent-gold); display: block; font-size: 1.2em; }
+        .call-container { background: linear-gradient(145deg, #1A202C, #2D3748); border-radius: 20px; padding: 30px; border: 1px solid var(--border-color); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+        .phone-number-label { font-size: 1rem; font-weight: 700; color: #a0aec0; margin: 0 0 5px 0; }
+        .phone-number { display: block; font-size: clamp(2.2rem, 8vw, 2.8rem); font-weight: 900; color: var(--text-color); text-decoration: none; letter-spacing: 1.5px; margin-bottom: 25px; transition: color 0.2s; }
+        .phone-number:hover { color: var(--accent-gold); }
+        .cta-button { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 18px; background: var(--cta-blue); color: var(--text-color); font-size: clamp(1.4rem, 5vw, 1.6rem); font-weight: 900; text-decoration: none; border-radius: 12px; border: none; cursor: pointer; box-sizing: border-box; transition: background-color 0.2s; }
+        .cta-button:hover { background-color: #009ad8; }
+        .cta-subtext { font-size: 0.9rem; color: #a0aec0; margin-top: 15px; }
+
+        /* --- Content Sections - 以前のデザインをベースに再構築 --- */
+        .section { padding: 50px 0; border-top: 1px solid var(--border-color); }
+        .section-title { font-size: clamp(1.8rem, 6vw, 2rem); font-weight: 900; margin-bottom: 30px; color: var(--accent-gold); }
+        
         /* Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-        .feature-card {
-            background-color: var(--card-bg);
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
-        .feature-card h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            color: var(--cta-blue);
-        }
-        .feature-card p {
-            margin: 0;
-            color: #b0c4de;
-            font-weight: 500;
-        }
+        .features-grid { display: grid; grid-template-columns: 1fr; gap: 20px; text-align: left; }
+        .feature-card { background-color: var(--card-bg); padding: 25px; border-radius: 12px; border-left: 5px solid var(--cta-blue); }
+        .feature-card h3 { font-size: 1.3rem; font-weight: 700; margin: 0 0 10px 0; color: var(--text-color); }
+        .feature-card p { margin: 0; color: #b0c4de; font-weight: 500; }
+
         /* Price Table */
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-        .price-table th, .price-table td {
-            padding: 15px;
-            text-align: left;
-        }
-        .price-table th {
-            background-color: #2D3748;
-            font-weight: 700;
-        }
-        .price-table td {
-            border-top: 1px solid var(--border-color);
-        }
-        .price-table tr:nth-child(even) {
-            background-color: #252c3a;
-        }
-        .price-notes {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #a0aec0;
-        }
+        .price-table { width: 100%; border-collapse: collapse; background-color: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); }
+        .price-table th, .price-table td { padding: 15px; text-align: left; font-weight: 500; font-size: clamp(1rem, 4vw, 1.1rem); }
+        .price-table th { background-color: #2D3748; font-weight: 700; }
+        .price-table td { border-top: 1px solid var(--border-color); font-weight: 700; color: var(--accent-gold); }
+        .price-table tr:nth-child(even) { background-color: #252c3a; }
+        .price-notes { margin-top: 15px; font-size: 0.9rem; color: #a0aec0; }
+        
         /* Long Distance */
-        .long-distance-card {
-            background: linear-gradient(145deg, #2D3748, #1A202C);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--accent-gold);
-        }
-        .long-distance-card p {
-            margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.7;
-            font-weight: 500;
-        }
+        .long-distance-card { background-color: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); text-align: left; }
+        .long-distance-card h4 { font-size: 1.3rem; margin: 0 0 15px 0; color: var(--cta-blue); font-weight: 700; }
+        .long-distance-card p { margin: 0; color: #b0c4de; font-weight: 500; }
+
         /* Footer */
-        footer {
-            padding: 40px 20px 20px;
-            font-size: 0.8rem;
-            color: var(--border-color);
-        }
+        .footer { padding: 40px 20px; font-size: 0.9rem; color: #a0aec0; background-color:#0C121A; }
+        .footer p { margin: 5px 0; }
+        .footer a { color: var(--cta-blue); }
+        
         @media (min-width: 600px) {
             .features-grid { grid-template-columns: repeat(3, 1fr); }
         }
@@ -208,7 +74,7 @@
 
     <div class="container">
         
-        <!-- === ファーストビュー === -->
+        <!-- === ファーストビュー（最新版） === -->
         <section class="hero-section">
             <div>
                 <p class="hero-subtitle">宮崎の夜、もう待たない。</p>
@@ -225,52 +91,65 @@
             </div>
         </section>
 
-        <!-- === 3つの強み === -->
+        <!-- === 3つの強み（以前のものを再構築） === -->
         <section id="features" class="section">
             <h2 class="section-title">Speedが選ばれる理由</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3>1. 圧倒的な到着スピード</h3>
+                    <h3>圧倒的な到着スピード</h3>
                     <p>GPS配車システムを駆使し、お客様に最も近いドライバーを配車。平均15分での迅速な到着を実現します。</p>
                 </div>
                 <div class="feature-card">
-                    <h3>2. 深夜まで安心の営業時間</h3>
+                    <h3>深夜まで安心の営業時間</h3>
                     <p>週末（金・土）は深夜4時まで営業。2次会、3次会で遅くなっても、安心してご自宅までお帰りいただけます。</p>
                 </div>
                 <div class="feature-card">
-                    <h3>3. プロによる丁寧な運転</h3>
+                    <h3>プロによる丁寧な運転</h3>
                     <p>徹底した安全教育を受けたプロドライバーが、お客様と大切なお車を、安全・快適にご自宅までお送りします。</p>
                 </div>
             </div>
         </section>
 
-        <!-- === 料金表 === -->
+        <!-- === 料金表（以前のものを再構築） === -->
         <section id="pricing" class="section">
             <h2 class="section-title">安心の明朗会計</h2>
             <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>距離</th>
-                        <th>料金</th>
-                    </tr>
-                </thead>
                 <tbody>
                     <tr>
-                        <td>〜3km</td>
+                        <th>〜3km</th>
                         <td>2,000円</td>
                     </tr>
                     <tr>
-                        <td>〜5km</td>
+                        <th>〜5km</th>
                         <td>2,400円</td>
                     </tr>
                     <tr>
-                        <td>〜10km</td>
+                        <th>〜10km</th>
                         <td>3,500円</td>
                     </tr>
                     <tr>
-                        <td>以降1km毎</td>
+                        <th>以降1km毎</th>
                         <td>+300円</td>
                     </tr>
                 </tbody>
             </table>
-            <p class="price-notes">※上記は目安です。交通状況に
+            <p class="price-notes">※上記は目安です。交通状況により変動する場合がございます。正確な料金はお電話にてお問い合わせください。</p>
+            
+            <div class="long-distance-card" style="margin-top: 40px;">
+                <h4>長距離のご利用も大歓迎です！</h4>
+                <p>ゴルフコンペの帰り、ご出張、県外への送迎など、長距離のご利用も喜んで承ります。事前のご予約で、料金や行程も柔軟に対応可能です。お気軽にご相談ください。</p>
+            </div>
+        </section>
+        
+        <!-- === フッター（以前のものを再構築） === -->
+        <footer class="footer">
+            <p><strong>運転代行 Speed</strong></p>
+            <p>宮崎県宮崎市大塚台西二丁目1-3</p>
+            <p>電話番号: <a href="tel:08096401844">080-9640-1844</a></p>
+            <p style="margin-top: 20px; font-size: 0.8em; color: #777;">copyright© 2024 運転代行請負Speed All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -3,90 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【長距離専門】宮崎市外への運転代行ならSpeed</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) - ここにあなたのGoogleタグを貼り付けてください -->
-    
+    <title>【長距離歓迎】宮崎市外への運転代行ならSpeed</title>
+    <!-- Google tag (gtag.js) - あなたのGoogleタグをここに貼り付けてください -->
+
+    <style>
+        /* --- CSS設定 --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+        .hero-text {
+            text-align: center;
+            padding: 20px 0;
+        }
+        .hero-text h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.4;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .hero-text h1 .highlight {
+            color: #f1c40f; /* 黄色 */
+        }
+        .hero-text p.subtitle {
+            font-size: 16px;
+            margin: 10px 0 20px 0;
+            color: #ccc;
+        }
+        .cta-box {
+            background-color: #2c3e50;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .cta-box .cta-label {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .cta-box .phone-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .cta-button {
+            display: block;
+            background-color: #3498db;
+            color: #fff;
+            padding: 18px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        .cta-button:hover {
+            background-color: #2980b9;
+        }
+        .cta-button span {
+            display: inline-block;
+            margin-right: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        .cta-note {
+            font-size: 14px;
+            color: #f1c40f;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .features {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #222;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+        .feature-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .feature-item {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .feature-item .icon {
+            color: #2ecc71; /* 緑 */
+            margin-right: 8px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #f1c40f;
+            text-align: center;
+            padding: 40px 0 15px 0;
+            border-bottom: 2px solid #f1c40f;
+            margin-bottom: 30px;
+        }
+        .content-box {
+            background-color: #2c3e50;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .map-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 15px;
+            border: 2px solid #555;
+        }
+        .price-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 5px;
+        }
+        .price-table td {
+            padding: 15px;
+            background-color: #333;
+        }
+        .price-table td:first-child {
+            font-weight: bold;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        .price-table td:last-child {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: right;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+            line-height: 2;
+        }
+        footer .business-hours {
+            font-weight: bold;
+            color: #f1c40f;
+        }
+        @keyframes pulse {
+          0% { transform: scale(1); }
+          50% { transform: scale(1.1); }
+          100% { transform: scale(1); }
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>宮崎の運転代行 Speed</h1>
-    </header>
+    <div class="container">
 
-    <main>
-        <section class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/road.jpg');">
-            <!-- 画像は 'images/road.jpg' に配置してください -->
-            <h2>宮崎市外への長距離運転代行<br>ためらわずにご相談ください。</h2>
-            <p>都城・日南・延岡方面など、県内全域へ安全・快適にお送りします。</p>
-        </section>
+        <div class="hero-text">
+            <h1><span class="highlight">宮崎市外への長距離、</span><br>大歓迎です！</h1>
+            <p class="subtitle">「こんな遠くまで…」とためらわずに、まずはお電話でご相談ください。</p>
+        </div>
 
-        <section class="content-section">
-            <a href="tel:あなたの電話番号" class="cta-button" onclick="gtag('event', 'conversion_event_phone_long');">
-                タップして今すぐ電話相談
+        <div class="cta-box">
+            <div class="cta-label">ご予約・お問い合わせ</div>
+            <div class="phone-number">080-9640-1844</div>
+            <a href="tel:080-9640-1844" class="cta-button" onclick="gtag('event', 'conversion_event_phone_long');">
+                <span>📞</span>今すぐ電話で料金を聞く
             </a>
-            <p class="cta-note">お電話一本で、概算料金をすぐにお伝えします！</p>
-        </section>
+            <div class="cta-note">お電話一本で、概算料金をすぐにお伝えします！</div>
+        </div>
 
-        <section class="content-section">
-            <h3>長距離でもSpeedが選ばれる3つの理由</h3>
-            <div class="container">
-                <div class="reason-box">
-                    <div class="reason-title">1. 長距離のご依頼、大歓迎です！</div>
-                    <p>「こんなに遠くまで…」とためらう必要は一切ありません。私たちは長距離移動のニーズに特化したサービスを提供しており、宮崎市内から県内各地へのご依頼を心からお待ちしております。</p>
-                </div>
-                <div class="reason-box">
-                    <div class="reason-title">2. ベテランドライバーが安全運転</div>
-                    <p>長時間の運転となる長距離移動だからこそ、ドライバーの質が重要です。厳しい研修をクリアした経験豊富なドライバーが、お客様と大切なお車を目的地まで安全・確実にお届けします。</p>
-                </div>
-                <div class="reason-box">
-                    <div class="reason-title">3. 万が一の時も安心の保険完備</div>
-                    <p>もちろん全車、代行運転保険に加入済みです。万が一の事故やトラブルにも、責任を持って対応できる体制を整えておりますので、安心してご利用いただけます。</p>
-                </div>
+        <div class="features">
+            <div class="feature-items">
+                <div class="feature-item"><span class="icon">✅</span>ベテランドライバー</div>
+                <div class="feature-item"><span class="icon">✅</span>代行保険完備</div>
+                <div class="feature-item"><span class="icon">✅</span>明朗会計</div>
             </div>
-        </section>
+        </div>
         
-        <section class="content-section">
-            <h3>主な長距離対応エリア</h3>
-            <div class="container">
-                <p>宮崎市中心部から県内主要都市へ対応！<br>下記以外のエリアもお気軽にご相談ください。</p>
-                <!-- 宮崎県の地図画像 'images/miyazaki-map.png' を用意してください -->
-                <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
+        <h2 class="section-title">主な長距離対応エリア</h2>
+
+        <div class="content-box">
+            <p>都城、日南、延岡方面など県内主要都市へ対応！<br>下記以外のエリアもお気軽にご相談ください。</p>
+            <!-- 【重要】 'images/miyazaki-map.png' にマップ画像を配置してください -->
+            <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
+        </div>
+
+        <h2 class="section-title">長距離でも安心の料金体系</h2>
+        
+        <p style="text-align: center;">料金は走行距離に応じた明朗会計です。目的地をお伝え頂ければ、その場ですぐに概算料金をお答えします。</p>
+        
+        <table class="price-table">
+            <tbody>
+                <tr>
+                    <td>初乗り料金<br><small>(最初の1kmまで)</small></td>
+                    <td>1,600円</td>
+                </tr>
+                <tr>
+                    <td>追加料金<br><small>(以降1kmごと)</small></td>
+                    <td>250円</td>
+                </tr>
+                <tr>
+                    <td>待機料金<br><small>(最初の5分無料)</small></td>
+                    <td>以降5分毎 200円</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <footer>
+            <div class="business-hours">
+                営業時間: 19:00～翌3:00<br>
+                (金・土・祝前日は翌4:00まで)
             </div>
-        </section>
+            <div>運転代行Speed</div>
+            <div>宮崎県宮崎市大塚台西二丁目1-3</div>
+            <div>電話番号: 080-9640-1844</div>
+            <div style="margin-top: 20px; font-size: 12px;">copyright© 2024 運転代行Speed All Rights Reserved.</div>
+        </footer>
 
-        <section class="price-section">
-             <div class="container">
-                <h3>透明性の高い料金体系</h3>
-                <p>料金は走行距離に応じた明朗会計です。お電話で目的地をお伝えいただければ、その場ですぐに概算料金をお答えします。</p>
-                <table class="price-table">
-                    <tr>
-                        <th>初乗り料金 (最初の1kmまで)</th>
-                        <td>1,600円</td>
-                    </tr>
-                    <tr>
-                        <th>追加料金 (以降1kmごと)</th>
-                        <td>250円</td>
-                    </tr>
-                    <tr>
-                        <th>待機料金 (最初の5分まで無料)</th>
-                        <td>以降5分毎 200円</td>
-                    </tr>
-                </table>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <a href="tel:あなたの電話番号" class="cta-button" onclick="gtag('event', 'conversion_event_phone_long');">
-                概算料金を聞いてみる
-            </a>
-            <p class="cta-note">24時間受付中！お気軽にお問い合わせください。</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>Copyright &copy; 運転代行Speed All Rights Reserved.</p>
-    </footer>
+    </div>
 
 </body>
 </html>

@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- ★★★ index.htmlから引用したGoogleタグをここに設置 ★★★ -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16929812546');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【宮崎市内から長距離】運転代行ならSpeed</title>
-    <!-- Google tag (gtag.js) - あなたのGoogleタグをここに貼り付けてください -->
 
     <style>
         /* --- CSS設定 --- */
@@ -175,7 +184,6 @@
     <div class="container">
 
         <div class="hero-text">
-            <!-- ★★★ 【A案】最強の見出しに修正済み ★★★ -->
             <h1><span class="highlight">宮崎市内から、県内どこへでも。</span></h1>
             <p class="subtitle">長距離運転代行ならSpeedにお任せください。</p>
         </div>
@@ -183,10 +191,10 @@
         <div class="cta-box">
             <div class="cta-label">ご予約・お問い合わせ</div>
             <div class="phone-number">080-9640-1844</div>
-            <a href="tel:080-9640-1844" class="cta-button" onclick="gtag('event', 'conversion_event_phone_long');">
+            <!-- ★★★ index.htmlから引用したイベントスニペットをここに設置 ★★★ -->
+            <a href="tel:080-9640-1844" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_'});">
                 <span>📞</span>今すぐ電話で料金を聞く
             </a>
-            <!-- ★★★ 補足文も修正済み ★★★ -->
             <div class="cta-note">宮崎市内から目的地までの概算料金を、すぐにお伝えします！</div>
         </div>
 
@@ -198,50 +206,18 @@
             </div>
         </div>
         
-        <h2 class="section-title">長距離対応エリア</h2>
+        <!-- サイトリンク用の目印(id="area") -->
+        <h2 class="section-title" id="area">長距離対応エリア</h2>
 
         <div class="content-box">
             <p>宮崎市内の飲食店やお勤め先から県内全域へお送りします。都城、日南、延岡はもちろん、記載のないエリアも、まずはお気軽にお電話でお問い合わせください。</p>
-            
-            <!-- ★★★ あなたが作成した、完成版の画像を表示します ★★★ -->
-            <!-- 必ず、imagesフォルダに `miyazaki-map.png` という名前で画像を配置してください -->
             <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
-            
         </div>
 
-        <h2 class="section-title">長距離でも安心の料金体系</h2>
+        <!-- サイトリンク用の目印(id="price") -->
+        <h2 class="section-title" id="price">長距離でも安心の料金体系</h2>
         
         <p style="text-align: center;">料金は走行距離に応じた明朗会計です。目的地をお伝え頂ければ、その場ですぐに概算料金をお答えします。</p>
         
         <table class="price-table">
             <tbody>
-                <tr>
-                    <td>初乗り料金<br><small>(最初の1kmまで)</small></td>
-                    <td>1,600円</td>
-                </tr>
-                <tr>
-                    <td>追加料金<br><small>(以降1kmごと)</small></td>
-                    <td>250円</td>
-                </tr>
-                <tr>
-                    <td>待機料金<br><small>(最初の5分無料)</small></td>
-                    <td>以降5分毎 200円</td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <footer>
-            <div class="business-hours">
-                営業時間: 19:00～翌3:00<br>
-                (金・土・祝前日は翌4:00まで)
-            </div>
-            <div>運転代行Speed</div>
-            <div>宮崎県宮崎市大塚台西二丁目1-3</div>
-            <div>電話番号: 080-9640-1844</div>
-            <div style="margin-top: 20px; font-size: 12px;">copyright© 2024 運転代行Speed All Rights Reserved.</div>
-        </footer>
-
-    </div>
-
-</body>
-</html>

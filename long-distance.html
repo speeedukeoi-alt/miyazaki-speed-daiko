@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- ★★★ index.htmlから引用したGoogleタグをここに設置 ★★★ -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -168,6 +168,10 @@
             color: #aaa;
             line-height: 2;
         }
+        footer a { /* フッター内のリンクの色を調整 */
+            color: #3498db;
+            text-decoration: none;
+        }
         footer .business-hours {
             font-weight: bold;
             color: #f1c40f;
@@ -191,7 +195,6 @@
         <div class="cta-box">
             <div class="cta-label">ご予約・お問い合わせ</div>
             <div class="phone-number">080-9640-1844</div>
-            <!-- ★★★ index.htmlから引用したイベントスニペットをここに設置 ★★★ -->
             <a href="tel:080-9640-1844" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_'});">
                 <span>📞</span>今すぐ電話で料金を聞く
             </a>
@@ -206,7 +209,6 @@
             </div>
         </div>
         
-        <!-- サイトリンク用の目印(id="area") -->
         <h2 class="section-title" id="area">長距離対応エリア</h2>
 
         <div class="content-box">
@@ -214,10 +216,43 @@
             <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
         </div>
 
-        <!-- サイトリンク用の目印(id="price") -->
         <h2 class="section-title" id="price">長距離でも安心の料金体系</h2>
         
         <p style="text-align: center;">料金は走行距離に応じた明朗会計です。目的地をお伝え頂ければ、その場ですぐに概算料金をお答えします。</p>
         
         <table class="price-table">
             <tbody>
+                <tr>
+                    <td>初乗り料金<br><small>(最初の1kmまで)</small></td>
+                    <td>1,600円</td>
+                </tr>
+                <tr>
+                    <td>追加料金<br><small>(以降1kmごと)</small></td>
+                    <td>250円</td>
+                </tr>
+                <tr>
+                    <td>待機料金<br><small>(最初の5分無料)</small></td>
+                    <td>以降5分毎 200円</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <!-- ★★★ ここからフッターの修正 ★★★ -->
+        <footer>
+            <div class="business-hours">
+                営業時間: 19:00～翌3:00<br>
+                (金・土・祝前日は翌4:00まで)
+            </div>
+            <div>運転代行Speed</div>
+            <!-- ▼▼▼ 認定番号をここに追加 ▼▼▼ -->
+            <div style="margin-top: 10px;">宮崎県公安委員会認定 第477号</div>
+            <div>宮崎県宮崎市大塚台西二丁目1-3</div>
+            <p style="margin: 5px 0;">電話番号: <a href="tel:080-9640-1844" onclick="gtag('event', 'conversion', {'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_'});">080-9640-1844</a></p>
+            <div style="margin-top: 20px; font-size: 12px; color: #888;">copyright© 2024 運転代行Speed All Rights Reserved.</div>
+        </footer>
+        <!-- ★★★ ここまでフッターの修正 ★★★ -->
+
+    </div>
+
+</body>
+</html>

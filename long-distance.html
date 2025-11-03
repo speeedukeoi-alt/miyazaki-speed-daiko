@@ -19,6 +19,8 @@
     <style>
         /* (CSS部分は変更ありません) */
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #f0f0f0; font-size: 16px; line-height: 1.8; } .container { max-width: 600px; margin: 0 auto; padding: 20px 15px; } .hero-text { text-align: center; padding: 20px 0; } .hero-text h1 { font-size: 32px; font-weight: bold; margin: 0; line-height: 1.4; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); } .hero-text h1 .highlight { color: #f1c40f; } .hero-text p.subtitle { font-size: 16px; margin: 10px 0 20px 0; color: #ccc; } .cta-box { background-color: #2c3e50; border-radius: 10px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); } .cta-box .cta-label { font-size: 16px; margin-bottom: 5px; } .cta-box .phone-number { font-size: 32px; font-weight: bold; color: #fff; letter-spacing: 1px; margin-bottom: 20px; } .cta-button { display: block; background-color: #3498db; color: #fff; padding: 18px; border-radius: 8px; text-decoration: none; font-size: 22px; font-weight: bold; transition: background-color 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); } .cta-button:hover { background-color: #2980b9; } .cta-button span { display: inline-block; margin-right: 10px; animation: pulse 1.5s infinite; } .cta-note { font-size: 14px; color: #f1c40f; margin-top: 15px; font-weight: bold; } .features { text-align: center; padding: 30px 20px; background-color: #222; margin-top: 30px; border-radius: 10px; } .feature-items { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; } .feature-item { font-size: 14px; font-weight: 500; } .feature-item .icon { color: #2ecc71; margin-right: 8px; } .section-title { font-size: 24px; font-weight: bold; color: #f1c40f; text-align: center; padding: 40px 0 15px 0; border-bottom: 2px solid #f1c40f; margin-bottom: 30px; } .content-box { background-color: #2c3e50; padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: center; } .map-image { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; } .price-table { width: 100%; border-collapse: separate; border-spacing: 0 5px; } .price-table td { padding: 15px; background-color: #333; } .price-table td:first-child { font-weight: bold; border-top-left-radius: 5px; border-bottom-left-radius: 5px; } .price-table td:last-child { font-size: 18px; font-weight: bold; text-align: right; border-top-right-radius: 5px; border-bottom-right-radius: 5px; } footer { text-align: center; padding: 30px 0; margin-top: 20px; font-size: 14px; color: #aaa; line-height: 2; } footer a { color: #3498db; text-decoration: none; } footer .business-hours { font-weight: bold; color: #f1c40f; } @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        /* ★★★ ここに改行防止CSSを1行追加 ★★★ */
+        .no-wrap { white-space: nowrap; }
     </style>
 </head>
 <body>
@@ -26,7 +28,8 @@
     <div class="container">
 
         <div class="hero-text">
-            <h1><span class="highlight">宮崎市内から、県内どこへでも。</span></h1>
+            <!-- ★★★ ここを改行防止タグで囲む ★★★ -->
+            <h1><span class="highlight"><span class="no-wrap">宮崎市内から、</span><span class="no-wrap">県内どこへでも。</span></span></h1>
             <p class="subtitle">長距離運転代行ならSpeedにお任せください。</p>
         </div>
 
@@ -44,43 +47,4 @@
             <div class="feature-items">
                 <div class="feature-item"><span class="icon">✅</span>ベテランドライバー</div>
                 <div class="feature-item"><span class="icon">✅</span>代行保険完備</div>
-                <div class="feature-item"><span class="icon">✅</span>明朗会計</div>
-            </div>
-        </div>
-        
-        <h2 class="section-title" id="area">長距離対応エリア</h2>
-
-        <div class="content-box">
-            <p>宮崎市内の飲食店やお勤め先から県内全域へお送りします。都城、日南、延岡はもちろん、記載のないエリアも、まずはお気軽にお電話でお問い合わせください。</p>
-            <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
-        </div>
-
-        <h2 class="section-title" id="price">長距離でも安心の料金体系</h2>
-        
-        <p style="text-align: center;">料金は走行距離に応じた明朗会計です。目的地をお伝え頂ければ、その場ですぐに概算料金をお答えします。</p>
-        
-        <table class="price-table">
-            <tbody>
-                <tr><td>初乗り料金<br><small>(最初の1kmまで)</small></td><td>1,600円</td></tr>
-                <tr><td>追加料金<br><small>(以降1kmごと)</small></td><td>250円</td></tr>
-                <tr><td>待機料金<br><small>(最初の5分無料)</small></td><td>以降5分毎 200円</td></tr>
-            </tbody>
-        </table>
-        
-        <footer>
-            <div class="business-hours">
-                営業時間: 19:00～翌3:00<br>
-                (金・土・祝前日は翌4:00まで)
-            </div>
-            <div>運転代行Speed</div>
-            <div style="margin-top: 10px;">宮崎県公安委員会認定 第477号</div>
-            <div>宮崎県宮崎市大塚台西二丁目1-3</div>
-             <!-- ★★★ 最新のイベントスニペットを設置 ★★★ -->
-            <p style="margin: 5px 0;">電話番号: <a href="tel:080-9640-1844" onclick="gtag('event', 'conversion', {'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_'});">080-9640-1844</a></p>
-            <div style="margin-top: 20px; font-size: 12px; color: #888;">copyright© 2024 運転代行Speed All Rights Reserved.</div>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+                <div class="feature-item"><span cla

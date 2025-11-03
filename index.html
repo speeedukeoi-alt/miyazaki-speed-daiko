@@ -189,20 +189,25 @@
         footer .highlight { color: var(--accent-color); font-weight: 700; }
         footer a { color: #3498db; text-decoration: none; }
 
+        /* ★★★ ここからが最終修正箇所 ★★★ */
+        .no-wrap {
+            white-space: nowrap; /* この単語の途中では改行しない */
+        }
+
         /* --- スマートフォン向け表示調整 --- */
         @media (max-width: 576px) {
             .hero h1 {
-                font-size: 2.2rem; /* 文字サイズを少し調整し、改行を最適化 */
+                font-size: 2.1rem; /* 文字サイズを微調整 */
                 line-height: 1.4;
             }
             .hero .highlight {
-                font-size: 2.5rem; /* 強調部分も連動 */
+                font-size: 2.4rem; /* 強調部分も連動 */
             }
             .cta-container .phone-number {
-                font-size: 2.2rem; /* 全体のバランスを見て電話番号も少し調整 */
+                font-size: 2.2rem;
             }
             .btn-call {
-                font-size: 1.3rem; /* ボタンの文字も調整 */
+                font-size: 1.3rem;
                 padding: 0.9rem;
             }
         }
@@ -236,7 +241,8 @@
         <!-- ファーストビュー -->
         <header class="hero">
             <p class="catchphrase">宮崎の夜、もう待たない。</p>
-            <h1>運転代行Speedが <span class="highlight">平均15分</span> でお迎え</h1>
+            <!-- ★★★ ここが最終修正箇所 ★★★ -->
+            <h1>運転代行Speedが <span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span></h1>
 
             <div class="cta-container">
                 <p class="label">ご予約・お問い合わせ</p>

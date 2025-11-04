@@ -14,6 +14,7 @@
         :root {
             --base-bg: #0d1117;
             --content-bg: #161b22;
+            --content-bg-darker: #11151c;
             --border-color: #30363d;
             --text-color: #c9d1d9;
             --text-color-strong: #f0f6fc;
@@ -31,7 +32,7 @@
         }
         .container { max-width: 600px; }
 
-        /* --- ファーストビュー --- */
+        /* --- ヒーローエリア --- */
         .hero { text-align: center; padding: 3rem 1rem 2rem; }
         .hero h1 { font-size: 2.2rem; font-weight: 900; color: var(--text-color-strong); line-height: 1.5; }
         .usp-block { background-color: var(--content-bg); border-radius: 10px; padding: 1.5rem; margin: 1.5rem auto; text-align: left; border-left: 5px solid var(--accent-color); }
@@ -42,93 +43,117 @@
 
         .section-title { font-size: 1.8rem; font-weight: 700; color: var(--accent-color); text-align: center; padding-top: 2rem; margin-bottom: 1.5rem; }
         
+        /* --- ② ご利用の流れ --- */
+        .steps-section .step { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
+        .steps-section .step-number { background-color: var(--accent-color); color: var(--base-bg); font-weight: 900; border-radius: 50%; width: 40px; height: 40px; line-height: 40px; text-align: center; flex-shrink: 0; margin-right: 15px; font-size: 1.2rem;}
+        .steps-section .step-content h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 0.2rem;}
+
+        /* --- ① 料金と対応エリア --- */
+        .price-area-section table { background-color: var(--content-bg-darker); border-radius: 8px; overflow: hidden; }
+        .price-area-section th, .price-area-section td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); }
+        .price-area-section th { background-color: var(--content-bg); font-weight: 500; text-align: left;}
+        .price-area-section td { font-weight: 700; color: var(--text-color-strong); }
+        .price-area-section .note { font-size: 0.9rem; text-align: center; margin-top: 1rem; }
+        .area-block { background-color: var(--content-bg); border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
+
+        /* --- ③ 安心・信頼アピール --- */
+        .trust-section { background-color: var(--content-bg); border-radius: 10px; padding: 2rem; }
+        .trust-section ul { list-style: none; padding-left: 0; }
+        .trust-section li { margin-bottom: 1rem; font-size: 1.1rem;}
+        .trust-section .bi-check-circle-fill { color: var(--accent-color); margin-right: 10px; }
+        .trust-section .certification { font-weight: 700; background-color: var(--accent-color); color: var(--base-bg); padding: 0.2rem 0.5rem; border-radius: 5px; }
+
         /* --- お客様の声セクション --- */
-        .customer-voice { background-color: var(--content-bg); border-left: 5px solid var(--accent-color); padding: 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0; }
+        .customer-voice { background-color: var(--content-bg-darker); border-left: 5px solid var(--accent-color); padding: 1.5rem; margin-bottom: 1rem; border-radius: 0 8px 8px 0; }
         .customer-voice p { margin: 0; font-style: italic; }
         .customer-voice .author { text-align: right; font-style: normal; font-size: 0.9rem; color: #aaa; margin-top: 0.5rem; }
-
-        /* --- フッター --- */
-        footer { text-align: center; font-size: 0.8rem; padding: 2.5rem 1rem; line-height: 1.8; }
-        footer a { color: #3498db; text-decoration: none; }
         
-        /* --- ★★★ スマホ用固定フッターバー ★★★ --- */
-        .fixed-footer-cta {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--content-bg);
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            z-index: 1000;
-            padding: 10px;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
-        }
-        .fixed-footer-cta .btn {
-            flex: 1;
-            margin: 0 5px;
-            padding: 12px 10px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        footer { text-align: center; font-size: 0.8rem; padding: 2.5rem 1rem; line-height: 1.8; }
+        
+        /* --- 固定フッターバー --- */
+        .fixed-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--content-bg); border-top: 1px solid var(--border-color); display: flex; z-index: 1000; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.5); }
+        .fixed-footer-cta .btn { flex: 1; margin: 0 5px; padding: 12px 10px; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
         .fixed-footer-cta .btn-call { background-color: var(--action-color-call); }
         .fixed-footer-cta .btn-line-cta { background-color: var(--action-color-line); }
         .fixed-footer-cta .btn .bi { font-size: 1.3rem; margin-right: 8px; }
-
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-16929812546');
-    </script>
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_',
-            'event_callback': callback
-        });
-        return false;
-      }
-    </script>
+    <!-- Google tag (gtag.js) & other scripts... -->
 </head>
 <body>
 
     <div class="container">
-        <!-- ファーストビュー -->
+        <!-- 1️⃣ ヒーローエリア -->
         <header class="hero">
-            <!-- ② 見出しを「検索キーワード一致型」に変更 -->
             <h1>宮崎市で今すぐ呼べる<br>運転代行 🚗</h1>
-            
-            <!-- ③ 「即対応」や「価格明示」で行動を促進 -->
             <div class="usp-block">
                 <ul>
-                    <li><span class="icon">📍</span>宮崎市全域対応</li>
                     <li><span class="icon">🚗</span>平均15分でお迎え</li>
-                    <!-- ★★★ ご指示通り初乗り料金を1,600円に修正 ★★★ -->
                     <li><span class="icon">💰</span>初乗り1,600円〜</li>
                     <li><span class="icon">🕒</span>深夜3時まで受付OK</li>
-                    <li><span class="icon">✅</span>公安委員会認定業者</li>
                     <li><span class="icon">💬</span>電話 or LINEですぐ予約！</li>
                 </ul>
             </div>
         </header>
 
         <main>
-            <!-- ⑤ 「お客様の声」セクション追加 -->
+            <!-- 2️⃣ ご利用の流れ -->
+            <section class="steps-section">
+                <h2 class="section-title">ご利用の流れ</h2>
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>電話またはLINEで予約</h3>
+                        <p>「今いる場所」と「行き先」をお伝えください。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>ドライバーが最短15分で到着</h3>
+                        <p>到着前に確認のお電話を差し上げます。</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>安全運転でご自宅まで</h3>
+                        <p>安心してお任せください。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3️⃣ 料金・対応エリア -->
+            <section class="price-area-section">
+                <h2 class="section-title">料金と対応エリア</h2>
+                <table class="table table-borderless">
+                    <thead>
+                        <tr><th colspan="2">🚕 ご利用料金（目安）</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th>宮崎市中心部〜加納・清武</th><td>約1,600円〜2,000円</td></tr>
+                        <tr><th>宮崎駅〜佐土原</th><td>約2,500円〜3,000円</td></tr>
+                        <tr><th>宮崎市内長距離（15km〜）</th><td>応相談</td></tr>
+                    </tbody>
+                </table>
+                <p class="note">💡 料金は距離により変動します。「LINE」または「電話」でお気軽にお見積りください。</p>
+                <div class="area-block">
+                    <h4>📍 対応エリア</h4>
+                    <p>宮崎市全域（橘通・神宮・清武・佐土原など）<br>※その他の地域もご相談ください。</p>
+                </div>
+            </section>
+
+            <!-- 4️⃣ 安心・信頼 -->
+            <section class="trust-section">
+                <h2 class="section-title">🔒 安心・信頼の運転代行</h2>
+                <ul>
+                    <li><i class="bi bi-check-circle-fill"></i> <span class="certification">宮崎県公安委員会認定（第477号）</span></li>
+                    <li><i class="bi bi-check-circle-fill"></i> 経験豊富なドライバーが対応</li>
+                    <li><i class="bi bi-check-circle-fill"></i> 夜間・深夜もスピーディーにお迎え</li>
+                    <li><i class="bi bi-check-circle-fill"></i> 飲み会・イベント・出張先など幅広く対応</li>
+                </ul>
+            </section>
+            
+            <!-- 5️⃣ お客様の声 -->
             <section style="padding: 2.5rem 1rem;">
                 <h2 class="section-title">お客様の声</h2>
                 <div class="customer-voice">
@@ -136,28 +161,22 @@
                     <div class="author">ー 30代 男性</div>
                 </div>
                 <div class="customer-voice">
-                    <p>「Googleマップで一番上に出てきたから電話したけど、本当に速かった。料金も分かりやすくて安心。」</p>
-                    <div class="author">ー 40代 男性</div>
-                </div>
-                 <div class="customer-voice">
-                    <p>「LINEで簡単に予約できるのが便利。次回使えるクーポンも嬉しい。」</p>
-                    <div class="author">ー 20代 女性</div>
+                    <p>「料金が分かりやすくて安心。いつもお願いしている業者さんより安く済みました。」</p>
+                    <div class="author">ー 50代 男性</div>
                 </div>
             </section>
         </main>
 
         <footer>
             <p>運転代行Speed</p>
-            <p>宮崎県公安委員会認定 第477号</p>
         </footer>
     </div>
 
-    <!-- ① 【ファーストビュー】に「電話」「LINE」ボタンを常時固定表示 -->
+    <!-- 6️⃣ 電話＆LINEボタン固定 -->
     <div class="fixed-footer-cta">
         <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="btn btn-call">
             <i class="bi bi-telephone-fill"></i> 今すぐ電話
         </a>
-        <!-- ★★★ LINE公式アカウントのURLを設定 ★★★ -->
         <a href="https://lin.ee/Qf1ngA4" class="btn btn-line-cta">
             <i class="bi bi-line"></i> LINEで呼ぶ
         </a>

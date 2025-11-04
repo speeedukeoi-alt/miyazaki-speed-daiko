@@ -12,204 +12,88 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --base-bg: #0d1117; /* ベースの背景色 */
-            --content-bg: #161b22; /* コンテンツの背景色 */
+            --base-bg: #0d1117;
+            --content-bg: #161b22;
             --border-color: #30363d;
             --text-color: #c9d1d9;
             --text-color-strong: #f0f6fc;
-            --accent-color: #f1c40f; /* 黄色 */
-            --button-bg: #238636;
+            --accent-color: #f1c40f;
         }
         body {
             font-family: 'Noto Sans JP', sans-serif;
             background-color: var(--base-bg);
             color: var(--text-color);
             font-size: 16px;
+            padding-bottom: 120px; /* 固定ボタン分の余白を確保 */
         }
         .container {
             max-width: 600px;
         }
-
-        /* --- ファーストビュー --- */
         .hero {
             padding: 2.5rem 1rem;
             text-align: center;
         }
-        .hero .catchphrase {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-color-strong);
-            margin-bottom: 2rem;
-            line-height: 1.4;
-        }
-        .hero .highlight {
-            background-color: var(--accent-color);
-            color: var(--base-bg);
-            padding: 0.1rem 0.8rem;
-            border-radius: 8px;
-            font-weight: 900;
-            display: inline-block;
-            transform: skew(-5deg); /* 少し斜体にして躍動感を出す */
-        }
-        .cta-container {
-            background-color: var(--content-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-        .cta-container .label {
-            font-size: 0.9rem;
-        }
-        .cta-container .phone-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--text-color-strong);
-            letter-spacing: 1px;
-        }
-        .btn-call {
-            display: block;
-            width: 100%;
-            background-color: #3498db; /* 青色ボタン */
-            color: #fff;
-            padding: 1rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 700;
-            transition: background-color 0.3s;
-        }
-        .btn-call:hover {
-            background-color: #2980b9;
-        }
-        .cta-container .note {
-            font-size: 0.9rem;
-            margin-top: 1rem;
-            color: var(--accent-color);
-            font-weight: 500;
-        }
-
-        /* --- 信頼性セクション --- */
-        .trust-section {
-            background-color: var(--content-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 2.5rem 0;
-        }
-        .trust-section h2 {
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-        .trust-items {
-            display: flex;
-            justify-content: space-around;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        .trust-items .bi {
-            color: #2ecc71; /* 緑色 */
-            margin-right: 0.5rem;
-            vertical-align: middle;
-        }
-
-        /* --- 料金セクション --- */
-        .price-section {
-            padding: 2.5rem 1rem;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 2rem;
-        }
-        .price-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: var(--content-bg);
-            padding: 1rem;
-            border-bottom: 1px solid var(--border-color);
-        }
+        .hero .catchphrase { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .hero h1 { font-size: 2.5rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 2rem; line-height: 1.4; }
+        .hero .highlight { background-color: var(--accent-color); color: var(--base-bg); padding: 0.1rem 0.8rem; border-radius: 8px; font-weight: 900; display: inline-block; transform: skew(-5deg); }
+        .cta-container { background-color: var(--content-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.5rem; margin-top: 2rem; }
+        .cta-container .label { font-size: 0.9rem; }
+        .cta-container .phone-number { font-size: 2.5rem; font-weight: 700; color: var(--text-color-strong); letter-spacing: 1px; }
+        .cta-container .note { font-size: 0.9rem; margin-top: 1rem; color: var(--accent-color); font-weight: 500; }
+        .trust-section { background-color: var(--content-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.5rem; margin: 2.5rem 0; }
+        .trust-section h2 { text-align: center; font-size: 1.5rem; font-weight: 500; margin-bottom: 1rem; }
+        .trust-items { display: flex; justify-content: space-around; font-size: 0.9rem; font-weight: 500; }
+        .trust-items .bi { color: #2ecc71; margin-right: 0.5rem; vertical-align: middle; }
+        .price-section { padding: 2.5rem 1rem; }
+        .section-title { text-align: center; font-size: 2rem; font-weight: 700; color: var(--accent-color); margin-bottom: 2rem; }
+        .price-item { display: flex; justify-content: space-between; align-items: center; background-color: var(--content-bg); padding: 1rem; border-bottom: 1px solid var(--border-color); }
         .price-item:first-of-type { border-radius: 10px 10px 0 0; }
         .price-item:last-of-type { border-radius: 0 0 10px 10px; border-bottom: none; }
-        .price-item .label {
-            font-size: 1rem;
-        }
-        .price-item .label small {
-            font-size: 0.8rem;
-            color: var(--text-color);
-            display: block;
-        }
-        .price-item .price {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--accent-color);
-        }
-        
-        /* --- 長距離セクション --- */
-        .long-distance-section {
-            background-color: var(--content-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 1.5rem;
-            margin: 2.5rem auto;
-            text-align: center;
-        }
-        .long-distance-section h3 {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--text-color-strong);
-        }
-
-        /* --- Q&Aセクション --- */
+        .price-item .label small { font-size: 0.8rem; color: var(--text-color); display: block; }
+        .price-item .price { font-size: 1.2rem; font-weight: 700; color: var(--accent-color); }
+        .long-distance-section { background-color: var(--content-bg); border: 1px solid var(--border-color); border-radius: 10px; padding: 1.5rem; margin: 2.5rem auto; text-align: center; }
+        .long-distance-section h3 { font-size: 1.3rem; font-weight: 700; color: var(--text-color-strong); }
         .faq-section { padding: 2.5rem 1rem; }
-        .accordion-button { background-color: var(--content-bg); color: var(--text-color-strong); font-weight: 500; border-top: 1px solid var(--border-color);}
-        .accordion-button:not(.collapsed) { background-color: var(--accent-color); color: var(--base-bg); font-weight: 700;}
+        .accordion-button { background-color: var(--content-bg); color: var(--text-color-strong); font-weight: 500; border-top: 1px solid var(--border-color); }
+        .accordion-button:not(.collapsed) { background-color: var(--accent-color); color: var(--base-bg); font-weight: 700; }
         .accordion-button:focus { box-shadow: 0 0 0 0.25rem rgba(241, 196, 15, 0.25); border-color: var(--accent-color); }
-        .accordion-item { background-color: var(--content-bg); border: none; } /* itemの背景と枠線を調整 */
+        .accordion-item { background-color: var(--content-bg); border: none; }
         .accordion-body { background-color: #212529; color: #f0f0f0; }
         .accordion-header { border-bottom: 1px solid var(--border-color); }
         #accordionFAQ { border: 1px solid var(--border-color); border-radius: 10px; overflow: hidden; }
-
-        /* --- フッター --- */
-        footer {
-            text-align: center;
-            font-size: 0.8rem;
-            padding: 2.5rem 1rem;
-            line-height: 1.8;
-        }
+        footer { text-align: center; font-size: 0.8rem; padding: 2.5rem 1rem; line-height: 1.8; }
         footer .highlight { color: var(--accent-color); font-weight: 700; }
         footer a { color: #3498db; text-decoration: none; }
+        .no-wrap { white-space: nowrap; }
 
-        /* ★★★ ここからが最終修正箇所 ★★★ */
-        .no-wrap {
-            white-space: nowrap; /* この単語の途中では改行しない */
+        @media (max-width: 576px) {
+            .hero h1 { font-size: 2.1rem; line-height: 1.4; }
+            .hero .highlight { font-size: 2.4rem; }
+            .cta-container .phone-number { font-size: 2.2rem; }
         }
 
-        /* --- スマートフォン向け表示調整 --- */
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2.1rem; /* 文字サイズを微調整 */
-                line-height: 1.4;
-            }
-            .hero .highlight {
-                font-size: 2.4rem; /* 強調部分も連動 */
-            }
-            .cta-container .phone-number {
-                font-size: 2.2rem;
-            }
-            .btn-call {
-                font-size: 1.3rem;
-                padding: 0.9rem;
-            }
+        /* --- ★★★ 固定電話ボタン（フローティング）CSS ★★★ --- */
+        .floating-call-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 90%;
+            max-width: 500px;
+        }
+        .floating-call-button .btn {
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 1rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            animation: pulse-light 2s infinite;
+        }
+        @keyframes pulse-light {
+            0% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255, 193, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
         }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -241,21 +125,14 @@
         <!-- ファーストビュー -->
         <header class="hero">
             <p class="catchphrase">宮崎の夜、もう待たない。</p>
-            <!-- ★★★ ここが最終修正箇所 ★★★ -->
             <h1>運転代行Speedが <span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span></h1>
-
             <div class="cta-container">
                 <p class="label">ご予約・お問い合わせ</p>
                 <p class="phone-number">080-9640-1844</p>
-                <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="btn-call">
-                    <i class="bi bi-telephone-outbound-fill"></i> 今すぐ電話で呼ぶ
-                </a>
                 <p class="note">金・土・祝前日は深夜4時まで営業中</p>
             </div>
         </header>
-
         <main>
-            <!-- 信頼性セクション -->
             <section class="trust-section">
                 <h2>安全・迅速・まごころ対応</h2>
                 <div class="trust-items">
@@ -264,77 +141,42 @@
                     <span><i class="bi bi-check-square-fill"></i>明朗会計</span>
                 </div>
             </section>
-
-            <!-- 料金セクション -->
             <section class="price-section">
                 <h2 class="section-title">ご利用料金</h2>
                 <div class="price-list">
-                    <div class="price-item">
-                        <div class="label">初乗り料金<small>(1kmまで)</small></div>
-                        <div class="price">1,600円</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="label">追加料金<small>(以降1kmごと)</small></div>
-                        <div class="price">250円</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="label">待機料金<small>(最初の5分無料)</small></div>
-                        <div class="price">以降5分毎 200円</div>
-                    </div>
+                    <div class="price-item"><div class="label">初乗り料金<small>(1kmまで)</small></div><div class="price">1,600円</div></div>
+                    <div class="price-item"><div class="label">追加料金<small>(以降1kmごと)</small></div><div class="price">250円</div></div>
+                    <div class="price-item"><div class="label">待機料金<small>(最初の5分無料)</small></div><div class="price">以降5分毎 200円</div></div>
                 </div>
             </section>
-
-            <!-- 長距離セクション -->
             <section class="long-distance-section">
                 <h3>長距離のご利用も大歓迎です！</h3>
                 <p class="mb-0">西都市、田野町、新富町、綾町など、宮崎市外への送迎も承っております。ご乗車前にお見積りも可能ですので、まずはお気軽にお電話でご相談ください。</p>
             </section>
-
-            <!-- よくあるご質問 -->
             <section class="faq-section">
                 <h2 class="section-title">よくあるご質問 (Q&A)</h2>
                 <div class="accordion" id="accordionFAQ">
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingOne">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                初めて利用するのですが、流れを教えてください。
-                            </button>
-                        </h2>
+                        <h2 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">初めて利用するのですが、流れを教えてください。</button></h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                お電話一本で簡単にご利用いただけます！ ①お電話で「お迎え場所」と「お名前」をお伝えください。 ②平均15分ほどでドライバー2名（お客様のお車を運転する者、随伴車を運転する者）が到着します。 ③あとは目的地まで、安心してお休みください。
-                            </div>
+                            <div class="accordion-body">お電話一本で簡単にご利用いただけます！ ①お電話で「お迎え場所」と「お名前」をお伝えください。 ②平均15分ほどでドライバー2名（お客様のお車を運転する者、随伴車を運転する者）が到着します。 ③あとは目的地まで、安心してお休みください。</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                長距離でもお願いできますか？料金が不安です。
-                            </button>
-                        </h2>
+                        <h2 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">長距離でもお願いできますか？料金が不安です。</button></h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                はい、大歓迎です！西都、都農、田野、佐土原方面など、宮崎市内から県内各地への長距離実績が豊富です。お電話の際に行き先をお伝えいただければ、目安の料金をご案内しますのでご安心ください。多くのお客様から「思ったより安い」とのお声をいただいております。
-                            </div>
+                            <div class="accordion-body">はい、大歓迎です！西都、都農、田野、佐土原方面など、宮崎市内から県内各地への長距離実績が豊富です。お電話の際に行き先をお伝えいただければ、目安の料金をご案内しますのでご安心ください。多くのお客様から「思ったより安い」とのお声をいただいております。</div>
                         </div>
                     </div>
                     <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                支払いは現金のみですか？領収書はもらえますか？
-                            </button>
-                        </h2>
+                        <h2 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">支払いは現金のみですか？領収書はもらえますか？</button></h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
-                            <div class="accordion-body">
-                                はい、現在のお支払いは<strong>現金のみ</strong>でお願いしております。その分、手数料などを価格に転嫁せず、お客様に納得いただける料金設定を維持しております。もちろん、領収書もその場で発行いたしますので、ビジネスでのご利用の際もお申し付けください。
-                            </div>
+                            <div class="accordion-body">はい、現在のお支払いは<strong>現金のみ</strong>でお願いしております。その分、手数料などを価格に転嫁せず、お客様に納得いただける料金設定を維持しております。もちろん、領収書もその場で発行いたしますので、ビジネスでのご利用の際もお申し付けください。</div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-
-        <!-- フッター -->
         <footer>
             <p>営業時間: 19:00〜翌3:00 <br><span class="highlight">(金・土・祝前日は翌4:00まで)</span></p>
             <p>運転代行Speed</p>
@@ -343,6 +185,13 @@
             <p>電話番号: <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');">080-9640-1844</a></p>
             <p style="margin-top: 20px; font-size: 10px; color: #666;">Copyright© 2024 運転代行Speed All Rights Reserved.</p>
         </footer>
+    </div>
+
+    <!-- ★★★ 固定電話ボタン（フローティング）HTML ★★★ -->
+    <div class="floating-call-button">
+        <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="btn btn-warning w-100">
+            <i class="bi bi-telephone-fill"></i> 今すぐ電話で呼ぶ
+        </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

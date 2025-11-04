@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>宮崎 代行｜深夜OK・最短15分でお迎え - 運転代行Speed</title>
-    <meta name="description" content="宮崎市で運転代行をお探しならSpeedへ！深夜3時までOK、平均15分でお迎えに上がります。初乗り1,600円から。電話・LINEで今すぐ呼べます。">
+    <meta name="description" content="宮崎市で運転代行をお探しならSpeedへ！深夜3時までOK、平均15分でお迎えに上がります。料金はお電話で明確にご提示。電話・LINEで今すぐ呼べます。">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,21 +43,34 @@
 
         .section-title { font-size: 1.8rem; font-weight: 700; color: var(--accent-color); text-align: center; padding-top: 2rem; margin-bottom: 1.5rem; }
         
-        /* --- ② ご利用の流れ --- */
+        /* --- ご利用の流れ --- */
         .steps-section .step { display: flex; align-items: flex-start; margin-bottom: 1.5rem; }
         .steps-section .step-number { background-color: var(--accent-color); color: var(--base-bg); font-weight: 900; border-radius: 50%; width: 40px; height: 40px; line-height: 40px; text-align: center; flex-shrink: 0; margin-right: 15px; font-size: 1.2rem;}
         .steps-section .step-content h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 0.2rem;}
 
-        /* --- ① 料金と対応エリア --- */
-        .price-area-section table { background-color: var(--content-bg-darker); border-radius: 8px; overflow: hidden; }
-        .price-area-section th, .price-area-section td { padding: 12px 15px; border-bottom: 1px solid var(--border-color); }
-        .price-area-section th { background-color: var(--content-bg); font-weight: 500; text-align: left;}
-        .price-area-section td { font-weight: 700; color: var(--text-color-strong); }
-        .price-area-section .note { font-size: 0.9rem; text-align: center; margin-top: 1rem; }
+        /* --- ★★★ 新・料金哲学ブロック ★★★ --- */
+        .price-philosophy-block {
+            background-color: var(--content-bg);
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 5px solid var(--accent-color);
+        }
+        .price-philosophy-block h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-color-strong);
+        }
+        .price-philosophy-block .strong-point {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-top: 1rem;
+        }
         .area-block { background-color: var(--content-bg); border-radius: 8px; padding: 1.5rem; margin-top: 2rem; }
 
-        /* --- ③ 安心・信頼アピール --- */
-        .trust-section { background-color: var(--content-bg); border-radius: 10px; padding: 2rem; }
+
+        /* --- 安心・信頼アピール --- */
+        .trust-section { background-color: var(--content-bg-darker); border-radius: 10px; padding: 2rem; }
         .trust-section ul { list-style: none; padding-left: 0; }
         .trust-section li { margin-bottom: 1rem; font-size: 1.1rem;}
         .trust-section .bi-check-circle-fill { color: var(--accent-color); margin-right: 10px; }
@@ -125,20 +138,16 @@
             <!-- 3️⃣ 料金・対応エリア -->
             <section class="price-area-section">
                 <h2 class="section-title">料金と対応エリア</h2>
-                <table class="table table-borderless">
-                    <thead>
-                        <tr><th colspan="2">🚕 ご利用料金（目安）</th></tr>
-                    </thead>
-                    <tbody>
-                        <tr><th>宮崎市中心部〜加納・清武</th><td>約1,600円〜2,000円</td></tr>
-                        <tr><th>宮崎駅〜佐土原</th><td>約2,500円〜3,000円</td></tr>
-                        <tr><th>宮崎市内長距離（15km〜）</th><td>応相談</td></tr>
-                    </tbody>
-                </table>
-                <p class="note">💡 料金は距離により変動します。「LINE」または「電話」でお気軽にお見積りください。</p>
+                
+                <div class="price-philosophy-block">
+                    <h3>料金は、お電話一本で明確に。</h3>
+                    <p>我々は、料金が不透明なままお客様をお乗せすることは致しません。目的地（経由地含む）をお伝え頂ければ、その場で走行ルートを想定し、概算料金を誠実にご提示します。</p>
+                    <p class="strong-point">「思ったより安かった」とのお声も多数頂いております。まずはお気軽にご相談ください。</p>
+                </div>
+
                 <div class="area-block">
                     <h4>📍 対応エリア</h4>
-                    <p>宮崎市全域（橘通・神宮・清武・佐土原など）<br>※その他の地域もご相談ください。</p>
+                    <p>宮崎市全域（橘通・神宮・清武・佐土原など）<br>※西都・都農・田野方面など、市外への長距離も大歓迎です。</p>
                 </div>
             </section>
 

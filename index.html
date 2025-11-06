@@ -82,6 +82,27 @@
         .fixed-footer-cta .btn .bi { font-size: 1.3rem; margin-right: 8px; }
     </style>
     <!-- Google tag (gtag.js) & other scripts... -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16929812546');
+    </script>
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
 </head>
 <body>
 
@@ -89,6 +110,7 @@
         <!-- ファーストビュー -->
         <header class="hero">
             <p class="catchphrase">宮崎の夜、もう待たない。</p>
+            <!-- ★★★ このh1タグがJavaScriptによって書き換えられます ★★★ -->
             <h1>運転代行Speedが <span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span></h1>
         </header>
 
@@ -175,5 +197,32 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ★★★ 見出し書き換え用JavaScript（カメレオン機能） ★★★ -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const adGroup = params.get('ad'); // URLの?ad=〇〇を読み取る
+                const headlineElement = document.querySelector('.hero h1');
+
+                if (headlineElement) {
+                    if (adGroup === '1') {
+                        // G_宮崎_代行
+                        headlineElement.innerHTML = '宮崎の代行ならSpeed<br><span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span>';
+                    } else if (adGroup === '2') {
+                        // G_宮崎市_代行
+                        headlineElement.innerHTML = '宮崎市の代行ならSpeed<br><span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span>';
+                    } else if (adGroup === '3') {
+                        // G_宮崎_運転代行
+                        headlineElement.innerHTML = '宮崎の運転代行ならSpeed<br><span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span>';
+                    }
+                    // adパラメータがない場合は、デフォルトの見出し(HTMLに記述されているもの)がそのまま表示される
+                }
+            } catch (e) {
+                console.error("Headline modification script failed:", e);
+            }
+        });
+    </script>
 </body>
 </html>

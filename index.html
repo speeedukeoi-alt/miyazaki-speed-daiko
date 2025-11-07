@@ -151,7 +151,24 @@
                     <div class="price-item"><div class="label">追加料金<small>(以降1kmごと)</small></div><div class="price">250円</div></div>
                     <div class="price-item"><div class="label">待機料金<small>(最初の5分無料)</small></div><div class="price">以降5分毎 200円</div></div>
                 </div>
-            </section>
+            </section
+                ...（149行目あたりから）
+                    <div class="price-item">...（待機料金）...</div>
+                </div>
+            </section> <!-- ← 154行目: 料金セクションの終わり -->
+
+        <!-- ★★★ ここに電話番号ブロックが挿入される ★★★ -->
+        <div class="cta-phone-block" style="text-align: center; margin: 2rem 0;">
+            <p style="margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-color);">ご予約・お問い合わせ</p>
+            <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:0809640-1844');" style="font-size: 2.5rem; font-weight: 700; color: var(--text-color-strong); text-decoration: none; letter-spacing: 1px;">
+                080-9640-1844
+            </a>
+        </div>
+        <!-- ★★★ ここまで ★★★ -->
+
+            <!-- よくあるご質問 --> <!-- ← 156行目だったものが、下にずれる -->
+            <section class="faq-section">
+...（以下、Q&Aセクションが続く）
 
             <!-- よくあるご質問 -->
             <section class="faq-section">
@@ -226,3 +243,4 @@
     </script>
 </body>
 </html>
+

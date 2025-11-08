@@ -34,6 +34,15 @@
         .hero h1 { font-size: 2.5rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 0; line-height: 1.4; }
         .hero .highlight { background-color: var(--accent-color); color: var(--base-bg); padding: 0.1rem 0.8rem; border-radius: 8px; font-weight: 900; display: inline-block; transform: skew(-5deg); }
         
+        .cta-phone-section {
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            margin: 2.5rem 0;
+        }
+        .cta-phone-section p { margin-bottom: 0.2rem; font-size: 0.9rem; color: var(--text-color); }
+        .cta-phone-section a { font-size: 2rem; font-weight: 700; color: var(--text-color-strong); text-decoration: none; letter-spacing: 1px; }
+
         .price-section { padding: 2.5rem 1rem; background-color: var(--content-bg); }
         .section-title { text-align: center; font-size: 2rem; font-weight: 700; color: var(--accent-color); margin-bottom: 2rem; }
         .price-item { display: flex; justify-content: space-between; align-items: center; background-color: var(--base-bg); padding: 1rem; border-bottom: 1px solid var(--border-color); }
@@ -41,13 +50,10 @@
         .price-item:last-of-type { border-radius: 0 0 10px 10px; border-bottom: none; }
         .price-item .label small { font-size: 0.8rem; color: var(--text-color); display: block; }
         .price-item .price { font-size: 1.2rem; font-weight: 700; color: var(--accent-color); }
-        
-        .reasons-section { padding: 2.5rem 1rem; margin-top: 2rem; /* ★★★ ここにマージンを追加 ★★★ */ }
-        
+        .reasons-section { padding: 2.5rem 1rem; }
         .reason-card { background-color: var(--content-bg); border-radius: 10px; padding: 1.5rem; text-align: center; height: 100%; border: 1px solid var(--border-color); }
         .reason-card .icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
         .reason-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 0.5rem; }
-        
         .faq-section { padding: 2.5rem 1rem; }
         .accordion-button { background-color: var(--content-bg); color: var(--text-color-strong); font-weight: 500; border-top: 1px solid var(--border-color); }
         .accordion-button:not(.collapsed) { background-color: var(--accent-color); color: var(--base-bg); font-weight: 700; }
@@ -81,6 +87,14 @@
         </header>
         
         <main>
+            <!-- CTA電話番号ブロック -->
+            <section class="cta-phone-section text-center">
+                <p>ご予約・お問い合わせ</p>
+                <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');">
+                    080-9640-1844
+                </a>
+            </section>
+
             <!-- 3つの理由 -->
             <section class="reasons-section">
                 <h2 class="section-title">Speedが選ばれる3つの理由</h2>
@@ -109,7 +123,7 @@
                 </div>
             </section>
             
-            <!-- (以下、変更なし) -->
+            <!-- 料金セクション -->
             <section class="price-section">
                 <h2 class="section-title">ご利用料金</h2>
                 <div class="price-list">
@@ -118,6 +132,8 @@
                     <div class="price-item"><div class="label">待機料金<small>(最初の5分無料)</small></div><div class="price">以降5分毎 200円</div></div>
                 </div>
             </section>
+            
+            <!-- よくあるご質問 -->
             <section class="faq-section">
                 <h2 class="section-title">よくあるご質問 (Q&A)</h2>
                 <div class="accordion" id="accordionFAQ">

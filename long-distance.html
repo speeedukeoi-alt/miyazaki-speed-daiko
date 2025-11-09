@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- ★★★ 最新のGoogleタグを設置 ★★★ -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-16929812546');
-    </script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【宮崎市内から長距離】運転代行ならSpeed｜西都・都農・延岡方面も対応</title>
     <meta name="description" content="宮崎市内から西都・都農・延岡など長距離の運転代行ならSpeedへ。深夜4時まで対応。「もう帰れないかも…」という不安を、確実な送迎でお応えします。安心の公安委員会認定業者です。">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
+    <!-- ★★★ 最新のGoogleトラッキングコード START ★★★ -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16929812546');
+    </script>
+    <!-- Event snippet for ウェブサイトからの電話タップ -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16929812546/ybafCMnSiq0bEMLg4Yg_',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    <!-- ★★★ 最新のGoogleトラッキングコード END ★★★ -->
+
     <style>
         :root {
             --base-bg: #0d1117;
@@ -37,23 +52,17 @@
             color: var(--text-color); 
             font-size: 16px; 
             line-height: 1.7; 
+            padding-bottom: 100px;
         }
         .container { max-width: 600px; margin: 0 auto; padding: 20px 15px; }
-        
-        /* --- ファーストビュー --- */
         .hero-text { text-align: center; padding: 20px 0; }
         .hero-text h1 { font-size: 32px; font-weight: bold; margin: 0; line-height: 1.4; color: var(--text-color-strong); }
         .hero-text h1 .highlight { color: var(--accent-color); }
         .hero-text p.subtitle { font-size: 18px; margin: 10px 0 20px 0; color: #ccc; font-weight: 500;}
-        
         .cta-box { background-color: var(--content-bg); border-radius: 10px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); margin-top: 2rem;}
         .cta-box .cta-label { font-size: 16px; margin-bottom: 5px; }
         .cta-box .phone-number { font-size: 32px; font-weight: bold; color: var(--text-color-strong); letter-spacing: 1px; margin-bottom: 20px; }
-        .cta-button { display: block; background-color: var(--button-bg); color: #fff; padding: 18px; border-radius: 8px; text-decoration: none; font-size: 22px; font-weight: bold; transition: background-color 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
-        .cta-button:hover { background-color: #2980b9; }
-        .cta-button .bi { vertical-align: middle; margin-right: 8px; animation: pulse 1.5s infinite;}
         .cta-note { font-size: 14px; color: var(--accent-color); margin-top: 15px; font-weight: bold; }
-
         .section-title { font-size: 24px; font-weight: bold; color: var(--accent-color); text-align: center; padding: 40px 0 15px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 30px; }
         .content-box { background-color: var(--content-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: left; }
         .map-image { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;}
@@ -71,91 +80,68 @@
         .customer-voice p { margin: 0; font-style: italic;}
         .customer-voice .author { text-align: right; font-style: normal; font-size: 14px; color: #aaa; margin-top: 10px;}
         footer { text-align: center; padding: 30px 0; margin-top: 20px; font-size: 14px; color: #aaa; line-height: 2; } 
-        footer a { color: var(--button-bg); text-decoration: none; } 
+        footer a { color: #3498db; text-decoration: none; } 
         footer .business-hours { font-weight: bold; color: var(--accent-color); }
-        .no-wrap { white-space: nowrap; } /* 改行防止用クラス */
-        
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .no-wrap { white-space: nowrap; }
+        .fixed-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--content-bg); border-top: 1px solid var(--border-color); display: flex; z-index: 1000; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.5); }
+        .fixed-footer-cta .btn { flex: 1; margin: 0 5px; padding: 12px 10px; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .fixed-footer-cta .btn-call { background-color: var(--action-color-call); }
+        .fixed-footer-cta .btn-line-cta { background-color: var(--action-color-line); }
+        .fixed-footer-cta .btn .bi { font-size: 1.3rem; margin-right: 8px; }
+        @media (max-width: 576px) { .hero-text h1 { font-size: 28px; } }
     </style>
 </head>
 <body>
-
     <div class="container">
-        <!-- ファーストビュー -->
         <header class="hero-text">
             <h1><span class="highlight"><span class="no-wrap">宮崎市内から</span> <span class="no-wrap">県内どこへでも。</span></span></h1>
-            <!-- ★★★ 修正箇所 ★★★ -->
             <p class="subtitle">長距離専門 <strong style="color: #fff;">運転代行Speed</strong> <span class="no-wrap">にお任せください。</span></p>
         </header>
-
-        <div class="cta-box">
-            <div class="cta-label">ご予約・お問い合わせ</div>
-            <div class="phone-number">080-9640-1844</div>
-            <a href="tel:080-9640-1844" class="cta-button" onclick="gtag('event', 'conversion', {'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_'});">
-                <i class="bi bi-telephone-outbound-fill"></i> 今すぐ電話で確認
-            </a>
-            <!-- ★★★ 修正箇所 ★★★ -->
-            <div class="cta-note"><span class="no-wrap">到着時間や概算料金など、</span><span class="no-wrap">お気軽にご確認ください。</span></div>
-        </div>
-
-        <!-- ここから下が『信頼構築』コンテンツ -->
-
-        <!-- セクション2: 実績の提示 -->
-        <h2 class="section-title" id="実績"><span class="no-wrap">長距離こそ、</span><span class="no-wrap">我々の専門分野です。</span></h2>
-        <div class="content-box">
-            <ul class="checklist">
-                <li><span class="icon">✅</span> 西都市への送迎実績【多数】</li>
-                <li><span class="icon">✅</span> 都農町への送迎実績【多数】</li>
-                <li><span class="icon">✅</span> 延岡市への送迎実績あり</li>
-                <li><span class="icon">✅</span> 佐土原・田野・国富・綾方面も対応</li>
-                <li><span class="icon">✅</span> 上記以外のエリアもお気軽にご相談ください</li>
-            </ul>
-             <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
-            <p style="text-align: center; margin-top: 20px; font-weight: bold;">宮崎県公安委員会認定 第477号</p>
-        </div>
-
-        <!-- セクション3: 料金哲学の提示 -->
-        <h2 class="section-title" id="料金"><span class="no-wrap">ご納得いただいてからの、</span><span class="no-wrap">スタートです。</span></h2>
-        <p style="text-align: center;">我々は、お客様が料金に不安を感じたまま、メーターが上がり続けるようなサービスは提供いたしません。</p>
-        <ol class="steps">
-            <li><span class="step-label">ステップ①</span>お電話にて、目的地（経由地含む）をお知らせください。</li>
-            <li><span class="step-label">ステップ②</span>走行ルートを想定し、概算の料金を誠実にご提示します。</li>
-            <li><span class="step-label">ステップ③</span>ご提示した料金に納得いただけましたら、すぐにお迎えに上がります。</li>
-        </ol>
-        <h3 style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0 15px;">参考：料金算出の基本</h3>
-        <table class="price-table">
-            <tbody>
-                <tr><td>初乗り料金<br><small>(最初の1kmまで)</small></td><td>1,600円</td></tr>
-                <tr><td>追加料金<br><small>(以降1kmごと)</small></td><td>250円</td></tr>
-                <!-- ★★★ 修正箇所 ★★★ -->
-                <tr><td>待機料金<br><small>(最初の5分無料)</small></td><td><span class="no-wrap">以降5分毎 200円</span></td></tr>
-            </tbody>
-        </table>
-
-        <!-- セクション4: お客様の声 -->
-        <h2 class="section-title" id="お客様の声"><span class="no-wrap">実際に長距離を</span><span class="no-wrap">ご利用されたお客様の声</span></h2>
-        <div class="customer-voice">
-            <p>「深夜に都農まで。相場も知ってたけど、納得の料金で安心して帰れた」</p>
-            <div class="author">ー 50代 男性（経営者）</div>
-        </div>
-        <div class="customer-voice">
-            <p>「他社に断られた後の電話だった。西都まで本当に送ってくれて助かった」</p>
-            <div class="author">ー 30代 男性</div>
-        </div>
-        
-        <footer>
-            <div class="business-hours">
-                営業時間: 19:00～翌3:00<br>
-                (金・土・祝前日は翌4:00まで)
+        <main>
+            <h2 class="section-title" id="実績"><span class="no-wrap">長距離こそ、</span><span class="no-wrap">我々の専門分野です。</span></h2>
+            <div class="content-box">
+                <ul class="checklist">
+                    <li><span class="icon">✅</span> 西都市への送迎実績【多数】</li>
+                    <li><span class="icon">✅</span> 都農町への送迎実績【多数】</li>
+                    <li><span class="icon">✅</span> 延岡市への送迎実績あり</li>
+                    <li><span class="icon">✅</span> 佐土原・田野・国富・綾方面も対応</li>
+                    <li><span class="icon">✅</span> 上記以外のエリアもお気軽にご相談ください</li>
+                </ul>
+                 <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
+                <p style="text-align: center; margin-top: 20px; font-weight: bold;">宮崎県公安委員会認定 第477号</p>
             </div>
+            <h2 class="section-title" id="料金"><span class="no-wrap">ご納得いただいてからの、</span><span class="no-wrap">スタートです。</span></h2>
+            <p style="text-align: center;">我々は、お客様が料金に不安を感じたまま、メーターが上がり続けるようなサービスは提供いたしません。</p>
+            <ol class="steps">
+                <li><span class="step-label">ステップ①</span>お電話にて、目的地（経由地含む）をお知らせください。</li>
+                <li><span class="step-label">ステップ②</span>走行ルートを想定し、概算の料金を誠実にご提示します。</li>
+                <li><span class="step-label">ステップ③</span>ご提示した料金に納得いただけましたら、すぐにお迎えに上がります。</li>
+            </ol>
+            <h3 style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0 15px;">参考：料金算出の基本</h3>
+            <table class="price-table">
+                <tbody>
+                    <tr><td>初乗り料金<small>(最初の1kmまで)</small></td><td>1,600円</td></tr>
+                    <tr><td>追加料金<small>(以降1kmごと)</small></td><td>250円</td></tr>
+                    <tr><td>待機料金<small>(最初の5分無料)</small></td><td><span class="no-wrap">以降5分毎 200円</span></td></tr>
+                </tbody>
+            </table>
+            <h2 class="section-title" id="お客様の声"><span class="no-wrap">実際に長距離を</span><span class="no-wrap">ご利用されたお客様の声</span></h2>
+            <div class="customer-voice"><p>「深夜に都農まで。相場も知ってたけど、納得の料金で安心して帰れた」</p><div class="author">ー 50代 男性（経営者）</div></div>
+            <div class="customer-voice"><p>「他社に断られた後の電話だった。西都まで本当に送ってくれて助かった」</p><div class="author">ー 30代 男性</div></div>
+        </main>
+        <footer>
+            <div class="business-hours">営業時間: 19:00～翌3:00<br>(金・土・祝前日は翌4:00まで)</div>
             <div>運転代行Speed</div>
             <div style="margin-top: 10px;">宮崎県公安委員会認定 第477号</div>
             <div>宮崎県宮崎市大塚台西二丁目1-3</div>
-            <p style="margin: 5px 0;">電話番号: <a href="tel:080-9640-1844" onclick="gtag('event', 'conversion', {'send_to': 'AW-16929812546/ybafCMnSiqDBEVLG4Yg_'});">080-9640-1844</a></p>
+            <p style="margin: 5px 0;">電話番号: <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');">080-9640-1844</a></p>
             <div style="margin-top: 20px; font-size: 12px; color: #888;">copyright© 2024 運転代行Speed All Rights Reserved.</div>
         </footer>
-
     </div>
-
+    <div class="fixed-footer-cta">
+        <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="btn btn-call"><i class="bi bi-telephone-outbound-fill"></i> 今すぐ電話で確認</a>
+        <a href="https://lin.ee/Qf1ngA4" class="btn btn-line-cta"><i class="bi bi-line"></i> LINEで確認</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -9,12 +9,35 @@
     <!-- Google Fonts (高級感のある明朝体を追加) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     
-    <!-- ★★★ Googleトラッキングコードはそのまま維持してください ★★★ -->
-    <!-- (省略) -->
+    <!-- ★★★ 最新のGoogleトラッキングコード START ★★★ -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-16929812546');
+    </script>
+    <!-- Event snippet for ウェブサイトからの電話タップ -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-16929812546/ybafCMnSiq0bEMLg4Yg_',
+            'event_callback': callback
+        });
+        return false;
+      }
+    </script>
+    <!-- ★★★ 最新のGoogleトラッキングコード END ★★★ -->
 
     <style>
         :root {
@@ -43,6 +66,7 @@
         
         /* フォント設定 */
         .font-mincho { font-family: 'Shippori Mincho', serif; }
+        .font-eng { font-family: 'League Spartan', sans-serif; }
         
         /* ヘッダーエリア */
         .hero-section {
@@ -324,23 +348,24 @@
             </div>
         </section>
 
-        <!-- 流れセクション -->
+        <!-- 流れセクション（修正済み） -->
         <section>
             <h2 class="section-title font-mincho">
-                ご利用の流れ<span class="section-sub">ご納得いただいてからのスタートです</span>
+                ご利用の流れ<span class="section-sub">お電話一本で簡単にご利用いただけます</span>
             </h2>
             <ul class="step-list">
                 <li>
                     <span class="step-title">お問い合わせ</span>
-                    お電話にて、目的地（経由地含む）をお知らせください。
+                    お電話にて「お迎え場所」と「目的地」をお知らせください。
                 </li>
                 <li>
-                    <span class="step-title">概算料金のご提示</span>
-                    走行ルートを想定し、目安の料金を誠実にご提示します。
+                    <span class="step-title">配車手配・到着時間の案内</span>
+                    近くのドライバーを手配し、到着予定時間をお伝えします。<br>
+                    <small style="color:#888; font-weight:normal;">※長距離で料金が不安な方は、概算をお伝えすることも可能です。</small>
                 </li>
                 <li>
-                    <span class="step-title">お迎え</span>
-                    料金に納得いただけましたら、すぐにお迎えに上がります。
+                    <span class="step-title">お迎え・出発</span>
+                    ドライバーが到着しましたら、安全運転で目的地までお送りします。
                 </li>
             </ul>
         </section>
@@ -408,16 +433,5 @@
             <i class="bi bi-line"></i> LINE
         </a>
     </div>
-
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            return false;
-        }
-    </script>
 </body>
 </html>

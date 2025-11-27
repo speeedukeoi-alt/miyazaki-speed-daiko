@@ -35,14 +35,17 @@
 
     <style>
         :root {
-            --base-bg: #0d1117;
-            --content-bg: #161b22;
-            --border-color: #30363d;
-            --text-color: #c9d1d9;
-            --text-color-strong: #f0f6fc;
-            --accent-color: #f1c40f;
-            --button-bg: #3498db;
-            --icon-color: #2ecc71;
+            /* 白基調へのカラーパレット変更 */
+            --base-bg: #ffffff;          /* 背景：白 */
+            --content-bg: #f8f9fa;       /* セクション背景：薄いグレー */
+            --border-color: #e9ecef;     /* 枠線：薄いグレー */
+            --text-color: #444444;       /* 本文：濃いグレー（読みやすさ重視） */
+            --text-color-strong: #0b1019; /* 見出し：濃紺（Speedブランド） */
+            --accent-color: #c5a059;     /* アクセント：上品なゴールド */
+            --button-bg: #b91c1c;        /* ボタン：緊急性の赤（クリック率重視） */
+            --icon-color: #27ae60;       /* チェックアイコン：安心の緑 */
+            --action-color-call: #b91c1c;
+            --action-color-line: #06c755;
         }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
@@ -54,97 +57,156 @@
             line-height: 1.7; 
             padding-bottom: 100px;
         }
-        .container { max-width: 600px; margin: 0 auto; padding: 20px 15px; }
-        .hero-text { text-align: center; padding: 20px 0; }
-        .hero-text h1 { font-size: 32px; font-weight: bold; margin: 0; line-height: 1.4; color: var(--text-color-strong); }
-        .hero-text h1 .highlight { color: var(--accent-color); }
-        .hero-text p.subtitle { font-size: 18px; margin: 10px 0 20px 0; color: #ccc; font-weight: 500;}
-        .cta-box { background-color: var(--content-bg); border-radius: 10px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.3); margin-top: 2rem;}
-        .cta-box .cta-label { font-size: 16px; margin-bottom: 5px; }
-        .cta-box .phone-number { font-size: 32px; font-weight: bold; color: var(--text-color-strong); letter-spacing: 1px; margin-bottom: 20px; }
-        .cta-note { font-size: 14px; color: var(--accent-color); margin-top: 15px; font-weight: bold; }
-        .section-title { font-size: 24px; font-weight: bold; color: var(--accent-color); text-align: center; padding: 40px 0 15px 0; border-bottom: 2px solid var(--accent-color); margin-bottom: 30px; }
-        .content-box { background-color: var(--content-bg); padding: 25px; border-radius: 8px; margin-bottom: 20px; text-align: left; }
-        .map-image { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto;}
+        .container { max-width: 600px; margin: 0 auto; padding: 0 15px 20px; }
+        
+        /* ヘッダー周り */
+        .hero-text { text-align: center; padding: 30px 0 10px; }
+        .hero-text h1 { font-size: 28px; font-weight: bold; margin: 0; line-height: 1.4; color: var(--text-color-strong); }
+        .hero-text h1 .highlight { color: var(--button-bg); border-bottom: 3px solid var(--accent-color); display: inline-block; padding-bottom: 3px;}
+        .hero-text p.subtitle { font-size: 16px; margin: 15px 0 0 0; color: #666; font-weight: 500;}
+
+        /* 安心料金バナー（新規追加） */
+        .price-banner {
+            background-color: #f0f4f8;
+            border: 1px solid #d1d9e6;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--text-color-strong);
+        }
+        .price-banner strong { font-size: 1.2rem; color: var(--button-bg); }
+
+        /* コンテンツBOX */
+        .content-box { background-color: var(--base-bg); padding: 15px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 20px; text-align: left; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        
+        .cta-box { background-color: #fff; border: 2px solid var(--accent-color); border-radius: 10px; padding: 25px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-top: 2rem;}
+        .cta-box .cta-label { font-size: 16px; margin-bottom: 5px; font-weight: bold; color: var(--text-color-strong); }
+        .cta-box .phone-number { font-size: 32px; font-weight: bold; color: var(--button-bg); letter-spacing: 1px; margin-bottom: 20px; font-family: sans-serif; }
+        
+        .cta-button { display: block; background-color: var(--button-bg); color: #fff; padding: 18px; border-radius: 8px; text-decoration: none; font-size: 20px; font-weight: bold; transition: background-color 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        .cta-button:hover { background-color: #991b1b; }
+        .cta-button .bi { vertical-align: middle; margin-right: 8px;}
+        
+        .section-title { font-size: 22px; font-weight: bold; color: var(--text-color-strong); text-align: center; padding: 40px 0 15px 0; margin-bottom: 20px; position: relative; }
+        .section-title::after { content: ""; display: block; width: 50px; height: 3px; background: var(--accent-color); margin: 10px auto 0; }
+
+        .map-image { max-width: 100%; height: auto; border-radius: 8px; margin-top: 15px; display: block; margin-left: auto; margin-right: auto; border: 1px solid #ddd;}
+        
+        /* リスト */
         .checklist { list-style: none; padding-left: 0; }
-        .checklist li { margin-bottom: 10px; font-weight: 500; }
-        .checklist li .icon { color: var(--icon-color); margin-right: 10px; font-weight: bold; }
+        .checklist li { margin-bottom: 10px; font-weight: 600; color: var(--text-color-strong); border-bottom: 1px dashed #eee; padding-bottom: 5px; }
+        .checklist li .icon { color: var(--icon-color); margin-right: 10px; font-size: 1.2em; }
+        
         .steps { list-style: none; padding-left: 0; }
-        .steps li { background-color: var(--content-bg); padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid var(--accent-color); }
-        .steps li .step-label { font-weight: bold; color: var(--accent-color); display: block; margin-bottom: 5px; }
-        .price-table { width: 100%; border-collapse: separate; border-spacing: 0 5px; margin-top: 20px; }
-        .price-table td { padding: 15px; background-color: #333; }
-        .price-table td:first-child { font-weight: bold; border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
-        .price-table td:last-child { font-size: 18px; font-weight: bold; text-align: right; border-top-right-radius: 5px; border-bottom-right-radius: 5px; }
-        .customer-voice { background-color: var(--content-bg); border-left: 5px solid var(--accent-color); padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
-        .customer-voice p { margin: 0; font-style: italic;}
-        .customer-voice .author { text-align: right; font-style: normal; font-size: 14px; color: #aaa; margin-top: 10px;}
-        footer { text-align: center; padding: 30px 0; margin-top: 20px; font-size: 14px; color: #aaa; line-height: 2; } 
-        footer a { color: #3498db; text-decoration: none; } 
-        footer .business-hours { font-weight: bold; color: var(--accent-color); }
+        .steps li { background-color: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; border-left: 5px solid var(--accent-color); box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .steps li .step-label { font-weight: bold; color: var(--text-color-strong); display: block; margin-bottom: 5px; }
+        
+        /* 料金表（白基調に変更） */
+        .price-table { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; border: 1px solid #ddd; }
+        .price-table td { padding: 15px; border-bottom: 1px solid #eee; color: var(--text-color-strong); }
+        .price-table td:first-child { font-weight: bold; background-color: #f9f9f9; width: 40%; }
+        .price-table td:last-child { font-size: 18px; font-weight: bold; text-align: right; }
+        
+        /* お客様の声 */
+        .customer-voice { background-color: #fff; border: 1px solid #eee; border-left: 5px solid var(--button-bg); padding: 20px; margin-bottom: 20px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .customer-voice p { margin: 0; font-style: italic; color: #333; font-weight: 500;}
+        .customer-voice .author { text-align: right; font-style: normal; font-size: 14px; color: #777; margin-top: 10px;}
+        
+        footer { text-align: center; padding: 40px 0; margin-top: 20px; font-size: 14px; color: #666; line-height: 2; background-color: #f0f0f0; } 
+        footer a { color: var(--text-color-strong); text-decoration: none; font-weight: bold;} 
+        footer .business-hours { font-weight: bold; color: var(--action-color-call); }
+        
         .no-wrap { white-space: nowrap; }
-        .fixed-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--content-bg); border-top: 1px solid var(--border-color); display: flex; z-index: 1000; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.5); }
+        
+        /* 固定フッター */
+        .fixed-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: rgba(255,255,255,0.95); border-top: 1px solid #ddd; display: flex; z-index: 1000; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); backdrop-filter: blur(5px); }
         .fixed-footer-cta .btn { flex: 1; margin: 0 5px; padding: 12px 10px; font-size: 1.1rem; font-weight: 700; text-decoration: none; color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
-        .fixed-footer-cta .btn-call { background-color: var(--action-color-call); }
+        .fixed-footer-cta .btn-call { background-color: var(--action-color-call); box-shadow: 0 4px 6px rgba(185, 28, 28, 0.3); }
         .fixed-footer-cta .btn-line-cta { background-color: var(--action-color-line); }
         .fixed-footer-cta .btn .bi { font-size: 1.3rem; margin-right: 8px; }
-        @media (max-width: 576px) { .hero-text h1 { font-size: 28px; } }
+        
+        @media (max-width: 576px) { .hero-text h1 { font-size: 26px; } }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="hero-text">
-            <h1><span class="highlight"><span class="no-wrap">宮崎市内から</span> <span class="no-wrap">県内どこへでも。</span></span></h1>
-            <p class="subtitle">長距離専門 <strong style="color: #fff;">運転代行Speed</strong> <span class="no-wrap">にお任せください。</span></p>
+            <h1>宮崎市内から<br><span class="highlight">県内どこへでも</span></h1>
+            <p class="subtitle">長距離専門 <strong style="color: var(--text-color-strong);">運転代行Speed</strong></p>
+            
+            <!-- ★★★ 安心価格バナー（ここが離脱防止の鍵です） ★★★ -->
+            <div class="price-banner">
+                <i class="bi bi-tag-fill" style="color:#e74c3c;"></i> 明朗会計：初乗り <strong>1,600円</strong> (1km)<br>
+                <small style="color:#666;">※業界標準価格で安心してご利用いただけます</small>
+            </div>
         </header>
+
         <main>
             <h2 class="section-title" id="実績"><span class="no-wrap">長距離こそ、</span><span class="no-wrap">我々の専門分野です。</span></h2>
             <div class="content-box">
                 <ul class="checklist">
-                    <li><span class="icon">✅</span> 西都市への送迎実績【多数】</li>
-                    <li><span class="icon">✅</span> 都農町への送迎実績【多数】</li>
-                    <li><span class="icon">✅</span> 延岡市への送迎実績あり</li>
-                    <li><span class="icon">✅</span> 佐土原・田野・国富・綾方面も対応</li>
-                    <li><span class="icon">✅</span> 上記以外のエリアもお気軽にご相談ください</li>
+                    <li><span class="icon"><i class="bi bi-check-circle-fill"></i></span> 西都市への送迎実績【多数】</li>
+                    <li><span class="icon"><i class="bi bi-check-circle-fill"></i></span> 都農町への送迎実績【多数】</li>
+                    <li><span class="icon"><i class="bi bi-check-circle-fill"></i></span> 延岡市への送迎実績あり</li>
+                    <li><span class="icon"><i class="bi bi-check-circle-fill"></i></span> 佐土原・田野・国富・綾方面も対応</li>
+                    <li><span class="icon"><i class="bi bi-chat-text-fill"></i></span> エリア外もお気軽にご相談ください</li>
                 </ul>
+                 <!-- マップ画像があれば表示（なければ削除可） -->
                  <img src="images/miyazaki-map.png" alt="宮崎県長距離対応エリアマップ" class="map-image">
-                <p style="text-align: center; margin-top: 20px; font-weight: bold;">宮崎県公安委員会認定 第477号</p>
+                <p style="text-align: center; margin-top: 15px; font-weight: bold; color: var(--text-color-strong); font-size: 0.9rem;">
+                    <i class="bi bi-shield-check"></i> 宮崎県公安委員会認定 第477号
+                </p>
             </div>
+
             <h2 class="section-title" id="料金"><span class="no-wrap">ご納得いただいてからの、</span><span class="no-wrap">スタートです。</span></h2>
-            <p style="text-align: center;">我々は、お客様が料金に不安を感じたまま、メーターが上がり続けるようなサービスは提供いたしません。</p>
+            <p style="text-align: center; font-size:0.95rem;">お客様が料金に不安を感じたまま、メーターが上がり続けるようなサービスは提供いたしません。</p>
+            
             <ol class="steps">
                 <li><span class="step-label">ステップ①</span>お電話にて、目的地（経由地含む）をお知らせください。</li>
-                <li><span class="step-label">ステップ②</span>走行ルートを想定し、概算の料金を誠実にご提示します。</li>
+                <li><span class="step-label">ステップ②</span>走行ルートを想定し、<strong>概算の料金</strong>を誠実にご提示します。</li>
                 <li><span class="step-label">ステップ③</span>ご提示した料金に納得いただけましたら、すぐにお迎えに上がります。</li>
             </ol>
-            <h3 style="text-align: center; font-size: 18px; color: #ccc; margin: 30px 0 15px;">参考：料金算出の基本</h3>
+
+            <h3 style="text-align: center; font-size: 1.1rem; color: var(--text-color-strong); margin: 30px 0 15px; border-bottom:2px solid #eee; display:inline-block; padding-bottom:5px;">基本料金表</h3>
             <table class="price-table">
                 <tbody>
-                    <tr><td>初乗り料金<small>(最初の1kmまで)</small></td><td>1,600円</td></tr>
-                    <tr><td>追加料金<small>(以降1kmごと)</small></td><td>250円</td></tr>
-                    <tr><td>待機料金<small>(最初の5分無料)</small></td><td><span class="no-wrap">以降5分毎 200円</span></td></tr>
+                    <tr><td>初乗り料金<br><small>(最初の1kmまで)</small></td><td>1,600円</td></tr>
+                    <tr><td>追加料金<br><small>(以降1kmごと)</small></td><td>250円</td></tr>
+                    <tr><td>待機料金<br><small>(最初の5分無料)</small></td><td><span class="no-wrap">以降5分毎 200円</span></td></tr>
                 </tbody>
             </table>
-            <h2 class="section-title" id="お客様の声"><span class="no-wrap">実際に長距離を</span><span class="no-wrap">ご利用されたお客様の声</span></h2>
-            <div class="customer-voice"><p>「深夜に都農まで。相場も知ってたけど、納得の料金で安心して帰れた」</p><div class="author">ー 50代 男性（経営者）</div></div>
-            <div class="customer-voice"><p>「他社に断られた後の電話だった。西都まで本当に送ってくれて助かった」</p><div class="author">ー 30代 男性</div></div>
+
+            <h2 class="section-title" id="お客様の声"><span class="no-wrap">長距離をご利用された</span><span class="no-wrap">お客様の声</span></h2>
+            <div class="customer-voice">
+                <p>「深夜に都農まで。相場も知ってたけど、納得の料金で安心して帰れた」</p>
+                <div class="author">ー 50代 男性（経営者）</div>
+            </div>
+            <div class="customer-voice">
+                <p>「他社に断られた後の電話だった。西都まで本当に送ってくれて助かった」</p>
+                <div class="author">ー 30代 男性</div>
+            </div>
+
             <section class="final-cta" style="text-align: center; padding: 40px 15px;">
-                <h2 style="font-size: 22px; font-weight: bold; color: var(--text-color-strong); margin-bottom: 25px;">ご不明な点は、お電話一本で解決します。</h2>
-                <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="cta-button" style="font-size: 20px; padding: 16px;"><i class="bi bi-telephone-outbound-fill"></i> 電話で料金・到着時間を確認する</a>
-                <p style="font-size: 14px; color: #aaa; margin-top: 15px;">もちろん、ご相談だけでも歓迎です。</p>
+                <h2 style="font-size: 20px; font-weight: bold; color: var(--text-color-strong); margin-bottom: 25px;">ご不明な点は、お電話一本で解決します。</h2>
+                <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="cta-button">
+                    <i class="bi bi-telephone-outbound-fill"></i> 電話で料金・時間を聞く
+                </a>
+                <p style="font-size: 14px; color: #777; margin-top: 15px;">もちろん、ご相談だけでも歓迎です。</p>
             </section>
         </main>
+
         <footer>
             <div class="business-hours">営業時間: 19:00～翌3:00<br>(金・土・祝前日は翌4:00まで)</div>
-            <div>運転代行Speed</div>
-            <div style="margin-top: 10px;">宮崎県公安委員会認定 第477号</div>
+            <div style="font-size: 1.2rem; margin: 10px 0; font-weight:bold; color: var(--text-color-strong);">運転代行Speed</div>
+            <div>宮崎県公安委員会認定 第477号</div>
             <div>宮崎県宮崎市大塚台西二丁目1-3</div>
-            <p style="margin: 5px 0;">電話番号: <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');">080-9640-1844</a></p>
-            <div style="margin-top: 20px; font-size: 12px; color: #888;">copyright© 2024 運転代行Speed All Rights Reserved.</div>
+            <div style="margin-top: 20px; font-size: 12px; color: #999;">&copy; 2024 運転代行Speed All Rights Reserved.</div>
         </footer>
     </div>
+
     <div class="fixed-footer-cta">
-        <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="btn btn-call"><i class="bi bi-telephone-outbound-fill"></i> 今すぐ電話で確認</a>
+        <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');" class="btn btn-call"><i class="bi bi-telephone-outbound-fill"></i> 電話で確認</a>
         <a href="https://lin.ee/Qf1ngA4" class="btn btn-line-cta"><i class="bi bi-line"></i> LINEで確認</a>
     </div>
 </body>

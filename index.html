@@ -44,7 +44,7 @@
         :root {
             /* 白基調カラーパレット */
             --base-bg: #ffffff;
-            --content-bg: #f8f9fa;
+            --content-bg: #f9f9f9; /* 薄いグレー（メリハリ用） */
             --border-color: #e9ecef;
             --text-color: #333333;
             --text-color-strong: #0b1019; /* Speedネイビー */
@@ -67,7 +67,7 @@
         .font-eng { font-family: 'League Spartan', sans-serif; }
 
         /* ヘッダー */
-        .hero { padding: 3rem 1rem 1rem; text-align: center; }
+        .hero { padding: 3rem 1rem 2rem; text-align: center; }
         .hero .catchphrase { font-size: 1rem; margin-bottom: 0.5rem; color: #666; font-weight: 500; }
         .hero h1 { 
             font-size: 2.2rem; 
@@ -75,7 +75,7 @@
             color: var(--text-color-strong); 
             margin-bottom: 10px; 
             line-height: 1.4; 
-            font-family: 'Shippori Mincho', serif; /* タイトルは明朝体で信頼感 */
+            font-family: 'Shippori Mincho', serif;
         }
         .hero .highlight { 
             color: var(--action-color-call); 
@@ -84,26 +84,48 @@
             display: inline-block;
         }
 
-        /* 料金バナー（新規追加） */
+        /* 料金バナー（安心感） */
         .price-banner {
             background-color: #f0f4f8;
             border: 1px solid #d1d9e6;
             border-radius: 8px;
-            padding: 12px;
+            padding: 10px;
             text-align: center;
-            margin: 20px 0 30px;
+            margin: 15px 0;
             color: var(--text-color-strong);
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         .price-banner strong { font-size: 1.3rem; color: var(--action-color-call); font-family: 'League Spartan', sans-serif;}
 
-        /* 電話ボタンエリア */
-        .cta-phone-section { padding: 2rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); margin: 1rem 0; text-align: center;}
-        .cta-phone-section p { margin-bottom: 0.5rem; font-size: 0.9rem; color: #666; }
-        .cta-phone-section a { font-size: 2.2rem; font-weight: 700; color: var(--text-color-strong); text-decoration: none; letter-spacing: 1px; font-family: 'League Spartan', sans-serif; }
+        /* ★最強の電話ボタン（ファーストビュー用）★ */
+        .hero-phone-btn {
+            display: block;
+            background-color: var(--action-color-call);
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 12px 10px;
+            border-radius: 50px;
+            margin: 15px auto 0;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(185, 28, 28, 0.4);
+            font-family: 'League Spartan', sans-serif;
+            transition: transform 0.2s;
+            line-height: 1.2;
+        }
+        .hero-phone-btn:active { transform: scale(0.98); }
+        .hero-phone-btn i { font-size: 1.8rem; margin-right: 10px; vertical-align: middle; }
+        .tap-guide { font-size: 0.85rem; color: #666; margin-bottom: 5px; margin-top: 20px;}
 
-        /* 理由セクション */
-        .reasons-section { padding: 2rem 1rem; }
+        /* 理由セクション（背景グレーでメリハリ） */
+        .reasons-section { 
+            padding: 3rem 1rem; 
+            background-color: var(--content-bg); /* ここで色を変える */
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
         .section-title { 
             text-align: center; 
             font-size: 1.6rem; 
@@ -135,27 +157,32 @@
         .reason-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 0.8rem; }
         .reason-card p { font-size: 0.9rem; color: #666; margin: 0;}
 
-        /* 料金セクション */
-        .price-section { padding: 3rem 1rem; background-color: var(--content-bg); }
+        /* 料金セクション（白背景） */
+        .price-section { padding: 3rem 1rem; background-color: var(--base-bg); }
+        .price-list {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* 影で浮かせる */
+            overflow: hidden;
+        }
         .price-item { display: flex; justify-content: space-between; align-items: center; background-color: #fff; padding: 1.2rem; border-bottom: 1px solid #eee; }
-        .price-item:first-of-type { border-radius: 8px 8px 0 0; }
-        .price-item:last-of-type { border-radius: 0 0 8px 8px; border-bottom: none; }
+        .price-item:last-child { border-bottom: none; }
         .price-item .label { font-weight: 700; color: var(--text-color-strong); }
         .price-item .label small { font-size: 0.8rem; color: #888; display: block; font-weight: normal; }
         .price-item .price { font-size: 1.3rem; font-weight: 700; color: var(--text-color-strong); font-family: 'League Spartan', sans-serif; }
 
-        /* FAQ */
-        .faq-section { padding: 3rem 1rem; }
+        /* FAQ（グレー背景） */
+        .faq-section { padding: 3rem 1rem; background-color: var(--content-bg); }
         .accordion-button { background-color: #fff; color: var(--text-color-strong); font-weight: 600; border-top: 1px solid #eee; padding: 1.2rem; }
         .accordion-button:not(.collapsed) { background-color: #f0f4f8; color: var(--text-color-strong); font-weight: 700; box-shadow: none;}
         .accordion-button:focus { box-shadow: none; border-color: #eee; }
         .accordion-item { border: none; border-bottom: 1px solid #eee; }
         .accordion-body { background-color: #fff; color: #555; padding: 1.5rem; font-size: 0.95rem; }
         .accordion-header { margin: 0; }
-        #accordionFAQ { border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+        #accordionFAQ { border: 1px solid #eee; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
 
         /* フッター */
-        footer { text-align: center; font-size: 0.8rem; padding: 3rem 1rem; line-height: 2; color: #888; background-color: #f9f9f9; }
+        footer { text-align: center; font-size: 0.8rem; padding: 3rem 1rem; line-height: 2; color: #888; background-color: #fff; border-top: 1px solid #eee;}
         footer .highlight { color: var(--action-color-call); font-weight: 700; }
         
         .no-wrap { white-space: nowrap; }
@@ -178,20 +205,23 @@
             <p class="catchphrase">宮崎の夜、もう待たない。</p>
             <h1>運転代行Speedが<br><span class="highlight">平均15分</span> <span class="no-wrap">でお迎え</span></h1>
             
-            <!-- 安心価格バナー（ここが重要） -->
+            <!-- 安心価格バナー -->
             <div class="price-banner">
                 <i class="bi bi-tag-fill" style="color:var(--action-color-call);"></i> 
                 初乗り <strong>1,600円</strong> (1km)<br>
                 <small style="color:#666;">※業界標準価格で安心してご利用いただけます</small>
             </div>
+
+            <!-- ★★★ 最強の電話ボタン（追加） ★★★ -->
+            <div style="text-align: center;">
+                <p class="tap-guide">＼ タップして今すぐ呼ぶ ／</p>
+                <a href="tel:08096401844" class="hero-phone-btn" onclick="return gtag_report_conversion('tel:08096401844');">
+                    <i class="bi bi-telephone-fill"></i>080-9640-1844
+                </a>
+            </div>
         </header>
 
         <main>
-            <section class="cta-phone-section text-center">
-                <p>ご予約・お問い合わせ</p>
-                <a href="tel:08096401844" onclick="return gtag_report_conversion('tel:08096401844');">080-9640-1844</a>
-            </section>
-
             <section class="reasons-section">
                 <h2 class="section-title">Speedが選ばれる<br>3つの理由</h2>
                 <div class="row g-3">

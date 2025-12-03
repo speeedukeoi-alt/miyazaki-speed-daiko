@@ -4,38 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- ==========================================
-         SEO Meta Tags
-    =========================================== -->
+    <!-- SEO Meta Tags -->
     <title>運転代行Speed 公式サイト | 宮崎市の丁寧・安心な代行・第477号</title>
-    <meta name="description" content="宮崎市の運転代行「Speed（スピード）」。丁寧な電話対応と穏やかな運転をお約束。Hondaグレイス無限仕様とスーツ着用スタッフがお迎え。初乗り1,600円。認定第477号。">
+    <meta name="description" content="宮崎市の運転代行「Speed（スピード）」。すぐにお迎え、丁寧にお送り。Hondaグレイス無限仕様とスーツ着用スタッフがお迎え。初乗り1,600円。認定第477号。">
     <meta name="keywords" content="宮崎市,運転代行,代行,Speed,丁寧,接客,安全運転,第477号,山元光大良">
     <meta property="og:title" content="運転代行Speed 公式サイト">
-    <meta property="og:description" content="電話対応から、心地よく。その運転に、安心と敬意を。宮崎の運転代行Speed。">
+    <meta property="og:description" content="すぐにお迎え。丁寧にお送り。宮崎の運転代行Speed。初乗り1,600円〜。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://speed-miyazaki.github.io/">
 
-    <!-- ==========================================
-         Google Fonts & CSS
-    =========================================== -->
+    <!-- Fonts & CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
-    
-    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
-    <!-- ==========================================
-         Structured Data (MEO対策)
-    =========================================== -->
+    <!-- 構造化データ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "運転代行 Speed",
-      "image": "https://speed-miyazaki.github.io/hero.jpg", 
+      "image": "https://images.unsplash.com/photo-1493238792000-8113da705763", 
       "telephone": "080-9640-1844",
       "priceRange": "￥1,600〜",
       "address": {
@@ -67,15 +58,14 @@
     </script>
 
     <style>
-        /* ==========================================
-           Speed Design System (Navy & Gold)
-        =========================================== */
+        /* Speed Design System */
         :root {
-            --speed-navy: #0f172a;   /* 信頼の濃紺 */
-            --speed-gold: #c5a059;   /* 格調のゴールド */
+            --speed-navy: #0f172a;
+            --speed-gold: #c5a059;
             --speed-white: #ffffff;
             --speed-gray: #f8f9fa;
             --text-main: #333333;
+            --line-green: #06c755;
         }
 
         body {
@@ -93,16 +83,15 @@
         /* Navbar */
         .navbar { background-color: var(--speed-navy); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         .navbar-brand { font-family: 'Shippori Mincho', serif; color: var(--speed-white) !important; font-weight: 700; font-size: 1.5rem; }
-        .nav-link { color: rgba(255,255,255,0.9) !important; font-size: 0.95rem; margin-left: 15px; transition: 0.3s; }
-        .nav-link:hover { color: var(--speed-gold) !important; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-size: 0.95rem; margin-left: 15px; }
         .btn-nav-call { background-color: var(--speed-gold); color: #fff !important; border-radius: 50px; padding: 6px 20px; font-weight: bold; border: none; }
-        .btn-nav-call:hover { background-color: #b08d48; color: #fff; }
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('./hero.jpg') center/cover no-repeat;
-            height: 85vh;
-            min-height: 550px;
+            /* Web上の綺麗な夜景画像を使用 */
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
+            height: 90vh;
+            min-height: 600px;
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
             position: relative;
         }
@@ -133,6 +122,16 @@
         }
         .price-box strong { font-size: 1.5rem; color: #b91c1c; }
 
+        /* LINE Button */
+        .btn-line {
+            background-color: var(--line-green);
+            color: white;
+            border: 2px solid white;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);
+        }
+        .btn-line:hover { background-color: #05b34c; color: white; }
+
         /* Sections */
         .section-padding { padding: 80px 0; }
         .bg-gray { background-color: var(--speed-gray); }
@@ -148,7 +147,7 @@
         .price-table th { background-color: var(--speed-navy); color: white; font-weight: normal; vertical-align: middle; }
         .price-highlight { color: #b91c1c; font-weight: 700; font-size: 1.4rem; }
 
-        /* Legal Section (法令対応) */
+        /* Legal Section */
         .legal-section {
             background-color: #fff;
             padding: 40px 0;
@@ -156,23 +155,15 @@
             text-align: center;
         }
         .legal-btn {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            border: 1px solid #ddd;
-            color: #555;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            background-color: #f9f9f9;
+            display: inline-block; margin: 10px; padding: 10px 20px; border: 1px solid #ddd;
+            color: #555; text-decoration: none; border-radius: 4px; font-size: 0.9rem; background-color: #f9f9f9;
         }
-        .legal-btn:hover { background-color: #eee; color: #333; }
 
         /* Footer */
         footer { background-color: var(--speed-navy); color: white; padding: 60px 0 20px; }
 
         /* Responsive */
-        @media (max-width: 768px) { .hero-title { font-size: 2.2rem; } .hero-section { height: 75vh; } }
+        @media (max-width: 768px) { .hero-title { font-size: 2.2rem; } .hero-section { height: 80vh; } }
     </style>
 </head>
 <body>
@@ -206,13 +197,13 @@
             </div>
 
             <h1 class="hero-title serif-font">
-                電話対応から、<br>
-                心地よく。
+                すぐにお迎え。<br>
+                丁寧にお送り。
             </h1>
 
             <p class="fs-5 text-white mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
-                その運転に、安心と敬意を。<br class="d-md-none">
-                <span class="fs-6 mt-2 d-block opacity-75">平均15分でお迎え | スーツ着用ドライバー</span>
+                お電話から運転まで、心地よく。<br class="d-md-none">
+                <span class="fs-6 mt-2 d-block opacity-75">平均15分でお迎え | スーツ着用スタッフ</span>
             </p>
 
             <div class="price-box">
@@ -222,13 +213,19 @@
 
             <br>
 
-            <a href="tel:08096401844" class="btn btn-danger btn-lg px-5 py-3 rounded-pill fw-bold text-white shadow" style="border: 2px solid white; box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);">
-                <i class="bi bi-telephone-fill"></i> 今すぐ呼ぶ
-            </a>
+            <!-- Buttons -->
+            <div class="d-grid gap-3 col-md-6 mx-auto d-md-block">
+                <a href="tel:08096401844" class="btn btn-danger btn-lg px-5 py-3 rounded-pill fw-bold text-white shadow mb-3 mb-md-0" style="border: 2px solid white; box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);">
+                    <i class="bi bi-telephone-fill"></i> 今すぐ呼ぶ
+                </a>
+                <a href="https://lin.ee/Qf1ngA4" class="btn btn-line btn-lg px-5 py-3 rounded-pill fw-bold shadow">
+                    <i class="bi bi-line"></i> LINEで予約
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- About Section -->
+    <!-- About Section (Driver Photo Area) -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="row align-items-center">
@@ -242,8 +239,9 @@
                     そう思っていただけるよう、私たちは当たり前の品質を徹底します。</p>
                 </div>
                 <div class="col-lg-6">
-                    <!-- Placeholder: グレイスの写真（後で差し替え） -->
-                    <img src="https://dummyimage.com/600x400/eee/333&text=Honda+Grace+Image" alt="Honda Grace 無限仕様" class="img-fluid rounded shadow">
+                    <!-- ★ここにドライバー（オーナー）の写真を入れます -->
+                    <img src="https://dummyimage.com/600x400/eee/333&text=Driver+Photo" alt="スーツ着用のスタッフ写真" class="img-fluid rounded shadow border border-3 border-white">
+                    <p class="text-center text-muted small mt-2">※清潔感のある正装スタッフがお迎えにあがります</p>
                 </div>
             </div>
         </div>
@@ -352,7 +350,7 @@
                     
                     <div class="text-center mt-5">
                         <p class="mb-3 fw-bold">お電話一本で、丁寧にお迎えにあがります。</p>
-                        <a href="tel:08096401844" class="btn btn-lg btn-danger px-5 py-3 rounded-pill shadow">
+                        <a href="tel:08096401844" class="btn btn-lg btn-danger px-5 py-3 rounded-pill shadow mb-3">
                             <i class="bi bi-telephone-fill"></i> 080-9640-1844
                         </a>
                     </div>
@@ -361,17 +359,16 @@
         </div>
     </section>
 
-    <!-- Legal Section (法令対応エリア) -->
+    <!-- Legal Section -->
     <section class="legal-section">
         <div class="container">
             <p class="small text-muted mb-3">【法令に基づく表示】</p>
             <div class="d-flex justify-content-center flex-wrap">
-                <!-- ※ここに認定証などの画像があればリンクやimgタグを入れられます -->
                 <a href="#" class="legal-btn"><i class="bi bi-file-earmark-text"></i> 自動車運転代行業約款 (PDF)</a>
                 <a href="#" class="legal-btn"><i class="bi bi-award"></i> 認定証 (第477号)</a>
                 <a href="#" class="legal-btn"><i class="bi bi-shield-check"></i> 代行保険加入証</a>
             </div>
-            <p class="small text-muted mt-3">※上記の書類は事務所にて閲覧可能です。Web上での確認をご希望の際はお問い合わせください。</p>
+            <p class="small text-muted mt-3">※上記の書類はWeb上での確認をご希望の際はお問い合わせください。</p>
         </div>
     </section>
 

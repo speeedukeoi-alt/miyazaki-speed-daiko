@@ -8,8 +8,8 @@
     <title>運転代行Speed 公式サイト | 宮崎市の丁寧・安心な代行・第477号</title>
     <meta name="description" content="宮崎市の運転代行「Speed（スピード）」。すぐにお迎え、丁寧にお送り。Hondaグレイス無限仕様とスーツ着用スタッフがお迎え。初乗り1,600円。認定第477号。">
     <meta name="keywords" content="宮崎市,運転代行,代行,Speed,丁寧,接客,安全運転,第477号,山元光大良">
-    <meta property="og:title" content="運転代行Speed 公式サイト">
-    <meta property="og:description" content="すぐにお迎え。丁寧にお送り。宮崎の運転代行Speed。初乗り1,600円〜。">
+    <meta property="og:title" content="運転代行Speed 公式サイト | 宮崎市">
+    <meta property="og:description" content="すぐにお迎え。丁寧にお送り。宮崎市の運転代行Speed。初乗り1,600円〜。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://speed-miyazaki.github.io/">
 
@@ -26,7 +26,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "運転代行 Speed",
-      "image": "https://images.unsplash.com/photo-1493238792000-8113da705763", 
+      "image": "https://speed-miyazaki.github.io/car.jpg", 
       "telephone": "080-9640-1844",
       "priceRange": "￥1,600〜",
       "address": {
@@ -88,8 +88,9 @@
 
         /* Hero Section */
         .hero-section {
-            /* Web上の綺麗な夜景画像を使用 */
-            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
+            /* ※car.jpgをアップロードすると、ここに愛車が表示されるようになります */
+            /* アップロード前はWeb上の夜景画像が表示されます */
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('./car.jpg'), url('https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
             height: 90vh;
             min-height: 600px;
             display: flex; align-items: center; justify-content: center; text-align: center; color: white;
@@ -150,14 +151,20 @@
         /* Legal Section */
         .legal-section {
             background-color: #fff;
-            padding: 40px 0;
+            padding: 50px 0;
             border-top: 1px solid #eee;
             text-align: center;
         }
         .legal-btn {
-            display: inline-block; margin: 10px; padding: 10px 20px; border: 1px solid #ddd;
-            color: #555; text-decoration: none; border-radius: 4px; font-size: 0.9rem; background-color: #f9f9f9;
+            display: inline-flex; align-items: center; justify-content: center;
+            margin: 10px; width: 220px; padding: 15px;
+            border: 1px solid #ddd; border-radius: 8px;
+            color: #555; text-decoration: none; font-size: 0.95rem; font-weight: 500;
+            background-color: #f9f9f9; transition: 0.3s;
         }
+        .legal-btn i { font-size: 1.2rem; margin-right: 8px; color: var(--speed-navy); }
+        .legal-btn:hover { background-color: var(--speed-navy); color: #fff; border-color: var(--speed-navy); }
+        .legal-btn:hover i { color: #fff; }
 
         /* Footer */
         footer { background-color: var(--speed-navy); color: white; padding: 60px 0 20px; }
@@ -193,7 +200,7 @@
     <header class="hero-section">
         <div class="container">
             <div class="trust-badge">
-                <i class="bi bi-check-circle-fill text-warning"></i> 丁寧な電話対応・安全運転
+                <i class="bi bi-geo-alt-fill text-warning"></i> 宮崎市全域対応 | 丁寧な電話対応
             </div>
 
             <h1 class="hero-title serif-font">
@@ -202,7 +209,7 @@
             </h1>
 
             <p class="fs-5 text-white mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
-                お電話から運転まで、心地よく。<br class="d-md-none">
+                宮崎市の夜を、もっと心地よく。<br class="d-md-none">
                 <span class="fs-6 mt-2 d-block opacity-75">平均15分でお迎え | スーツ着用スタッフ</span>
             </p>
 
@@ -213,7 +220,6 @@
 
             <br>
 
-            <!-- Buttons -->
             <div class="d-grid gap-3 col-md-6 mx-auto d-md-block">
                 <a href="tel:08096401844" class="btn btn-danger btn-lg px-5 py-3 rounded-pill fw-bold text-white shadow mb-3 mb-md-0" style="border: 2px solid white; box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);">
                     <i class="bi bi-telephone-fill"></i> 今すぐ呼ぶ
@@ -225,7 +231,7 @@
         </div>
     </header>
 
-    <!-- About Section (Driver Photo Area) -->
+    <!-- About Section (Driver Photo) -->
     <section id="about" class="section-padding">
         <div class="container">
             <div class="row align-items-center">
@@ -233,14 +239,15 @@
                     <h2 class="section-title text-start mb-4">「丁寧さ」という品質。</h2>
                     <p class="lead mb-4 fw-bold serif-font">運転代行に、もっと安心を。</p>
                     <p>Speed（スピード）が大切にしているのは、お客様と大切なお車に対する「敬意」です。</p>
-                    <p>お電話をいただいた瞬間から、目的地に到着してお見送りするまで。<br>
+                    <p>宮崎市内の移動はお任せください。<br>
+                    お電話をいただいた瞬間から、目的地に到着してお見送りするまで。<br>
                     清潔な<strong>「スーツ着用のスタッフ」</strong>が、穏やかな運転と丁寧な対応をお約束します。</p>
                     <p>「今日はSpeedでよかった」。<br>
                     そう思っていただけるよう、私たちは当たり前の品質を徹底します。</p>
                 </div>
-                <div class="col-lg-6">
-                    <!-- ★ここにドライバー（オーナー）の写真を入れます -->
-                    <img src="https://dummyimage.com/600x400/eee/333&text=Driver+Photo" alt="スーツ着用のスタッフ写真" class="img-fluid rounded shadow border border-3 border-white">
+                <div class="col-lg-6 text-center">
+                    <!-- ★ここに driver.jpg が表示されます -->
+                    <img src="./driver.jpg" onerror="this.src='https://dummyimage.com/600x400/eee/333&text=Driver+Photo'" alt="スーツ着用のスタッフ写真" class="img-fluid rounded shadow border border-3 border-white">
                     <p class="text-center text-muted small mt-2">※清潔感のある正装スタッフがお迎えにあがります</p>
                 </div>
             </div>
@@ -281,7 +288,7 @@
     <section id="price" class="section-padding">
         <div class="container">
             <h2 class="section-title">ご利用料金</h2>
-            <p class="text-center mb-5">いつもの代行と変わらない安心価格。<br>ご不明な点はドライバーにお尋ねください。</p>
+            <p class="text-center mb-5">いつもの代行と変わらない安心価格。<br>宮崎市内どこでも、距離に応じた明朗会計です。</p>
             
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -359,16 +366,16 @@
         </div>
     </section>
 
-    <!-- Legal Section -->
+    <!-- Legal Section (法令対応：2点) -->
     <section class="legal-section">
         <div class="container">
             <p class="small text-muted mb-3">【法令に基づく表示】</p>
             <div class="d-flex justify-content-center flex-wrap">
-                <a href="#" class="legal-btn"><i class="bi bi-file-earmark-text"></i> 自動車運転代行業約款 (PDF)</a>
-                <a href="#" class="legal-btn"><i class="bi bi-award"></i> 認定証 (第477号)</a>
-                <a href="#" class="legal-btn"><i class="bi bi-shield-check"></i> 代行保険加入証</a>
+                <!-- ここにファイル名を指定しています -->
+                <a href="./yakkan.pdf" target="_blank" class="legal-btn"><i class="bi bi-file-earmark-text"></i> 自動車運転代行業約款</a>
+                <a href="./nintei.jpg" target="_blank" class="legal-btn"><i class="bi bi-award"></i> 認定証 (第477号)</a>
             </div>
-            <p class="small text-muted mt-3">※上記の書類はWeb上での確認をご希望の際はお問い合わせください。</p>
+            <p class="small text-muted mt-3">※クリックで確認できます。</p>
         </div>
     </section>
 

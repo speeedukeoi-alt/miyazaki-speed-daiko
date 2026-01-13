@@ -3,335 +3,397 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>運転代行Speed 公式サイト | 宮崎市の丁寧・安心な代行</title>
-    <meta name="description" content="宮崎市の運転代行Speed公式サイト。代表山元光大良が運営。初乗り1,800円。丁寧な運転と接客で愛車をお守りします。宮崎県公安委員会認定 第477号。">
     
-    <!-- ★★★ 最新のGoogleトラッキングコード (維持) ★★★ -->
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16929812546"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-16929812546');
-    </script>
-    <!-- Event snippet for ウェブサイトからの電話タップ -->
-    <script>
-      function gtag_report_conversion(url) {
-        var callback = function () {
-          if (typeof(url) != 'undefined') {
-            window.location = url;
-          }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-16929812546/ybafCMnSiq0bEMLg4Yg_',
-            'event_callback': callback
-        });
-        return false;
-      }
-    </script>
-    <!-- ★★★ 最新のGoogleトラッキングコード END ★★★ -->
+    <!-- SEO Meta Tags -->
+    <title>運転代行Speed 公式サイト | 宮崎市の丁寧・安心な代行・第477号</title>
+    <meta name="description" content="宮崎市の運転代行「Speed（スピード）」。すぐにお迎え、丁寧にお送り。Hondaグレイス無限仕様とスーツ着用スタッフがお迎え。初乗り1,600円。認定第477号。">
+    <meta name="keywords" content="宮崎市,運転代行,代行,Speed,丁寧,接客,安全運転,第477号,山元光大良">
+    <meta property="og:title" content="運転代行Speed 公式サイト | 宮崎市">
+    <meta property="og:description" content="すぐにお迎え。丁寧にお送り。宮崎市の運転代行Speed。初乗り1,600円〜。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://speed-miyazaki.github.io/">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts -->
+    <!-- Fonts & CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@600;700&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- 構造化データ -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "運転代行 Speed",
+      "image": "https://speed-miyazaki.github.io/car.jpg", 
+      "telephone": "080-9640-1844",
+      "priceRange": "￥1,600〜",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Miyazaki",
+        "addressRegion": "Miyazaki",
+        "addressCountry": "JP"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Sunday"],
+          "opens": "19:00",
+          "closes": "03:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday"],
+          "opens": "19:00",
+          "closes": "04:00"
+        }
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "山元 光大良"
+      },
+      "license": "宮崎県公安委員会認定 第477号"
+    }
+    </script>
 
     <style>
+        /* Speed Design System */
         :root {
-            --base-bg: #ffffff;
-            --content-bg: #f9f9f9;
-            --border-color: #e9ecef;
-            --text-color: #333333;
-            --text-color-strong: #0b1019; /* Speedネイビー */
-            --accent-color: #c5a059;     /* ゴールド */
-            --action-color-call: #b91c1c; /* 落ち着いた赤 */
+            --speed-navy: #0f172a;
+            --speed-gold: #c5a059;
+            --speed-white: #ffffff;
+            --speed-gray: #f8f9fa;
+            --text-main: #333333;
+            --line-green: #06c755;
         }
-        
+
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            background-color: var(--base-bg);
-            color: var(--text-color);
-            font-size: 16px;
-            padding-bottom: 90px;
+            color: var(--text-main);
             line-height: 1.8;
+            padding-top: 70px;
         }
-        
-        .container { max-width: 700px; } /* 公式サイトなので少し幅を広げてもOK */
 
-        /* ヘッダー */
-        .hero { padding: 4rem 1rem 3rem; text-align: center; }
-        .hero .catchphrase { font-size: 1rem; margin-bottom: 1rem; color: #666; font-weight: 500; font-family: 'Shippori Mincho', serif;}
-        .hero h1 { 
-            font-size: 2.2rem; 
-            font-weight: 700; 
-            color: var(--text-color-strong); 
-            margin-bottom: 15px; 
-            line-height: 1.5; 
+        h1, h2, h3, .serif-font {
             font-family: 'Shippori Mincho', serif;
-        }
-        .hero .highlight { 
-            border-bottom: 4px solid var(--accent-color);
-            display: inline-block;
-            padding-bottom: 5px;
+            letter-spacing: 0.05em;
         }
 
-        /* 料金バナー（シンプル・高級感） */
-        .price-banner {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px 15px;
-            text-align: center;
-            margin: 25px 0;
-            color: var(--text-color-strong);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-        .price-main { font-size: 2.4rem; color: var(--action-color-call); font-family: 'League Spartan', sans-serif; font-weight: 700; line-height: 1; }
+        /* Navbar */
+        .navbar { background-color: var(--speed-navy); box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .navbar-brand { font-family: 'Shippori Mincho', serif; color: var(--speed-white) !important; font-weight: 700; font-size: 1.5rem; }
+        .nav-link { color: rgba(255,255,255,0.9) !important; font-size: 0.95rem; margin-left: 15px; }
+        .btn-nav-call { background-color: var(--speed-gold); color: #fff !important; border-radius: 50px; padding: 6px 20px; font-weight: bold; border: none; }
 
-        /* 電話ボタン */
-        .hero-phone-btn {
-            display: block;
-            background-color: var(--text-color-strong); /* 公式サイトらしくネイビーで重厚に */
-            color: #fff;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-decoration: none;
-            padding: 15px 10px;
+        /* Hero Section */
+        .hero-section {
+            /* ※car.jpgをアップロードすると、ここに愛車が表示されるようになります */
+            /* アップロード前はWeb上の夜景画像が表示されます */
+            background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('./car.jpg'), url('https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
+            height: 90vh;
+            min-height: 600px;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
+            position: relative;
+        }
+        .hero-title { font-size: 3.5rem; margin-bottom: 20px; text-shadow: 0 4px 10px rgba(0,0,0,0.8); font-weight: 700; }
+        
+        /* 安心バッジ */
+        .trust-badge {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 50px;
-            margin: 20px auto 0;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 5px 15px rgba(11, 16, 25, 0.3);
-            font-family: 'League Spartan', sans-serif;
-            transition: transform 0.2s;
+            padding: 5px 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: #fff;
         }
-        .hero-phone-btn:active { transform: scale(0.98); }
-        .hero-phone-btn i { font-size: 1.6rem; margin-right: 10px; vertical-align: middle; }
 
-        /* セクション見出し */
-        .section-title { 
-            text-align: center; 
-            font-size: 1.6rem; 
-            font-weight: 700; 
-            color: var(--text-color-strong); 
-            margin-bottom: 2.5rem; 
-            font-family: 'Shippori Mincho', serif;
-            position: relative;
+        /* 価格表示ボックス */
+        .price-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: var(--speed-navy);
+            padding: 15px 30px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 3px;
-            background: var(--accent-color);
-            margin: 15px auto 0;
-        }
-        
-        /* 理由セクション */
-        .reasons-section { padding: 4rem 1rem; background-color: var(--content-bg); }
-        .reason-card { 
-            background-color: #fff; 
-            border-radius: 8px; 
-            padding: 2rem; 
-            text-align: center; 
-            height: 100%; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-            border-top: 4px solid var(--text-color-strong);
-        }
-        .reason-card .icon { font-size: 2.5rem; color: var(--accent-color); margin-bottom: 1rem; }
-        .reason-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-color-strong); margin-bottom: 0.8rem; }
-        .reason-card p { font-size: 0.95rem; color: #666; margin: 0; text-align: justify; }
+        .price-box strong { font-size: 1.5rem; color: #b91c1c; }
 
-        /* ★★★ 代表挨拶（Crayonから移植・強化） ★★★ */
-        .message-section { padding: 4rem 1rem; background-color: #fff; }
-        .message-box {
-            max-width: 650px;
-            margin: 0 auto;
+        /* LINE Button */
+        .btn-line {
+            background-color: var(--line-green);
+            color: white;
+            border: 2px solid white;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.4);
+        }
+        .btn-line:hover { background-color: #05b34c; color: white; }
+
+        /* Sections */
+        .section-padding { padding: 80px 0; }
+        .bg-gray { background-color: var(--speed-gray); }
+        .section-title { text-align: center; margin-bottom: 50px; font-size: 2rem; color: var(--speed-navy); position: relative; display: inline-block; width: 100%; }
+        .section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--speed-gold); margin: 15px auto 0; }
+
+        /* Features */
+        .feature-box { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); height: 100%; transition: transform 0.3s; border-bottom: 3px solid var(--speed-gold); }
+        .feature-box:hover { transform: translateY(-5px); }
+        .feature-icon { font-size: 2.5rem; color: var(--speed-navy); margin-bottom: 15px; }
+
+        /* Price Table */
+        .price-table th { background-color: var(--speed-navy); color: white; font-weight: normal; vertical-align: middle; }
+        .price-highlight { color: #b91c1c; font-weight: 700; font-size: 1.4rem; }
+
+        /* Legal Section */
+        .legal-section {
             background-color: #fff;
-            padding: 30px;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            position: relative;
-        }
-        .message-box::before {
-            content: 'MESSAGE';
-            position: absolute;
-            top: -12px;
-            left: 30px;
-            background: var(--text-color-strong);
-            color: #fff;
-            padding: 2px 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            font-family: 'League Spartan';
-            border-radius: 2px;
-        }
-        .message-text { margin-bottom: 20px; text-align: justify; font-size: 0.95rem; }
-        .signature { text-align: right; margin-top: 30px; }
-        .signature-title { font-size: 0.8rem; color: #666; display: block; margin-bottom: 5px; }
-        .signature-name { font-size: 1.2rem; font-weight: bold; font-family: 'Shippori Mincho', serif; color: var(--text-color-strong); }
-
-        /* 料金セクション */
-        .price-section { padding: 4rem 1rem; background-color: var(--content-bg); }
-        .price-list {
-            max-width: 600px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-        .price-item { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem; border-bottom: 1px solid #eee; }
-        .price-item:last-child { border-bottom: none; }
-        .price-item .label { font-weight: 700; color: var(--text-color-strong); }
-        .price-item .label small { font-size: 0.8rem; color: #888; display: block; font-weight: normal; }
-        .price-item .price { font-size: 1.2rem; font-weight: 700; color: var(--text-color-strong); font-family: 'League Spartan', sans-serif; }
-
-        /* ★★★ 会社概要（信頼性UP） ★★★ */
-        .company-section { padding: 4rem 1rem; background-color: #fff; }
-        .company-table { width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; font-size: 0.95rem; }
-        .company-table th { text-align: left; padding: 15px; width: 30%; color: #666; border-bottom: 1px solid #eee; }
-        .company-table td { padding: 15px; border-bottom: 1px solid #eee; font-weight: 500; }
-
-        /* FAQ */
-        .faq-section { padding: 4rem 1rem; background-color: var(--content-bg); }
-        .accordion-button { font-weight: 600; color: var(--text-color-strong); }
-        .accordion-button:not(.collapsed) { background-color: #eef2f6; color: var(--text-color-strong); }
-
-        /* フッター */
-        footer { text-align: center; font-size: 0.8rem; padding: 3rem 1rem; line-height: 2; color: #999; background-color: var(--text-color-strong); border-top: none;}
-        footer p { color: #ccc; }
-        
-        /* 固定フッター（電話のみ） */
-        .fixed-footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background-color: rgba(255,255,255,0.98); border-top: 1px solid #ddd; display: flex; z-index: 1000; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); }
-        .btn-call-fixed {
-            width: 100%;
-            background-color: var(--action-color-call);
-            color: #fff;
-            text-decoration: none;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 50px 0;
+            border-top: 1px solid #eee;
             text-align: center;
-            font-weight: bold;
-            font-size: 1.3rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 6px rgba(185, 28, 28, 0.3);
         }
-        .btn-call-fixed i { margin-right: 10px; }
+        .legal-btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            margin: 10px; width: 220px; padding: 15px;
+            border: 1px solid #ddd; border-radius: 8px;
+            color: #555; text-decoration: none; font-size: 0.95rem; font-weight: 500;
+            background-color: #f9f9f9; transition: 0.3s;
+        }
+        .legal-btn i { font-size: 1.2rem; margin-right: 8px; color: var(--speed-navy); }
+        .legal-btn:hover { background-color: var(--speed-navy); color: #fff; border-color: var(--speed-navy); }
+        .legal-btn:hover i { color: #fff; }
 
+        /* Footer */
+        footer { background-color: var(--speed-navy); color: white; padding: 60px 0 20px; }
+
+        /* Responsive */
+        @media (max-width: 768px) { .hero-title { font-size: 2.2rem; } .hero-section { height: 80vh; } }
     </style>
 </head>
 <body>
-    
-    <!-- ヒーローエリア -->
-    <header class="hero">
-        <div class="container">
-            <p class="catchphrase">宮崎の夜、安心と共にお届けします</p>
-            <h1>丁寧な運転で<br>お客様と<span class="highlight">愛車を守る</span></h1>
-            
-            <p style="font-size:0.9rem; color:#444; margin-bottom:0;">
-                宮崎県公安委員会認定 第477号
-            </p>
 
-            <!-- 安心価格バナー -->
-            <div class="price-banner">
-                <div>初乗り <span class="price-main">1,800円</span> <small>(1km)</small></div>
-                <div style="font-size: 0.8rem; font-weight:bold; color: var(--text-color-strong); margin-top: 10px; border-top:1px dashed #ddd; padding-top:10px;">
-                    ※お支払いは「現金のみ」となります
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">運転代行 Speed</a>
+            <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#about">Speedについて</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">特徴</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#price">料金表</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#company">店舗情報</a></li>
+                    <li class="nav-item ms-lg-3">
+                        <a href="tel:08096401844" class="btn btn-nav-call"><i class="bi bi-telephone-fill"></i> 080-9640-1844</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <div class="trust-badge">
+                <i class="bi bi-geo-alt-fill text-warning"></i> 宮崎市全域対応 | 丁寧な電話対応
             </div>
 
-            <!-- 電話ボタン -->
-            <div style="text-align: center;">
-                <p class="tap-guide" style="font-size: 0.8rem; color:#666;">＼ タップして今すぐ呼ぶ ／</p>
-                <a href="tel:08096401844" class="hero-phone-btn" onclick="return gtag_report_conversion('tel:08096401844');">
-                    <i class="bi bi-telephone-fill"></i>080-9640-1844
+            <h1 class="hero-title serif-font">
+                すぐにお迎え。<br>
+                丁寧にお送り。
+            </h1>
+
+            <p class="fs-5 text-white mb-4" style="text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                宮崎市の夜を、もっと心地よく。<br class="d-md-none">
+                <span class="fs-6 mt-2 d-block opacity-75">平均15分でお迎え | スーツ着用スタッフ</span>
+            </p>
+
+            <div class="price-box">
+                <span class="text-muted small">明朗会計・業界標準</span><br>
+                初乗り <strong>1,600円〜</strong>
+            </div>
+
+            <br>
+
+            <div class="d-grid gap-3 col-md-6 mx-auto d-md-block">
+                <a href="tel:08096401844" class="btn btn-danger btn-lg px-5 py-3 rounded-pill fw-bold text-white shadow mb-3 mb-md-0" style="border: 2px solid white; box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);">
+                    <i class="bi bi-telephone-fill"></i> 今すぐ呼ぶ
+                </a>
+                <a href="https://lin.ee/Qf1ngA4" class="btn btn-line btn-lg px-5 py-3 rounded-pill fw-bold shadow">
+                    <i class="bi bi-line"></i> LINEで予約
                 </a>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- 3つの理由 -->
-        <section class="reasons-section">
-            <div class="container">
-                <h2 class="section-title">Speedが選ばれる理由</h2>
-                <div class="row g-4">
-                    <div class="col-12 col-md-4">
-                        <div class="reason-card">
-                            <div class="icon"><i class="bi bi-shield-check"></i></div>
-                            <h3>安全・丁寧な運転</h3>
-                            <p>「安い代行で車を傷つけられたくない」というお客様へ。プロのドライバーが、自分の車のように大切に扱います。左ハンドル・高級車もお任せください。</p>
-                        </div>
+    <!-- About Section (Driver Photo) -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="section-title text-start mb-4">「丁寧さ」という品質。</h2>
+                    <p class="lead mb-4 fw-bold serif-font">運転代行に、もっと安心を。</p>
+                    <p>Speed（スピード）が大切にしているのは、お客様と大切なお車に対する「敬意」です。</p>
+                    <p>宮崎市内の移動はお任せください。<br>
+                    お電話をいただいた瞬間から、目的地に到着してお見送りするまで。<br>
+                    清潔な<strong>「スーツ着用のスタッフ」</strong>が、穏やかな運転と丁寧な対応をお約束します。</p>
+                    <p>「今日はSpeedでよかった」。<br>
+                    そう思っていただけるよう、私たちは当たり前の品質を徹底します。</p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <!-- ★ここに driver.jpg が表示されます -->
+                    <img src="./driver.jpg" onerror="this.src='https://dummyimage.com/600x400/eee/333&text=Driver+Photo'" alt="スーツ着用のスタッフ写真" class="img-fluid rounded shadow border border-3 border-white">
+                    <p class="text-center text-muted small mt-2">※清潔感のある正装スタッフがお迎えにあがります</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section-padding bg-gray">
+        <div class="container">
+            <h2 class="section-title">Speedの約束</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <i class="bi bi-telephone-inbound feature-icon"></i>
+                        <h3 class="h5 fw-bold mb-3">丁寧な電話対応</h3>
+                        <p class="text-muted small">ぶっきらぼうな対応はいたしません。お電話口から心地よく、到着時間や料金の目安を明確にお伝えします。</p>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <div class="reason-card">
-                            <div class="icon"><i class="bi bi-person-check-fill"></i></div>
-                            <h3>清潔感のある正装</h3>
-                            <p>ジャージやラフな格好は禁止。清潔なスーツ着用のスタッフがお迎えにあがります。女性のお客様や接待でのご利用も安心です。</p>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <i class="bi bi-shield-check feature-icon"></i>
+                        <h3 class="h5 fw-bold mb-3">穏やかな安全運転</h3>
+                        <p class="text-muted small">急発進や急ブレーキのない、滑らかな運転技術。お客様が車内でリラックスできるよう、細心の注意を払います。</p>
                     </div>
-                    <div class="col-12 col-md-4">
-                        <div class="reason-card">
-                            <div class="icon"><i class="bi bi-wallet2"></i></div>
-                            <h3>明朗会計</h3>
-                            <p>メーター通りのシンプルな料金設定。「手数料」や「深夜割増」などの不明瞭な追加料金は一切いただきません。</p>
-                        </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box text-center">
+                        <i class="bi bi-person-badge feature-icon"></i>
+                        <h3 class="h5 fw-bold mb-3">清潔感と身だしなみ</h3>
+                        <p class="text-muted small">ジャージ不可・スーツ着用。タバコの臭いにも配慮し、清潔な車とスタッフがお迎えにあがります。</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ★★★ 代表挨拶（Crayonの魂をここに！） ★★★ -->
-        <section class="message-section">
-            <div class="container">
-                <h2 class="section-title">代表挨拶・私たちの想い</h2>
-                <div class="message-box">
-                    <p class="message-text">
-                        現在、宮崎市街地では「運転代行がつかまらない」というお声を多くいただきます。その結果、飲酒運転による悲しい事故も後を絶ちません。
-                    </p>
-                    <p class="message-text">
-                        だからこそ私たちは、迅速かつ安心な運転代行サービスを通じて、宮崎の皆様が安全にご帰宅できるお手伝いをしたいと強く願っています。
-                    </p>
-                    <p class="message-text">
-                        あなたの大切な時間を守り、安全な明日を迎えるために。ぜひ私たち運転代行Speedをご利用ください。
-                    </p>
-                    <div class="signature">
-                        <span class="signature-title">運転代行 Speed 代表</span>
-                        <span class="signature-name">山元 光大良</span>
+    <!-- Price Section -->
+    <section id="price" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">ご利用料金</h2>
+            <p class="text-center mb-5">いつもの代行と変わらない安心価格。<br>宮崎市内どこでも、距離に応じた明朗会計です。</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-lg">
+                        <div class="card-body p-0">
+                            <table class="table table-bordered mb-0 text-center price-table">
+                                <tbody>
+                                    <tr>
+                                        <th class="py-4 w-50">初乗り料金<br><span class="small">(最初の1kmまで)</span></th>
+                                        <td class="py-4 price-highlight">1,600円</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="py-4">追加料金<br><span class="small">(以降1kmごとに)</span></th>
+                                        <td class="py-4 fs-4 fw-bold">250円</td>
+                                    </tr>
+                                    <tr>
+                                        <th class="py-3 text-secondary">待機料金<br><span class="small">(到着後)</span></th>
+                                        <td class="py-3 text-secondary">5分毎 200円</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="mt-4 text-center">
+                         <p class="small text-muted">
+                             ※お支払い方法：現金のみ<br>
+                             ※スムーズな運行のため、到着後は速やかなご乗車にご協力をお願いいたします。
+                         </p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 料金セクション -->
-        <section class="price-section">
-            <div class="container">
-                <h2 class="section-title">ご利用料金</h2>
-                <div class="price-list">
-                    <div class="price-item">
-                        <div class="label">初乗り料金<small>(1kmまで)</small></div>
-                        <div class="price" style="color: var(--action-color-call);">1,800円</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="label">追加料金<small>(以降1kmごと)</small></div>
-                        <div class="price">250円</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="label">経由料金<small>(コンビニ等への立ち寄り)</small></div>
-                        <div class="price">100円 / 1回</div>
-                    </div>
-                    <div class="price-item">
-                        <div class="label">待機料金<small>(最初の5分無料)</small></div>
-                        <div class="price">以降5分毎 100円</div>
+    <!-- Company Profile -->
+    <section id="company" class="section-padding bg-gray">
+        <div class="container">
+            <h2 class="section-title">店舗情報</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <table class="table table-borderless align-middle">
+                        <tr>
+                            <th style="width: 130px; color:var(--speed-navy);">屋号</th>
+                            <td>運転代行 Speed（スピード）</td>
+                        </tr>
+                        <tr>
+                            <th style="color:var(--speed-navy);">代表</th>
+                            <td>山元 光大良</td>
+                        </tr>
+                        <tr>
+                            <th style="color:var(--speed-navy);">認定</th>
+                            <td>宮崎県公安委員会認定 第477号</td>
+                        </tr>
+                        <tr>
+                            <th style="color:var(--speed-navy);">営業時間</th>
+                            <td>
+                                19:00 〜 03:00 <span class="badge bg-secondary">平日・日</span><br>
+                                19:00 〜 04:00 <span class="badge bg-danger">金・土・祝前日</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th style="color:var(--speed-navy);">対応エリア</th>
+                            <td>宮崎市内全域 <small class="text-muted">※市外は応相談</small></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="text-center mt-5">
+                        <p class="mb-3 fw-bold">お電話一本で、丁寧にお迎えにあがります。</p>
+                        <a href="tel:08096401844" class="btn btn-lg btn-danger px-5 py-3 rounded-pill shadow mb-3">
+                            <i class="bi bi-telephone-fill"></i> 080-9640-1844
+                        </a>
                     </div>
                 </div>
-                <p style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 15px;">
-                    ※お支払いは<strong style="color:#000;">現金のみ</strong>と
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Section (法令対応：2点) -->
+    <section class="legal-section">
+        <div class="container">
+            <p class="small text-muted mb-3">【法令に基づく表示】</p>
+            <div class="d-flex justify-content-center flex-wrap">
+                <!-- ここにファイル名を指定しています -->
+                <a href="./yakkan.pdf" target="_blank" class="legal-btn"><i class="bi bi-file-earmark-text"></i> 自動車運転代行業約款</a>
+                <a href="./nintei.jpg" target="_blank" class="legal-btn"><i class="bi bi-award"></i> 認定証 (第477号)</a>
+            </div>
+            <p class="small text-muted mt-3">※クリックで確認できます。</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <h4 class="serif-font mb-3">運転代行 Speed</h4>
+            <p class="mb-4 text-white-50 small">
+                宮崎の夜をもっと心地よく、もっと安全に。<br>
+                代表 山元 光大良 | 第477号
+            </p>
+            <div class="border-top border-secondary pt-4">
+                <p class="small text-white-50 mb-0">&copy; 2024 Driving Service Speed. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

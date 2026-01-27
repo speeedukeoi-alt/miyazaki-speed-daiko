@@ -88,8 +88,6 @@
 
         /* Hero Section */
         .hero-section {
-            /* ※car.jpgをアップロードすると、ここに愛車が表示されるようになります */
-            /* アップロード前はWeb上の夜景画像が表示されます */
             background: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.5)), url('./car.jpg'), url('https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop') center/cover no-repeat;
             height: 90vh;
             min-height: 600px;
@@ -294,7 +292,7 @@
                 <div class="col-lg-8">
                     <div class="card border-0 shadow-lg">
                         <div class="card-body p-0">
-                            <!-- 料金表更新箇所 -->
+                            <!-- 料金表：文字色を統一 -->
                             <table class="table table-bordered mb-0 text-center price-table">
                                 <tbody>
                                     <tr>
@@ -306,12 +304,14 @@
                                         <td class="py-4 fs-4 fw-bold">250円</td>
                                     </tr>
                                     <tr>
-                                        <th class="py-3 text-secondary">待機料金<br><span class="small">(到着後の待機時間)</span></th>
-                                        <td class="py-3 text-secondary">5分毎 100円</td>
+                                        <!-- ↓ここからtext-secondaryを削除しました -->
+                                        <th class="py-3">待機料金<br><span class="small">(到着後の待機時間)</span></th>
+                                        <td class="py-3 fs-5">5分毎 100円</td>
                                     </tr>
                                     <tr>
-                                        <th class="py-3 text-secondary">経由料金<br><span class="small">(コンビニ立ち寄り等)</span></th>
-                                        <td class="py-3 text-secondary">1か所 100円</td>
+                                        <!-- ↓ここからtext-secondaryを削除しました -->
+                                        <th class="py-3">経由料金<br><span class="small">(コンビニ立ち寄り等)</span></th>
+                                        <td class="py-3 fs-5">1か所 100円</td>
                                     </tr>
                                 </tbody>
                             </table>

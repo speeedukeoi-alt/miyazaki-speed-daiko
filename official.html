@@ -28,24 +28,33 @@
         body {
             font-family: 'Noto Sans JP', sans-serif;
             color: var(--text-dark);
-            padding-bottom: 90px; /* 固定フッター分 */
+            padding-bottom: 90px;
         }
 
         h1, h2, h3, .serif-font {
             font-family: 'Shippori Mincho', serif;
         }
 
-        /* 共通ボタン */
+        /* 共通ボタン設定（改行禁止を追加） */
+        .btn-custom-gold, .btn-line {
+            white-space: nowrap; /* 文字を改行させない */
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
         .btn-custom-gold {
             background-color: var(--accent-gold);
-            color: #fff; border: none; font-weight: bold; transition: all 0.3s;
+            color: #fff; border: none;
             box-shadow: 0 4px 6px rgba(197, 160, 89, 0.3);
         }
         .btn-custom-gold:hover { background-color: #b08d4b; color: #fff; transform: translateY(-2px); }
         
         .btn-line {
             background-color: var(--line-green);
-            color: #fff; border: none; font-weight: bold; transition: all 0.3s;
+            color: #fff; border: none;
             box-shadow: 0 4px 6px rgba(6, 199, 85, 0.3);
         }
         .btn-line:hover { background-color: #05b34c; color: #fff; transform: translateY(-2px); }
@@ -59,8 +68,8 @@
         /* ヒーローエリア */
         .hero-section {
             position: relative;
-            height: 75vh; min-height: 500px;
-            background-image: url('hero.jpg.png'); /* 画像パス修正済み */
+            height: 75vh; min-height: 520px;
+            background-image: url('hero.jpg.png');
             background-size: cover; background-position: center;
             display: flex; align-items: center; justify-content: center;
             text-align: center; color: white;
@@ -69,7 +78,7 @@
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: rgba(15, 23, 42, 0.55); z-index: 1;
         }
-        .hero-content { position: relative; z-index: 2; padding: 20px; }
+        .hero-content { position: relative; z-index: 2; padding: 20px; width: 100%; }
         .hero-title { font-size: 2.8rem; font-weight: 800; margin-bottom: 1.2rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
         .hero-subtitle { font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.7; }
         
@@ -80,7 +89,7 @@
             border: 1px solid rgba(255,255,255,0.5);
         }
 
-        /* セクションタイトル */
+        /* タイトル設定 */
         .section-title {
             color: var(--primary-navy); font-weight: 800; margin-bottom: 2.5rem;
             position: relative; display: inline-block;
@@ -90,7 +99,7 @@
             background-color: var(--accent-gold); margin: 12px auto 0;
         }
 
-        /* LINE依頼案内（モバイル最適化） */
+        /* LINE案内（モバイル最適化） */
         .line-guide-container {
             background-color: #ffffff;
             border-radius: 15px;
@@ -106,23 +115,17 @@
             border-bottom: 2px solid #dcfce7;
             color: #166534;
         }
-        .line-step-list {
-            padding: 25px 20px;
-        }
+        .line-step-list { padding: 25px 20px; }
         .line-step-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
+            display: flex; align-items: flex-start;
+            margin-bottom: 20px; padding-bottom: 15px;
             border-bottom: 1px solid #f1f5f9;
         }
         .line-step-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
         .line-step-num {
             background-color: var(--accent-gold);
-            color: white;
-            min-width: 32px; height: 32px;
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
+            color: white; min-width: 32px; height: 32px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
             font-weight: 900; margin-right: 15px; margin-top: 2px;
         }
         .line-step-text strong { color: var(--primary-navy); font-size: 1.1rem; }
@@ -131,11 +134,11 @@
         /* 想いセクション */
         .thought-section { background-color: var(--primary-navy); color: white; }
         .thought-img-col {
-            background-image: url('driver.jpg.png'); /* 画像パス修正済み */
+            background-image: url('driver.jpg.png');
             background-size: cover; background-position: center top; min-height: 380px;
         }
 
-        /* 料金・FAQ */
+        /* 料金・会社概要 */
         .price-card { border: 2px solid var(--primary-navy); border-radius: 8px; overflow: hidden; background: white; }
         .price-header { background-color: var(--primary-navy); color: white; padding: 1rem; }
         .price-main { font-size: 2.6rem; color: var(--primary-navy); font-weight: bold; }
@@ -154,8 +157,22 @@
             text-decoration: none; font-weight: bold; font-size: 0.95rem;
         }
 
+        /* スマホ用詳細調整 */
         @media (max-width: 768px) {
             .hero-title { font-size: 1.9rem; }
+            .hero-subtitle { font-size: 0.95rem; }
+            /* スマホのヒーローボタンを綺麗に横並びさせる */
+            .hero-btn-container {
+                display: flex;
+                justify-content: center;
+                gap: 8px;
+            }
+            .hero-btn-container .btn {
+                flex: 1;
+                font-size: 0.85rem;
+                padding: 12px 5px;
+                max-width: 160px;
+            }
             .section-title { font-size: 1.6rem; }
             .thought-img-col { min-height: 300px; }
         }
@@ -191,12 +208,13 @@
                 宮崎の夜に、上質な安心を。<br>
                 誠実な対応でお客様と愛車を守ります。
             </p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="tel:08096401844" class="btn btn-custom-gold btn-lg px-4 rounded-pill shadow">
-                    <i class="fas fa-phone-alt me-2"></i>電話で呼ぶ
+            <!-- ボタンコンテナ -->
+            <div class="hero-btn-container">
+                <a href="tel:08096401844" class="btn btn-custom-gold btn-lg rounded-pill shadow">
+                    <i class="fas fa-phone-alt me-1"></i>電話で呼ぶ
                 </a>
-                <a href="https://lin.ee/Qf1ngA4" class="btn btn-line btn-lg px-4 rounded-pill shadow">
-                    <i class="fab fa-line me-2"></i>LINEで依頼
+                <a href="https://lin.ee/Qf1ngA4" class="btn btn-line btn-lg rounded-pill shadow">
+                    <i class="fab fa-line me-1"></i>LINEで依頼
                 </a>
             </div>
         </div>
@@ -204,20 +222,20 @@
 
     <!-- Speedの約束 -->
     <section class="py-5 bg-white text-center border-bottom">
-        <div class="container">
+        <div class="container px-4">
             <h2 class="section-title h2">Speedの約束</h2>
             <div class="row g-4 mt-2">
-                <div class="col-md-4 px-4">
+                <div class="col-md-4">
                     <div class="mb-3 text-gold fs-2"><i class="fas fa-headset"></i></div>
                     <h3 class="h5 fw-bold mb-2">丁寧な電話対応</h3>
                     <p class="text-secondary small">ぶっきらぼうな対応はいたしません。到着時間や料金目安を明確にお伝えします。</p>
                 </div>
-                <div class="col-md-4 px-4 border-start border-end border-light">
+                <div class="col-md-4">
                     <div class="mb-3 text-gold fs-2"><i class="fas fa-shield-alt"></i></div>
                     <h3 class="h5 fw-bold mb-2">穏やかな安全運転</h3>
                     <p class="text-secondary small">急発進や急ブレーキのない滑らかな技術。車内でリラックスできる運転を追求します。</p>
                 </div>
-                <div class="col-md-4 px-4">
+                <div class="col-md-4">
                     <div class="mb-3 text-gold fs-2"><i class="fas fa-user-tie"></i></div>
                     <h3 class="h5 fw-bold mb-2">清潔感と身だしなみ</h3>
                     <p class="text-secondary small">ジャージ不可・正装着用。タバコの臭いにも配慮し、清潔なスタッフがお迎えします。</p>
@@ -226,7 +244,7 @@
         </div>
     </section>
 
-    <!-- 改良版LINE依頼案内（モバイル視認性重視） -->
+    <!-- 改良版LINE依頼案内 -->
     <section class="py-5 bg-light">
         <div class="container px-4">
             <div class="text-center mb-4">
@@ -235,8 +253,8 @@
             </div>
             
             <div class="line-guide-container">
-                <div class="line-guide-header text-center">
-                    <h4 class="h6 fw-bold mb-0">「3つの項目」を送るだけ</h4>
+                <div class="line-guide-header text-center text-dark fw-bold">
+                    「3つの項目」を送るだけ
                 </div>
                 <div class="line-step-list">
                     <div class="line-step-item">
@@ -258,12 +276,6 @@
                         <div class="line-step-text">
                             <strong>車種・ナンバー</strong>
                         </div>
-                    </div>
-                    <div class="mt-4 p-3 bg-light rounded-3 small">
-                        <p class="mb-0 text-secondary">
-                            <i class="fas fa-check-circle text-success me-1"></i>
-                            担当者が確認後、すぐに「到着予定時間」を返信いたします。
-                        </p>
                     </div>
                 </div>
             </div>
@@ -298,10 +310,10 @@
 
     <!-- 料金表 -->
     <section class="py-5 bg-white border-bottom">
-        <div class="container text-center">
+        <div class="container text-center px-4">
             <h2 class="section-title h2">ご利用料金</h2>
             <div class="row justify-content-center mb-4">
-                <div class="col-lg-6 col-md-8 px-4">
+                <div class="col-lg-6 col-md-8">
                     <div class="price-card shadow-sm">
                         <div class="price-header fw-bold">基本料金（税込）</div>
                         <div class="price-body py-4">
@@ -316,11 +328,11 @@
                     </div>
                 </div>
             </div>
-            <div class="alert alert-danger d-inline-block text-start shadow-sm small mb-4 mx-3" style="max-width: 600px;">
+            <div class="alert alert-danger d-inline-block text-start shadow-sm small mb-4" style="max-width: 600px;">
                 <i class="fas fa-exclamation-triangle me-2"></i><strong>キャンセルについて</strong><br>
                 現地到着後のお客様都合によるキャンセルは、初乗り料金（1,800円）を申し受けます。
             </div>
-            <div class="p-3 bg-light rounded d-inline-block w-100 mx-3" style="max-width: 500px;">
+            <div class="p-3 bg-light rounded d-inline-block w-100" style="max-width: 500px;">
                 <h4 class="h6 text-secondary mb-3 fw-bold">お支払い方法</h4>
                 <div class="d-flex justify-content-center align-items-center gap-4 text-dark">
                     <div class="text-center"><i class="fas fa-money-bill-wave fs-3 d-block mb-1 text-secondary"></i><span class="small fw-bold">現金</span></div>
@@ -335,9 +347,10 @@
 
     <!-- FAQ -->
     <section class="py-5 bg-white">
-        <div class="container">
+        <div class="container px-4">
             <h2 class="section-title h2 text-center w-100">よくあるご質問</h2>
-            <div class="accordion mx-auto px-2" id="faqAccordion" style="max-width: 750px;">
+            <div class="accordion mx-auto" id="faqAccordion" style="max-width: 750px;">
+                <!-- 初めて -->
                 <div class="accordion-item shadow-sm mb-3 border">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
@@ -345,12 +358,13 @@
                         </button>
                     </h3>
                     <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary" style="line-height: 1.8;">
+                        <div class="accordion-body text-secondary small" style="line-height: 1.8;">
                             <strong>A. 大歓迎です。丁寧にご案内いたします。</strong><br>
                             お電話の際に「今いる場所」をお伝えいただくだけで結構です。料金システムや到着予定時間など、オペレーターが分かりやすく説明しながら配車を調整いたします。安心してお任せください。
                         </div>
                     </div>
                 </div>
+                <!-- 長距離 -->
                 <div class="accordion-item shadow-sm mb-3 border">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
@@ -358,12 +372,13 @@
                         </button>
                     </h3>
                     <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary" style="line-height: 1.8;">
+                        <div class="accordion-body text-secondary small" style="line-height: 1.8;">
                             <strong>A. はい、もちろんです。実績も多数ございます。</strong><br>
                             近距離はもちろん、市外や県外への長距離送迎も喜んで承ります。あらかじめ目的地をお伝えいただければ、概算料金をご提示することも可能です。お気軽にご相談ください。
                         </div>
                     </div>
                 </div>
+                <!-- 支払い -->
                 <div class="accordion-item shadow-sm mb-3 border">
                     <h3 class="accordion-header">
                         <button class="accordion-button collapsed fw-bold py-3" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
@@ -371,7 +386,7 @@
                         </button>
                     </h3>
                     <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-secondary" style="line-height: 1.8;">
+                        <div class="accordion-body text-secondary small" style="line-height: 1.8;">
                             <strong>A. いいえ、各種クレジットカード決済も可能です。</strong><br>
                             Visa・Mastercard・JCB・AMEX・Dinersに対応しております。お車でそのままキャッシュレス決済が可能ですので、お手元に現金が不足している場合でも安心してご依頼いただけます。
                         </div>

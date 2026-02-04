@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miyazaki Freedom Drive | Premium Driving Agency SPEED</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #111;
+            --main-gold: #d4af37;
+            --text-white: #ffffff;
+            --text-gray: #ccc;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+        .container { padding: 20px; max-width: 600px; margin: auto; }
+        
+        /* Header & Hero */
+        header { text-align: center; padding: 40px 0; border-bottom: 1px solid var(--main-gold); }
+        .logo { font-size: 2.5rem; font-weight: bold; color: var(--main-gold); letter-spacing: 2px; }
+        .hero { text-align: center; padding: 40px 0; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        .hero p { color: var(--main-gold); font-size: 1.2rem; font-weight: bold; }
+
+        /* Alert Section */
+        .alert { background: #440000; border: 2px solid #ff0000; padding: 15px; border-radius: 8px; margin: 20px 0; }
+        .alert h2 { margin: 0; font-size: 1.2rem; color: #ff6666; }
+
+        /* Freedom Drive Concept */
+        .concept { background: #222; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .concept h3 { color: var(--main-gold); margin-top: 0; }
+
+        /* Pricing Table */
+        .pricing { width: 100%; border-collapse: collapse; margin: 30px 0; }
+        .pricing th, .pricing td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
+        .pricing th { color: var(--main-gold); }
+        .price-tag { font-size: 1.5rem; font-weight: bold; color: var(--main-gold); }
+
+        /* Benefits */
+        .benefit { display: flex; align-items: center; margin-bottom: 20px; }
+        .benefit i { font-size: 1.5rem; color: var(--main-gold); width: 40px; }
+        .benefit-text { flex: 1; }
+        .benefit-text b { display: block; font-size: 1.1rem; }
+
+        /* Fixed Footer Button */
+        .cta-container { position: fixed; bottom: 0; left: 0; width: 100%; background: rgba(17,17,17,0.95); padding: 15px 0; text-align: center; border-top: 1px solid var(--main-gold); }
+        .btn { display: inline-block; padding: 15px 30px; border-radius: 50px; font-weight: bold; text-decoration: none; font-size: 1.2rem; margin: 5px; transition: transform 0.2s; }
+        .btn-whatsapp { background-color: #25D366; color: white; }
+        .btn-whatsapp:active { transform: scale(0.95); }
+        .spacer { height: 120px; } /* Space for fixed button */
+
+        .note { font-size: 0.9rem; color: var(--text-gray); text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="logo">SPEED</div>
+        <div style="font-size: 0.8rem; letter-spacing: 3px;">DRIVING AGENCY MIYAZAKI</div>
+    </header>
+
+    <section class="hero">
+        <h1>Miyazaki Freedom Drive</h1>
+        <p>Don't wait for taxis. Drive your car to the city. We drive you back.</p>
+    </section>
+
+    <section class="alert">
+        <h2>⚠️ DRINKING? ZERO TOLERANCE</h2>
+        <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+            Drunk driving laws in Japan are <b>extremely strict</b>. Even one glass of beer leads to arrest and license revocation. Don't risk your trip.
+        </p>
+    </section>
+
+    <section class="concept">
+        <h3>How it Works</h3>
+        <p>1. Drive your rental car to Nishitachi (Downtown).</p>
+        <p>2. Enjoy local sake and food freely.</p>
+        <p>3. WhatsApp us. Our professional driver in a suit meets you and drives you & your car back to the hotel.</p>
+    </section>
+
+    <section>
+        <h3 style="text-align:center; color: var(--main-gold);">Flat Rate Pricing</h3>
+        <table class="pricing">
+            <tr>
+                <td>City Center Hotels</td>
+                <td class="price-tag">¥7,000</td>
+            </tr>
+            <tr>
+                <td>Seagaia Area</td>
+                <td class="price-tag">¥12,000</td>
+            </tr>
+            <tr>
+                <td>Aoshima Area</td>
+                <td class="price-tag">¥18,000</td>
+            </tr>
+            <tr>
+                <td>Additional</td>
+                <td>+ ¥1,000 / km</td>
+            </tr>
+        </table>
+        <p style="font-size: 0.8rem; color: var(--text-gray); text-align: center;">
+            *Includes: Driving + Parking Assistance + Insurance.
+        </p>
+    </section>
+
+    <section style="margin-top: 40px;">
+        <div class="benefit">
+            <i class="fas fa-parking"></i>
+            <div class="benefit-text">
+                <b>Parking Assistance</b>
+                We handle complex parking machines and pay the fee for you (reimbursed at end).
+            </div>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-user-tie"></i>
+            <div class="benefit-text">
+                <b>Suits & Professional</b>
+                High-end service by suit-wearing drivers. Clean and safe.
+            </div>
+        </div>
+        <div class="benefit">
+            <i class="fas fa-credit-card"></i>
+            <div class="benefit-text">
+                <b>No Cash Needed</b>
+                All major credit cards and Apple Pay accepted via Square.
+            </div>
+        </div>
+    </section>
+
+    <div class="note">
+        Pre-booking is highly recommended during the camp season.<br>
+        Booking Fee: ¥3,000 (via Square link) required to secure your driver.
+    </div>
+
+    <div class="spacer"></div>
+</div>
+
+<div class="cta-container">
+    <a href="https://wa.me/818096401844?text=Hi%20Speed!%20I%20want%20to%20book%20a%20Miyazaki%20Freedom%20Drive.%20Location:" class="btn btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> Book via WhatsApp
+    </a>
+</div>
+
+</body>
+</html>

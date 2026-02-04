@@ -3,153 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miyazaki Freedom Drive | Licensed Agency SPEED</title>
+    <title>Miyazaki Freedom Drive | SPEED Premium Driving Agency</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --main-navy: #001a3d;
-            --main-gold: #b38e44;
-            --bg-light: #f4f7f9;
-            --accent-red: #c53030;
-        }
-        body { margin: 0; padding: 0; font-family: "Helvetica Neue", Arial, sans-serif; background-color: #fff; color: #333; line-height: 1.6; }
+        :root { --main-navy: #001a3d; --main-gold: #b38e44; --bg-light: #f4f7f9; --accent-red: #c53030; }
+        body { margin: 0; padding: 0; font-family: "Helvetica Neue", Arial, sans-serif; background-color: #fff; color: #333; line-height: 1.4; }
         
+        /* Language Switcher */
+        .lang-switcher { background: #eee; text-align: center; padding: 10px 0; sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 15px; font-size: 0.8rem; }
+        .lang-switcher a { text-decoration: none; color: #666; font-weight: bold; padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .lang-switcher a.active { background: var(--main-navy); color: #fff; border-color: var(--main-navy); }
+
+        /* Sections */
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+
         /* Official Badge */
-        .official-badge { background: var(--main-navy); color: #fff; text-align: center; padding: 6px 0; font-size: 0.75rem; letter-spacing: 1px; }
+        .official-badge { background: var(--main-navy); color: #fff; text-align: center; padding: 6px 0; font-size: 0.7rem; letter-spacing: 1px; }
 
-        /* Hero Section with Night Overlay */
-        .hero {
-            background: linear-gradient(rgba(0,26,61,0.4), rgba(0,26,61,0.6)), url('hero.jpg.png');
-            background-size: cover; background-position: center;
-            height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
-            color: #fff; text-align: center; padding: 0 20px;
-        }
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 3px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; line-height: 1.5; border-bottom: 2px solid var(--main-gold); padding-bottom: 15px; }
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(0,26,61,0.5), rgba(0,26,61,0.5)), url('hero.jpg.png'); background-size: cover; background-position: center; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1rem; border-bottom: 2px solid var(--main-gold); padding-bottom: 10px; }
 
-        .container { max-width: 650px; margin: auto; padding: 40px 20px; }
+        .container { max-width: 600px; margin: auto; padding: 30px 15px; }
         
-        /* Nightlife Appeal Section */
-        .nightlife-appeal { text-align: center; margin: 40px 0; padding: 30px; background: var(--main-navy); color: #fff; border-radius: 15px; }
-        .nightlife-appeal h2 { color: var(--main-gold); font-size: 1.4rem; margin-top: 0; }
-        .nightlife-appeal p { font-size: 0.95rem; opacity: 0.9; }
-
-        /* The System: One-way service */
-        .section-title { text-align: center; font-size: 1.6rem; color: var(--main-navy); margin-bottom: 25px; font-weight: bold; }
-        .service-flow { background: var(--bg-light); padding: 35px 20px; border-radius: 15px; margin: 30px 0; border: 1px solid #e1e8ed; }
-        .flow-grid { display: grid; grid-template-columns: 1fr 40px 1fr; align-items: center; text-align: center; }
-        .flow-item b { display: block; color: var(--main-gold); font-size: 1.1rem; margin-bottom: 10px; }
-        .flow-item span { font-size: 0.9rem; }
-
-        /* Parking Concierge */
-        .parking-box { border: 2px dashed var(--main-gold); padding: 25px; border-radius: 12px; margin: 40px 0; background: #fffdf5; display: flex; align-items: flex-start; gap: 15px; }
-        .parking-box i { font-size: 2rem; color: var(--main-navy); }
-        .parking-box h3 { margin: 0 0 5px 0; color: var(--main-navy); font-size: 1.1rem; }
-
         /* Alert Box */
-        .alert-box { border-left: 5px solid var(--accent-red); background: #fff5f5; padding: 20px; margin-bottom: 40px; }
-        .alert-box b { color: var(--accent-red); display: block; margin-bottom: 5px; }
+        .alert-box { border-left: 5px solid var(--accent-red); background: #fff5f5; padding: 15px; margin-bottom: 30px; font-size: 0.9rem; }
+        .alert-box b { color: var(--accent-red); display: block; }
 
         /* Pricing Table */
-        .pricing-table { border: 2px solid var(--main-navy); border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-        .pricing-header { background: var(--main-navy); color: #fff; padding: 20px; text-align: center; font-weight: bold; font-size: 1.1rem; }
-        .price-row { display: flex; justify-content: space-between; padding: 18px 25px; border-bottom: 1px solid #eee; background: #fff; }
-        .price-row:last-child { border-bottom: none; }
-        .area-label { font-weight: bold; }
-        .price-val { font-weight: bold; color: var(--main-gold); font-size: 1.3rem; }
+        .pricing-table { border: 2px solid var(--main-navy); border-radius: 10px; overflow: hidden; margin: 20px 0; }
+        .pricing-header { background: var(--main-navy); color: #fff; padding: 15px; text-align: center; font-weight: bold; }
+        .price-row { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #eee; background: #fff; align-items: center; }
+        .price-val { font-weight: bold; color: var(--main-gold); font-size: 1.2rem; }
 
-        /* Driver Profile */
-        .driver-card { display: flex; align-items: center; gap: 25px; margin-top: 60px; padding: 25px; border-radius: 20px; background: #fff; border: 1px solid #eee; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-        .driver-img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--main-gold); flex-shrink: 0; }
-        .driver-msg { font-size: 0.95rem; }
+        /* Flow Grid */
+        .service-flow { background: var(--bg-light); padding: 25px 15px; border-radius: 12px; margin: 20px 0; text-align: center; }
+        .flow-grid { display: grid; grid-template-columns: 1fr 30px 1fr; align-items: center; font-size: 0.85rem; }
+        .flow-item b { display: block; color: var(--main-gold); margin-bottom: 5px; }
+
+        /* Driver Card */
+        .driver-card { display: flex; align-items: center; gap: 15px; padding: 20px; border-radius: 15px; background: #fff; border: 1px solid #eee; margin-top: 30px; }
+        .driver-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--main-gold); }
+        .driver-msg { font-size: 0.85rem; }
 
         /* Sticky Footer */
-        .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 15px 0; text-align: center; z-index: 100; }
-        .btn-wa { background: #25d366; color: #fff; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 12px; box-shadow: 0 8px 20px rgba(37,211,102,0.4); }
+        .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 12px 0; text-align: center; z-index: 100; }
+        .btn-wa { background: #25d366; color: #fff; padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37,211,102,0.3); }
 
-        .spacer { height: 120px; }
+        .spacer { height: 100px; }
     </style>
 </head>
 <body>
 
-    <div class="official-badge">OFFICIAL LICENSED AGENCY #477 | MIYAZAKI CITY GOVERNMENT</div>
+    <div class="lang-switcher">
+        <a href="javascript:void(0)" onclick="switchLang('en')" id="btn-en" class="active">English</a>
+        <a href="javascript:void(0)" onclick="switchLang('ko')" id="btn-ko">한국어</a>
+        <a href="javascript:void(0)" onclick="switchLang('zh')" id="btn-zh">繁體中文</a>
+    </div>
 
+    <div class="official-badge">OFFICIAL LICENSED DRIVING AGENCY #477 | MIYAZAKI CITY</div>
+
+    <!-- HERO -->
     <div class="hero">
-        <div style="font-size: 0.9rem; letter-spacing: 5px; margin-bottom: 15px; font-weight: bold; color: var(--main-gold);">SPEED LUXURY TRANSPORT</div>
-        <h1>Own the Night.</h1>
-        <p>From Nishitachi neons to your hotel door.<br>Enjoy Miyazaki's night in your own car.</p>
+        <div style="font-size: 0.7rem; letter-spacing: 4px; margin-bottom: 10px; color: var(--main-gold);">SPEED PREMIUM DRIVING</div>
+        <h1 id="hero-title">Freedom Drive</h1>
+        <p id="hero-sub">Your Rental Car. Our Pro Driver.</p>
     </div>
 
     <div class="container">
-        
-        <div class="nightlife-appeal">
-            <h2>Experience Miyazaki's Nightlife</h2>
-            <p>Miyazaki is famous for its world-class Shochu, Wagyu beef, and the vibrant neon streets of <b>Nishitachi</b>. Don't let taxi shortages limit your experience. With <b>Speed</b>, you have the ultimate freedom.</p>
-        </div>
 
-        <div class="alert-box">
-            <b>⚠️ DRUNK DRIVING WARNING:</b>
-            Japan has zero tolerance. Arrest, heavy fines, and immediate license revocation apply even for one drink. Be smart, stay safe.
-        </div>
-
-        <div class="section-title">The One-Way Return Service</div>
-        <div class="service-flow">
-            <div class="flow-grid">
-                <div class="flow-item">
-                    <b>EVENING</b>
-                    <i class="fas fa-car" style="font-size: 1.8rem; color: var(--main-navy); margin-bottom: 10px;"></i><br>
-                    <span><b>You</b> drive your rental car to downtown.</span>
-                </div>
-                <div style="font-size: 1.8rem; color: #ccc;"><i class="fas fa-arrow-right"></i></div>
-                <div class="flow-item">
-                    <b>NIGHT</b>
-                    <i class="fas fa-user-tie" style="font-size: 1.8rem; color: var(--main-gold); margin-bottom: 10px;"></i><br>
-                    <span><b>We</b> drive you back in your car. (One-way)</span>
+        <!-- ENGLISH SECTION -->
+        <div id="lang-en" class="lang-section active">
+            <div class="alert-box">
+                <b>⚠️ ZERO TOLERANCE:</b>
+                Drunk driving in Japan leads to arrest and license revocation. Don't wait for taxis. Enjoy your night and we'll drive you back safely.
+            </div>
+            <div class="service-flow">
+                <div class="flow-grid">
+                    <div class="flow-item"><b>EVENING</b><span>You drive to downtown.</span></div>
+                    <div><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-item"><b>NIGHT</b><span>We drive you & your car back.</span></div>
                 </div>
             </div>
-            <p style="text-align: center; font-size: 0.8rem; color: #777; margin-top: 20px;">*Our support car follows behind to pick up our driver.</p>
+            <h3 style="text-align: center; color: var(--main-navy);">Fixed Rates (One-Way)</h3>
         </div>
 
-        <div class="parking-box">
-            <i class="fas fa-parking"></i>
-            <div>
-                <h3>Parking Assistance Included</h3>
-                <p style="margin: 0; font-size: 0.9rem;">
-                    Unsure where to park? Just WhatsApp us when you arrive downtown. We'll guide you to the safest spot and assist with the parking machine.
-                </p>
+        <!-- KOREAN SECTION -->
+        <div id="lang-ko" class="lang-section">
+            <div class="alert-box">
+                <b>⚠️ 음주운전 절대 금지:</b>
+                일본의 음주운전 처벌은 매우 엄격합니다. 맥주 한 잔도 구속 대상입니다. 택시를 기다리지 마시고, SPEED 대리운전으로 안전하게 귀가하세요.
             </div>
+            <div class="service-flow">
+                <div class="flow-grid">
+                    <div class="flow-item"><b>저녁</b><span>렌터카로 시내 이동</span></div>
+                    <div><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-item"><b>밤</b><span>대리운전으로 호텔 귀가</span></div>
+                </div>
+            </div>
+            <h3 style="text-align: center; color: var(--main-navy);">구간별 정찰제 요금 (편도)</h3>
         </div>
 
-        <div class="section-title">Flat Rate Pricing</div>
+        <!-- CHINESE SECTION -->
+        <div id="lang-zh" class="lang-section">
+            <div class="alert-box">
+                <b>⚠️ 嚴禁酒後駕車:</b>
+                日本對酒駕採取「零容忍」政策。即使喝一杯啤酒也會被逮捕。無需苦等計程車，讓 SPEED 專業代駕送您與愛車安全回飯店。
+            </div>
+            <div class="service-flow">
+                <div class="flow-grid">
+                    <div class="flow-item"><b>傍晚</b><span>自行開車前往市中心</span></div>
+                    <div><i class="fas fa-arrow-right"></i></div>
+                    <div class="flow-item"><b>深夜</b><span>由我們代駕送您回飯店</span></div>
+                </div>
+            </div>
+            <h3 style="text-align: center; color: var(--main-navy);">固定收費標準 (單程)</h3>
+        </div>
+
+        <!-- PRICING TABLE (SHARED) -->
         <div class="pricing-table">
-            <div class="pricing-header">One-Way from Downtown to:</div>
-            <div class="price-row"><span class="area-label">City Center Hotels</span><span class="price-val">¥7,000</span></div>
-            <div class="price-row"><span class="area-label">Seagaia Area</span><span class="price-val">¥12,000</span></div>
-            <div class="price-row"><span class="area-label">Aoshima Area</span><span class="price-val">¥18,000</span></div>
-            <div class="price-row"><span class="area-label">Other Areas</span><span class="price-val">+ ¥1,000 / km</span></div>
+            <div class="pricing-header">From Miyazaki Downtown to:</div>
+            <div class="price-row"><span>City Center Hotels</span><span class="price-val">¥7,000</span></div>
+            <div class="price-row"><span>Seagaia Area</span><span class="price-val">¥12,000</span></div>
+            <div class="price-row"><span>Aoshima Area</span><span class="price-val">¥18,000</span></div>
+            <div class="price-row"><span>Other Areas</span><span class="price-val">+ ¥1,000/km</span></div>
         </div>
-        <p style="font-size: 0.8rem; text-align: center; color: #777; margin-top: 15px;">*No midnight surcharges. Includes parking payment assistance.</p>
 
         <div class="driver-card">
             <img src="driver.jpg.png" alt="Speed Driver" class="driver-img">
             <div class="driver-msg">
-                <b>"Your luxury night deserves a professional return."</b><br>
-                Whether you're here for golf, surf, or the spring camp, we ensure you return home in the comfort of your own car.
+                <b id="driver-name">Licensed Professional Driver</b><br>
+                <span id="driver-txt">"Enjoy Miyazaki's Sake and nightlife. We'll handle the driving. Suits worn, card payment OK."</span>
             </div>
         </div>
 
-        <div style="text-align: center; font-size: 0.8rem; color: #999; margin: 40px 0;">
-            *Booking Fee: ¥3,000 (via Square link) required to secure your spot.
+        <div style="text-align: center; font-size: 0.8rem; color: #999; margin: 30px 0;">
+            *Booking Fee: ¥3,000 (via Square link) required to secure.
         </div>
-
         <div class="spacer"></div>
     </div>
 
     <div class="footer-cta">
-        <a href="https://wa.me/818096401844?text=Hi%20Speed!%20I'm%20at%20[Location]%20and%20need%20a%20ride%20to%20[Hotel].%20Car:" class="btn-wa">
-            <i class="fab fa-whatsapp"></i> Book via WhatsApp
+        <a id="wa-link" href="https://wa.me/818096401844?text=Hi%20Speed!%20I'm%20at%20[Location]%20and%20need%20a%20ride." class="btn-wa">
+            <i class="fab fa-whatsapp"></i> <span id="btn-text">Book via WhatsApp</span>
         </a>
     </div>
 
+    <script>
+        function switchLang(lang) {
+            // Hide all sections
+            document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
+            
+            // Show selected section
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+
+            // Update shared elements
+            const t = {
+                en: { h1: "Freedom Drive", sub: "Your Rental Car. Our Pro Driver.", btn: "Book via WhatsApp", driver: '"Enjoy Miyazaki\'s nightlife. We handle the driving."', wa: "Hi Speed! I need a driver." },
+                ko: { h1: "미야자키 프리덤 드라이브", sub: "렌터카는 그대로, 운전은 전문가에게.", btn: "WhatsApp으로 예약하기", driver: '"미야자키의 술과 밤을 즐기세요. 운전은 저희가 책임집니다."', wa: "안녕하세요! 대리운전 예약하고 싶습니다." },
+                zh: { h1: "宮崎自由駕駛服務", sub: "您的租車，由我們專業代駕。", btn: "透過 WhatsApp 預約", driver: '"盡情享受宮崎美酒與之夜。由我們為您專業代駕。"', wa: "您好！我想預約代駕服務。" }
+            };
+            
+            document.getElementById('hero-title').innerText = t[lang].h1;
+            document.getElementById('hero-sub').innerText = t[lang].sub;
+            document.getElementById('btn-text').innerText = t[lang].btn;
+            document.getElementById('driver-txt').innerText = t[lang].driver;
+            document.getElementById('wa-link').href = "https://wa.me/818096401844?text=" + encodeURIComponent(t[lang].wa);
+        }
+    </script>
 </body>
 </html>

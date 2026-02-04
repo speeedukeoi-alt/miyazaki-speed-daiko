@@ -11,13 +11,13 @@
         
         /* Lang Switcher */
         .lang-switcher { background: #fff; text-align: center; padding: 12px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 8px; border-bottom: 1px solid #eee; }
-        .lang-switcher a { text-decoration: none; color: #666; font-weight: bold; padding: 6px 12px; border: 1px solid #ccc; border-radius: 20px; font-size: 0.75rem; }
+        .lang-switcher a { text-decoration: none; color: #666; font-weight: bold; padding: 6px 15px; border: 1px solid #ccc; border-radius: 20px; font-size: 0.8rem; }
         .lang-switcher a.active { background: var(--main-navy); color: #fff; border-color: var(--main-navy); }
 
         .official-badge { background: var(--main-navy); color: #fff; text-align: center; padding: 6px 0; font-size: 0.7rem; letter-spacing: 1px; }
 
         .hero { background: linear-gradient(rgba(0,26,61,0.5), rgba(0,26,61,0.5)), url('hero.jpg.png'); background-size: cover; background-position: center; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
-        .hero h1 { font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
         .hero p { font-size: 1.1rem; border-bottom: 2px solid var(--main-gold); padding-bottom: 10px; }
 
         .container { max-width: 650px; margin: auto; padding: 40px 20px; }
@@ -34,9 +34,10 @@
         .step-title { font-weight: bold; font-size: 1.1rem; color: var(--main-gold); }
         .step-desc { font-size: 0.9rem; color: #555; }
 
-        /* Parking Cashless Box */
-        .parking-support { background: #fffdf0; border: 2px dashed var(--main-gold); padding: 20px; border-radius: 12px; margin: 30px 0; }
-        .parking-support h3 { margin-top: 0; color: var(--main-navy); font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+        /* Advantage Items */
+        .advantage-box { background: var(--bg-light); padding: 25px; border-radius: 12px; margin-bottom: 40px; }
+        .advantage-item { margin-bottom: 15px; display: flex; gap: 15px; align-items: flex-start; }
+        .advantage-item i { color: var(--main-gold); font-size: 1.2rem; margin-top: 5px; }
 
         /* Pricing Card */
         .pricing-card { border: 2px solid var(--main-navy); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); margin: 30px 0; }
@@ -44,14 +45,15 @@
         .price-row { display: flex; justify-content: space-between; padding: 15px 25px; border-bottom: 1px solid #eee; background: #fff; font-weight: bold; align-items: center; }
         .price-val { color: var(--main-gold); font-size: 1.3rem; }
 
-        /* Owner Message - Heart of Speed */
-        .owner-wish { background: var(--main-navy); color: #fff; padding: 40px 30px; border-radius: 20px; margin-top: 60px; text-align: center; position: relative; }
-        .owner-wish h2 { color: var(--main-gold); font-size: 1.4rem; margin-top: 0; }
+        /* Owner Message */
+        .owner-wish { background: var(--main-navy); color: #fff; padding: 40px 30px; border-radius: 20px; margin-top: 60px; text-align: center; }
+        .owner-wish h2 { color: var(--main-gold); font-size: 1.3rem; margin-top: 0; }
         .owner-wish p { font-style: italic; line-height: 1.8; font-size: 0.95rem; }
-        .owner-wish img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--main-gold); margin-bottom: 20px; }
+        .owner-wish img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--main-gold); margin-bottom: 15px; }
 
+        /* Footer */
         .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 15px 0; text-align: center; z-index: 100; }
-        .btn-wa { background: #25d366; color: #fff; padding: 16px 40px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(37,211,102,0.4); }
+        .btn-wa { background: #25d366; color: #fff; padding: 16px 40px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(37,211,102,0.4); }
 
         .spacer { height: 120px; }
         .alert { background: #fff5f5; border: 1px solid #feb2b2; padding: 15px; border-radius: 8px; color: var(--accent-red); margin-bottom: 30px; font-weight: bold; font-size: 0.85rem; }
@@ -68,124 +70,130 @@
     <div class="official-badge">OFFICIAL LICENSED DRIVING AGENCY #477 | MIYAZAKI CITY GOVERNMENT</div>
 
     <div class="hero">
-        <div style="font-size: 0.7rem; letter-spacing: 5px; margin-bottom: 15px; color: var(--main-gold); font-weight: bold;">SPEED PREMIUM DRIVING AGENCY</div>
+        <div style="font-size: 0.8rem; letter-spacing: 5px; margin-bottom: 15px; color: var(--main-gold); font-weight: bold;">SPEED PREMIUM DRIVING & CONCIERGE</div>
         <h1 id="hero-title">Freedom Drive</h1>
-        <p id="hero-sub">We drive you and your car to your hotel.</p>
+        <p id="hero-sub">Don't wait for taxis. Use your car. Enjoy the night.</p>
     </div>
 
     <div class="container">
 
+        <!-- WHY US SECTION -->
+        <div class="section-title" id="why-title">Why Hire SPEED?</div>
+        <div class="advantage-box" id="advantage-content">
+            <div class="advantage-item">
+                <i class="fas fa-check-circle"></i>
+                <div><b>More than just a driver:</b> We are your local partners. Feel free to consult us about anything to make your trip better.</div>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-check-circle"></i>
+                <div><b>Your car, your limousine:</b> Travel in the comfort of your own car with a professional driver in a suit.</div>
+            </div>
+            <div class="advantage-item">
+                <i class="fas fa-check-circle"></i>
+                <div><b>Cashless Parking Support:</b> No cash for the parking machine? We pay for you and add it to your credit card bill.</div>
+            </div>
+        </div>
+
         <!-- ENGLISH CONTENT -->
         <div id="content-en" class="lang-content active">
-            <div class="alert">⚠️ ZERO TOLERANCE: Drunk driving in Japan leads to arrest. Even one beer is enough. Don't risk it.</div>
+            <div class="alert">⚠️ ZERO TOLERANCE: Drunk driving in Japan results in immediate arrest. Don't risk it.</div>
             
-            <div class="section-title">Unlimited Freedom in Miyazaki</div>
-            <p>Miyazaki is a beautiful place for driving, dining, and premium Sake. Don't let the "taxi shortage" ruin your night. With <b>SPEED</b>, you can drive your rental car to downtown, enjoy the vibrant nightlife, and have a <b>professional private driver</b> take you back safely in your own car whenever you're ready.</p>
+            <div class="section-title">What is a Driving Agency?</div>
+            <p>It's a unique Japanese service called "Daikou." If you drive to a restaurant and drink, a professional driver will meet you and **drive you to your hotel in your own car.**</p>
 
             <div class="section-title">Step-by-Step Guide</div>
             <div class="step-container">
                 <div class="step-item">
                     <span class="step-time">Daytime</span>
-                    <span class="step-title">1. Book via WhatsApp</span>
-                    <div class="step-desc">Secure your driver. Pay ¥3,000 deposit via Square link.</div>
+                    <span class="step-title">1. Consult & Book</span>
+                    <div class="step-desc">Book via WhatsApp. Pay ¥3,000 deposit via Square link to secure your driver.</div>
                 </div>
                 <div class="step-item">
-                    <span class="step-time">19:00 (Evening)</span>
+                    <span class="step-time">Evening</span>
                     <span class="step-title">2. Drive Out & Parking</span>
-                    <div class="step-desc">Drive your car to downtown (Nishitachi). Not sure where to park? Just WhatsApp us, we'll guide you to the safest spot.</div>
+                    <div class="step-desc">Drive to downtown. Not sure where to park? WhatsApp us! We'll guide you to the safest spot.</div>
                 </div>
                 <div class="step-item">
-                    <span class="step-time">Night (After Drinking)</span>
-                    <span class="step-title">3. Safe Return to Hotel</span>
-                    <div class="step-desc">We meet at your car. Pro driver drives <b>you and your car to your hotel.</b> (Our support car follows).</div>
+                    <span class="step-time">After Drinking</span>
+                    <span class="step-title">3. Safe Drive to Hotel</span>
+                    <div class="step-desc">Our pro driver drives <b>you and your car to your hotel.</b> (Support car follows).</div>
                 </div>
-            </div>
-
-            <div class="parking-support">
-                <h3><i class="fas fa-credit-card"></i> Cashless Parking Support</h3>
-                <p style="font-size: 0.9rem; margin: 0;">No Japanese Yen (Cash) for the parking machine? No problem. <b>We pay the cash for you at the gate,</b> and you can simply pay us later by credit card along with our service fee.</p>
             </div>
         </div>
 
         <!-- KOREAN CONTENT -->
         <div id="content-ko" class="lang-content">
-            <div class="alert">⚠️ 음주운전 절대 금지: 일본에서는 맥주 한 잔도 구속 및 면허 취소 대상입니다.</div>
+            <div class="alert">⚠️ 음주운전 절대 금지: 일본에서는 맥주 한 잔도 즉시 체포 대상입니다.</div>
 
-            <div class="section-title">미야자키에서의 완벽한 자유</div>
-            <p>미야자키의 훌륭한 골프 코스와 맛있는 밤을 택시 대란 때문에 포기하지 마세요. 렌터카로 자유롭게 시내에 나오시고, 돌아가실 때는 <b>SPEED 전문가</b>에게 맡기세요. 본인의 차로 편안하게, 원하는 시간에 호텔까지 모셔다 드립니다.</p>
+            <div class="section-title">미야자키를 만끽하는 최고의 방법</div>
+            <p>미야자키의 맛있는 술과 밤을 택시 대란 때문에 포기하지 마세요. 렌터카로 자유롭게 시내에 나오시고, 돌아가실 때는 <b>SPEED 전용 기사</b>에게 맡기세요. 본인의 차로 편안하게 호텔까지 모셔다 드립니다.</p>
 
             <div class="section-title">이용 방법</div>
             <div class="step-container">
                 <div class="step-item">
                     <span class="step-time">낮 시간</span>
-                    <span class="step-title">1. WhatsApp으로 예약</span>
-                    <div class="step-desc">전용 기사를 미리 확보하세요. 3,000엔 예약금을 결제합니다.</div>
+                    <span class="step-title">1. 상담 및 예약</span>
+                    <div class="step-desc">WhatsApp으로 문의하세요. 예약금 3,000엔 결제 시 전용 기사가 배정됩니다.</div>
                 </div>
                 <div class="step-item">
-                    <span class="step-time">19:00 (저녁)</span>
-                    <span class="step-title">2. 시내 이동 및 주차 지원</span>
-                    <div class="step-desc">렌터카로 시내(니시타치)로 오세요. 주차장 위치나 이용법이 고민이라면 WhatsApp으로 언제든 문의하세요.</div>
+                    <span class="step-time">저녁 시간</span>
+                    <span class="step-title">2. 시내 이동 및 주차</span>
+                    <div class="step-desc">렌터카로 시내 이동. 주차장 위치나 이용법이 고민이라면 언제든 문의하세요. 안내해 드립니다.</div>
                 </div>
                 <div class="step-item">
-                    <span class="step-time">밤 (음주 후)</span>
-                    <span class="step-title">3. 호텔로 안전하게 귀가</span>
-                    <div class="step-desc">주차장에서 합류합니다. 프로 기사가 <b>고객님의 차를 직접 운전해 호텔까지</b> 모십니다.</div>
+                    <span class="step-time">음주 후</span>
+                    <span class="step-title">3. 호텔로 안전 귀가</span>
+                    <div class="step-desc">전문 기사가 <b>고객님의 차를 직접 운전해 호텔까지</b> 모십니다. (수행 차량 동행)</div>
                 </div>
-            </div>
-
-            <div class="parking-support">
-                <h3><i class="fas fa-wallet"></i> 주차비 현금이 없으신가요?</h3>
-                <p style="font-size: 0.9rem; margin: 0;">일본 주차 기계는 현금만 가능한 경우가 많습니다. 걱정 마세요. <b>기사가 현금으로 먼저 결제해 드리고,</b> 나중에 대리운전 요금과 함께 카드로 한꺼번에 결제하시면 됩니다.</p>
             </div>
         </div>
 
         <!-- CHINESE CONTENT -->
         <div id="content-zh" class="lang-content">
-            <div class="alert">⚠️ 嚴禁酒後駕車: 日本法律極其嚴格，喝一杯啤酒也會被逮捕。</div>
+            <div class="alert">⚠️ 嚴禁酒駕: 在日本喝一杯啤酒也會被逮捕。請勿以身試法。</div>
 
-            <div class="section-title">在宮崎享受無限自由</div>
-            <p>別讓計程車短缺限制您的美好夜晚。與其苦等，不如自行駕駛租車前往市區，盡情品味宮崎的美酒與美食。<b>SPEED 專業代駕</b>隨時待命，為您駕駛座車安全返回飯店，讓您的旅程發揮最大價值。</p>
+            <div class="section-title">享受無拘無束的宮崎之夜</div>
+            <p>別讓計程車不足限制您的行程。自行開租車前往市區，盡情品味宮崎美食。<b>SPEED 專業私人司機</b>隨時待命，為您駕駛座車安全返回飯店，讓您的旅程發揮最大價值。</p>
 
             <div class="section-title">服務流程</div>
             <div class="step-container">
                 <div class="step-item">
                     <span class="step-time">白天</span>
-                    <span class="step-title">1. 透過 WhatsApp 預約</span>
-                    <div class="step-desc">提前預約確保司機。支付 3,000 日圓預約金。</div>
+                    <span class="step-title">1. 諮詢與預約</span>
+                    <div class="step-desc">透過 WhatsApp 聯繫。支付 3,000 日圓預約金後即可確保司機。</div>
                 </div>
                 <div class="step-item">
-                    <span class="step-time">19:00 (傍晚)</span>
-                    <span class="step-title">2. 開車前往與停車引導</span>
-                    <div class="step-desc">自行開車前往市中心（西橘通）。若不確定停車場位置，我們將為您提供詳細引導。</div>
+                    <span class="step-time">傍晚</span>
+                    <span class="step-title">2. 停車引導</span>
+                    <div class="step-desc">自行開車前往市中心。不確定停車位置？透過 WhatsApp 聯繫，我們將指引您。</div>
                 </div>
                 <div class="step-item">
-                    <span class="step-time">深夜 (飲酒後)</span>
+                    <span class="step-time">深夜</span>
                     <span class="step-title">3. 安全返回飯店</span>
-                    <div class="step-desc">在停車處會合。專業司機將<b>駕駛您的座車送您回飯店</b>（隨行車將緊隨其後）。</div>
+                    <div class="step-desc">專業司機為您<b>駕駛座車返回飯店。</b>（隨行車將緊隨其後）</div>
                 </div>
-            </div>
-
-            <div class="parking-support">
-                <h3><i class="fas fa-coins"></i> 沒有日圓現金支付停車費？</h3>
-                <p style="font-size: 0.9rem; margin: 0;">日本大部分停車機僅收現金。別擔心，<b>我們將代您支付現金，</b>您可以最後與代駕費用一併刷卡支付。讓您享受全程無現金的便利。</p>
             </div>
         </div>
 
         <!-- SHARED PRICING -->
+        <div class="section-title" id="price-title">One-Way Fixed Rates</div>
         <div class="pricing-card">
-            <div class="pricing-header">One-Way Fixed Rates (All Areas OK)</div>
-            <div class="price-row"><span>Miyazaki City Center Hotels</span><span class="price-val">¥7,000</span></div>
+            <div class="pricing-header">From Downtown Miyazaki to:</div>
+            <div class="price-row"><span>City Center Hotels</span><span class="price-val">¥7,000</span></div>
             <div class="price-row"><span>Seagaia Area</span><span class="price-val">¥12,000</span></div>
             <div class="price-row"><span>Aoshima Area</span><span class="price-val">¥18,000</span></div>
             <div class="price-row"><span>Other Areas</span><span class="price-val">+ ¥1,000 / km</span></div>
         </div>
-        <p style="text-align: center; color: #777; font-size: 0.8rem;">*Service for standard passenger cars only (up to 10 seats).<br>*Actual parking fee will be added to the final bill.</p>
+        <p style="text-align: center; color: #777; font-size: 0.8rem;" id="disclaimer">
+            *Service for standard passenger cars only (up to 10 seats).<br>
+            *Actual parking fee will be added to the final bill.
+        </p>
 
-        <!-- OWNER'S MESSAGE: THE HEART OF SPEED -->
+        <!-- OWNER'S MESSAGE -->
         <div class="owner-wish">
             <img src="driver.jpg.png" alt="Speed Owner">
             <h2 id="wish-title">Our Wish for You</h2>
-            <p id="wish-text">"We want you to fall in love with Miyazaki—its Sake, its food, and its warm atmosphere. Our mission is more than just driving; we want to be the infrastructure that makes your trip happy and worry-free. Your safety and joy are our greatest rewards."</p>
+            <p id="wish-text">"We want you to fall in love with Miyazaki. Our mission is to be the essential infrastructure that makes your trip happy and worry-free. No request is too small. We look forward to hearing from you!"</p>
             <div style="font-weight: bold; margin-top: 15px;">- Driving Agency SPEED</div>
         </div>
 
@@ -194,7 +202,7 @@
 
     <div class="footer-cta">
         <a id="wa-link" href="https://wa.me/818096401844?text=Hi%20Speed!%20I'm%20at%20[Location]%20and%20need%20a%20ride." class="btn-wa">
-            <i class="fab fa-whatsapp"></i> <span id="btn-text">Book via WhatsApp</span>
+            <i class="fab fa-whatsapp"></i> <span id="btn-text">Consult/Book via WhatsApp</span>
         </a>
     </div>
 
@@ -206,15 +214,20 @@
             document.getElementById('btn-' + lang).classList.add('active');
 
             const t = {
-                en: { h1: "Freedom Drive", sub: "We drive you and your car to your hotel.", btn: "Book via WhatsApp", wish_h: "Our Wish for You", wish_p: '"We want you to fall in love with Miyazaki—its Sake, its food, and its warm atmosphere. Our mission is more than just driving; we want to be the infrastructure that makes your trip happy and worry-free. Your safety and joy are our greatest rewards."' },
-                ko: { h1: "프리덤 드라이브", sub: "고객님의 차로 호텔까지 모셔다 드립니다.", btn: "WhatsApp으로 예약하기", wish_h: "여러분의 행복을 위한 SPEED의 마음", wish_p: '"미야자키의 술과 음식, 그리고 따뜻한 분위기를 마음껏 즐기시길 바랍니다. 저희의 사명은 단순한 운전 이상입니다. 여러분의 여행이 행복하고 걱정 없도록 돕는 든든한 교통망이 되겠습니다. 여러분의 기쁨이 저희의 가장 큰 보람입니다."' },
-                zh: { h1: "自由駕駛服務", sub: "為您駕駛座車安全返回飯店。", btn: "透過 WhatsApp 預約", wish_h: "我們對您的初衷", wish_p: '"我們衷心希望您愛上宮崎的美酒、美食與人文氣息。我們的使命不僅僅是代駕，更是成為讓您的旅程既快樂又無憂的強大後盾。您的平安與快樂，就是我們最大的成就。"' }
+                en: { h1: "Freedom Drive", sub: "We drive you and your car to your hotel.", btn: "Consult/Book via WhatsApp", why: "Why Hire SPEED?", why_c: '<div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>More than just a driver:</b> We are your local partners. Feel free to consult us about anything.</div></div><div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>Your car, your limousine:</b> Travel in the comfort of your own car with a pro driver.</div></div><div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>Cashless Parking:</b> We pay cash for the machine and add it to your card bill.</div></div>', wish_h: "Our Wish for You", wish_p: '"We want you to fall in love with Miyazaki. Our mission is to be the essential infrastructure that makes your trip happy and worry-free. No request is too small. We look forward to hearing from you!"', wa: "Hi Speed! I have a question/reservation request.", ptitle: "One-Way Fixed Rates", disc: "*Service for standard passenger cars only (up to 10 seats).<br>*Actual parking fee will be added to the final bill." },
+                ko: { h1: "프리덤 드라이브", sub: "고객님의 차로 호텔까지 모셔다 드립니다.", btn: "상담 및 예약 (WhatsApp)", why: "왜 SPEED인가?", why_c: '<div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>기사 이상의 파트너:</b> 현지 전문가로서 여행을 돕겠습니다. 무엇이든 편하게 상담하세요.</div></div><div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>나만의 리무진:</b> 정장 차림의 프로 기사가 고객님의 차로 편안하게 모십니다.</div></div><div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>주차비 대납:</b> 현금만 가능한 주차기 요금을 저희가 먼저 내고 나중에 카드로 청구해 드립니다.</div></div>', wish_h: "SPEED의 소망", wish_p: '"여러분이 미야자키를 더 사랑하게 되길 바랍니다. 저희의 사명은 여러분의 여행을 행복하고 걱정 없게 만드는 교통 인프라가 되는 것입니다. 어떤 사소한 요청도 환영합니다!"', wa: "안녕하세요! 궁금한 점이나 예약 문의가 있습니다.", ptitle: "구간별 정찰제 요금", disc: "*일반 승용차(10인승 이하)만 서비스 이용이 가능합니다.<br>*주차비 실비는 최종 요금에 합산됩니다." },
+                zh: { h1: "自由駕駛服務", sub: "為您駕駛座車安全返回飯店。", btn: "諮詢及預約 (WhatsApp)", why: "為什麼選擇 SPEED?", why_c: '<div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>不僅是司機：</b> 身為您的在地夥伴，有任何問題請隨時諮詢。</div></div><div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>專屬移動空間：</b> 專業司機為您駕駛座車，提供最舒適的回程。</div></div><div class="advantage-item"><i class="fas fa-check-circle"></i><div><b>代繳停車費：</b> 我們可代為支付僅收現金的停車費，並併入刷卡結帳。</div></div>', wish_h: "我們的衷心願望", wish_p: '"我們衷心希望您愛上宮崎。我們的使命是成為讓您的旅程快樂且無憂的基礎設施。任何微小的需求我們都全力以赴。期待收到您的訊息！"', wa: "您好！我有疑問或預約需求想請教。", ptitle: "固定收費標準 (單程)", disc: "*本服務僅限普通乘用車（10人座以下）。<br>*停車費實報實銷，將併入最後帳單。" }
             };
             document.getElementById('hero-title').innerText = t[lang].h1;
             document.getElementById('hero-sub').innerText = t[lang].sub;
             document.getElementById('btn-text').innerText = t[lang].btn;
+            document.getElementById('why-title').innerText = t[lang].why;
+            document.getElementById('advantage-content').innerHTML = t[lang].why_c;
             document.getElementById('wish-title').innerText = t[lang].wish_h;
             document.getElementById('wish-text').innerText = t[lang].wish_p;
+            document.getElementById('price-title').innerText = t[lang].ptitle;
+            document.getElementById('disclaimer').innerHTML = t[lang].disc;
+            document.getElementById('wa-link').href = "https://wa.me/818096401844?text=" + encodeURIComponent(t[lang].wa);
         }
     </script>
 </body>

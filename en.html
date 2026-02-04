@@ -3,56 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miyazaki Freedom Drive | SPEED Premium Driving Agency</title>
+    <title>Miyazaki Freedom Drive | SPEED Premium Private Driver</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --main-navy: #001a3d; --main-gold: #b38e44; --bg-light: #f4f7f9; --accent-red: #c53030; }
-        body { margin: 0; padding: 0; font-family: "Helvetica Neue", Arial, sans-serif; background-color: #fff; color: #333; line-height: 1.4; }
+        body { margin: 0; padding: 0; font-family: "Helvetica Neue", Arial, sans-serif; background-color: #fff; color: #333; line-height: 1.6; }
         
-        /* Language Switcher */
-        .lang-switcher { background: #eee; text-align: center; padding: 10px 0; sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 15px; font-size: 0.8rem; }
-        .lang-switcher a { text-decoration: none; color: #666; font-weight: bold; padding: 5px 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .lang-switcher { background: #fff; text-align: center; padding: 12px 0; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: center; gap: 10px; border-bottom: 1px solid #eee; }
+        .lang-switcher a { text-decoration: none; color: #666; font-weight: bold; padding: 6px 15px; border: 1px solid #ccc; border-radius: 20px; font-size: 0.8rem; }
         .lang-switcher a.active { background: var(--main-navy); color: #fff; border-color: var(--main-navy); }
 
-        /* Sections */
-        .lang-section { display: none; }
-        .lang-section.active { display: block; }
-
-        /* Official Badge */
         .official-badge { background: var(--main-navy); color: #fff; text-align: center; padding: 6px 0; font-size: 0.7rem; letter-spacing: 1px; }
 
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(0,26,61,0.5), rgba(0,26,61,0.5)), url('hero.jpg.png'); background-size: cover; background-position: center; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
-        .hero h1 { font-size: 2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; }
-        .hero p { font-size: 1rem; border-bottom: 2px solid var(--main-gold); padding-bottom: 10px; }
+        .hero { background: linear-gradient(rgba(0,26,61,0.5), rgba(0,26,61,0.5)), url('hero.jpg.png'); background-size: cover; background-position: center; height: 55vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
+        .hero h1 { font-size: 2.2rem; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+        .hero p { font-size: 1.1rem; border-bottom: 2px solid var(--main-gold); padding-bottom: 10px; }
 
-        .container { max-width: 600px; margin: auto; padding: 30px 15px; }
+        .container { max-width: 650px; margin: auto; padding: 40px 20px; }
         
-        /* Alert Box */
-        .alert-box { border-left: 5px solid var(--accent-red); background: #fff5f5; padding: 15px; margin-bottom: 30px; font-size: 0.9rem; }
-        .alert-box b { color: var(--accent-red); display: block; }
+        .section-title { font-size: 1.5rem; color: var(--main-navy); text-align: center; margin-bottom: 25px; border-bottom: 2px solid var(--main-gold); display: inline-block; width: 100%; padding-bottom: 10px; }
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
 
-        /* Pricing Table */
-        .pricing-table { border: 2px solid var(--main-navy); border-radius: 10px; overflow: hidden; margin: 20px 0; }
-        .pricing-header { background: var(--main-navy); color: #fff; padding: 15px; text-align: center; font-weight: bold; }
-        .price-row { display: flex; justify-content: space-between; padding: 15px; border-bottom: 1px solid #eee; background: #fff; align-items: center; }
-        .price-val { font-weight: bold; color: var(--main-gold); font-size: 1.2rem; }
+        .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0; }
+        .feature-item { background: var(--bg-light); padding: 20px; border-radius: 12px; font-size: 0.85rem; }
+        .feature-item i { font-size: 1.8rem; color: var(--main-gold); margin-bottom: 10px; display: block; }
 
-        /* Flow Grid */
-        .service-flow { background: var(--bg-light); padding: 25px 15px; border-radius: 12px; margin: 20px 0; text-align: center; }
-        .flow-grid { display: grid; grid-template-columns: 1fr 30px 1fr; align-items: center; font-size: 0.85rem; }
-        .flow-item b { display: block; color: var(--main-gold); margin-bottom: 5px; }
+        .pricing-card { border: 2px solid var(--main-navy); border-radius: 15px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .pricing-header { background: var(--main-navy); color: #fff; padding: 20px; text-align: center; font-weight: bold; }
+        .price-row { display: flex; justify-content: space-between; padding: 15px 25px; border-bottom: 1px solid #eee; background: #fff; font-weight: bold; }
+        .price-val { color: var(--main-gold); font-size: 1.3rem; }
 
-        /* Driver Card */
-        .driver-card { display: flex; align-items: center; gap: 15px; padding: 20px; border-radius: 15px; background: #fff; border: 1px solid #eee; margin-top: 30px; }
-        .driver-img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--main-gold); }
-        .driver-msg { font-size: 0.85rem; }
+        .owner-section { display: flex; align-items: center; gap: 20px; background: #fff; padding: 25px; border-radius: 15px; border: 1px solid #eee; margin-top: 40px; }
+        .owner-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 2px solid var(--main-gold); flex-shrink: 0; }
+        .owner-text { font-size: 0.9rem; font-style: italic; }
 
-        /* Sticky Footer */
-        .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 12px 0; text-align: center; z-index: 100; }
-        .btn-wa { background: #25d366; color: #fff; padding: 14px 35px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 8px; box-shadow: 0 4px 12px rgba(37,211,102,0.3); }
+        .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 15px 0; text-align: center; z-index: 100; }
+        .btn-wa { background: #25d366; color: #fff; padding: 16px 45px; border-radius: 40px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 5px 15px rgba(37,211,102,0.4); }
 
-        .spacer { height: 100px; }
+        .spacer { height: 120px; }
+        .disclaimer { font-size: 0.75rem; color: #888; text-align: center; margin-top: 20px; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -63,115 +53,114 @@
         <a href="javascript:void(0)" onclick="switchLang('zh')" id="btn-zh">繁體中文</a>
     </div>
 
-    <div class="official-badge">OFFICIAL LICENSED DRIVING AGENCY #477 | MIYAZAKI CITY</div>
+    <div class="official-badge">OFFICIAL LICENSED AGENCY #477 | MIYAZAKI CITY</div>
 
-    <!-- HERO -->
     <div class="hero">
-        <div style="font-size: 0.7rem; letter-spacing: 4px; margin-bottom: 10px; color: var(--main-gold);">SPEED PREMIUM DRIVING</div>
-        <h1 id="hero-title">Freedom Drive</h1>
-        <p id="hero-sub">Your Rental Car. Our Pro Driver.</p>
+        <div style="font-size: 0.8rem; letter-spacing: 5px; margin-bottom: 15px; color: var(--main-gold); font-weight: bold;">SPEED PREMIUM PRIVATE DRIVER</div>
+        <h1 id="hero-title">Your Private Driver</h1>
+        <p id="hero-sub">Don't wait. Use your car. Enjoy the night.</p>
     </div>
 
     <div class="container">
 
-        <!-- ENGLISH SECTION -->
-        <div id="lang-en" class="lang-section active">
-            <div class="alert-box">
-                <b>⚠️ ZERO TOLERANCE:</b>
-                Drunk driving in Japan leads to arrest and license revocation. Don't wait for taxis. Enjoy your night and we'll drive you back safely.
+        <!-- ENGLISH -->
+        <div id="content-en" class="lang-content active">
+            <div class="content-section">
+                <div class="section-title">Unlimited Freedom</div>
+                <p>Miyazaki's nightlife is too good to miss. But don't let the "taxi shortage" trap you in your hotel. With <b>SPEED</b>, you can drive your own rental car to the city, enjoy Miyazaki's world-class Sake, and have a <b>professional private driver</b> take you back in your own car whenever you're ready.</p>
             </div>
-            <div class="service-flow">
-                <div class="flow-grid">
-                    <div class="flow-item"><b>EVENING</b><span>You drive to downtown.</span></div>
-                    <div><i class="fas fa-arrow-right"></i></div>
-                    <div class="flow-item"><b>NIGHT</b><span>We drive you & your car back.</span></div>
-                </div>
+            <div class="content-section">
+                <div class="section-title">Why Hire SPEED?</div>
+                <p><b>1. No Waiting:</b> No more 60-minute taxi queues. Your car is your limousine.<br>
+                   <b>2. Professional:</b> Drivers in suits, safe and polite.<br>
+                   <b>3. Stress-Free:</b> We even help you with parking machines and guidance.</p>
             </div>
-            <h3 style="text-align: center; color: var(--main-navy);">Fixed Rates (One-Way)</h3>
         </div>
 
-        <!-- KOREAN SECTION -->
-        <div id="lang-ko" class="lang-section">
-            <div class="alert-box">
-                <b>⚠️ 음주운전 절대 금지:</b>
-                일본의 음주운전 처벌은 매우 엄격합니다. 맥주 한 잔도 구속 대상입니다. 택시를 기다리지 마시고, SPEED 대리운전으로 안전하게 귀가하세요.
+        <!-- KOREAN -->
+        <div id="content-ko" class="lang-content">
+            <div class="content-section">
+                <div class="section-title">완벽한 자유, 나만의 전용 기사</div>
+                <p>미야자키의 밤을 택시 대란 때문에 포기하지 마세요. 렌터카로 자유롭게 시내에 나오시고, 돌아가실 때는 <b>SPEED 전용 기사</b>에게 맡기세요. 본인의 차로 편안하게, 원하는 시간에 호텔까지 모셔다 드립니다. 이것이 가장 스마트한 미야자키 여행법입니다.</p>
             </div>
-            <div class="service-flow">
-                <div class="flow-grid">
-                    <div class="flow-item"><b>저녁</b><span>렌터카로 시내 이동</span></div>
-                    <div><i class="fas fa-arrow-right"></i></div>
-                    <div class="flow-item"><b>밤</b><span>대리운전으로 호텔 귀가</span></div>
-                </div>
+            <div class="content-section">
+                <div class="section-title">SPEED를 선택해야 하는 이유</div>
+                <p><b>1. 대기 시간 제로:</b> 1시간씩 택시를 기다릴 필요가 없습니다. 고객님의 차가 바로 리무진이 됩니다.<br>
+                   <b>2. 프로페셔널:</b> 정장 차림의 품격 있는 기사가 안전하게 운전합니다.<br>
+                   <b>3. 주차 지원:</b> 복잡한 주차장 이용법도 저희가 완벽하게 도와드립니다.</p>
             </div>
-            <h3 style="text-align: center; color: var(--main-navy);">구간별 정찰제 요금 (편도)</h3>
         </div>
 
-        <!-- CHINESE SECTION -->
-        <div id="lang-zh" class="lang-section">
-            <div class="alert-box">
-                <b>⚠️ 嚴禁酒後駕車:</b>
-                日本對酒駕採取「零容忍」政策。即使喝一杯啤酒也會被逮捕。無需苦等計程車，讓 SPEED 專業代駕送您與愛車安全回飯店。
+        <!-- CHINESE -->
+        <div id="content-zh" class="lang-content">
+            <div class="content-section">
+                <div class="section-title">尊享自由，您的專屬司機</div>
+                <p>別讓「計程車荒」困住您的宮崎之夜。與其在飯店苦等，不如自行開租車前往市區盡情暢飲。<b>SPEED 專業私人司機</b>隨時待命，為您駕駛愛車安全返回飯店。讓您的租車發揮最大價值，享受無拘無束的深夜時光。</p>
             </div>
-            <div class="service-flow">
-                <div class="flow-grid">
-                    <div class="flow-item"><b>傍晚</b><span>自行開車前往市中心</span></div>
-                    <div><i class="fas fa-arrow-right"></i></div>
-                    <div class="flow-item"><b>深夜</b><span>由我們代駕送您回飯店</span></div>
-                </div>
+            <div class="content-section">
+                <div class="section-title">選擇 SPEED 的理由</div>
+                <p><b>1. 零等待：</b>無需在路邊苦等一小時。您的座車就是最舒適的接送車。<br>
+                   <b>2. 專業品質：</b>穿著西裝的專業司機，提供最優質的安全駕駛服務。<br>
+                   <b>3. 停車無憂：</b>我們將指引並協助您處理繁瑣的停車操作。</p>
             </div>
-            <h3 style="text-align: center; color: var(--main-navy);">固定收費標準 (單程)</h3>
         </div>
 
-        <!-- PRICING TABLE (SHARED) -->
-        <div class="pricing-table">
-            <div class="pricing-header">From Miyazaki Downtown to:</div>
+        <div class="feature-grid">
+            <div class="feature-item"><i class="fas fa-user-tie"></i><b>Suit-Wearing Pro</b>Uniformed & safe drivers.</div>
+            <div class="feature-item"><i class="fas fa-parking"></i><b>Parking Support</b>Guidance & machine support.</div>
+            <div class="feature-item"><i class="fas fa-credit-card"></i><b>Credit Card OK</b>Square, Apple Pay, Visa/Master.</div>
+            <div class="feature-item"><i class="fas fa-shield-alt"></i><b>Fully Insured</b>JD-Kyosai coverage.</div>
+        </div>
+
+        <div class="section-title" id="price-title">One-Way Fixed Rates</div>
+        <div class="pricing-card">
+            <div class="pricing-header">From Downtown Miyazaki to:</div>
             <div class="price-row"><span>City Center Hotels</span><span class="price-val">¥7,000</span></div>
             <div class="price-row"><span>Seagaia Area</span><span class="price-val">¥12,000</span></div>
             <div class="price-row"><span>Aoshima Area</span><span class="price-val">¥18,000</span></div>
-            <div class="price-row"><span>Other Areas</span><span class="price-val">+ ¥1,000/km</span></div>
+            <div class="price-row"><span>Other Areas</span><span class="price-val">+ ¥1,000 / km</span></div>
         </div>
 
-        <div class="driver-card">
-            <img src="driver.jpg.png" alt="Speed Driver" class="driver-img">
-            <div class="driver-msg">
-                <b id="driver-name">Licensed Professional Driver</b><br>
-                <span id="driver-txt">"Enjoy Miyazaki's Sake and nightlife. We'll handle the driving. Suits worn, card payment OK."</span>
+        <div class="disclaimer">
+            <p id="disclaimer-text">
+                *Service available for standard-sized passenger cars only (up to 10 seats).<br>
+                *Includes parking assistance & insurance. Booking fee ¥3,000 required to secure.
+            </p>
+        </div>
+
+        <div class="owner-section">
+            <img src="driver.jpg.png" alt="Owner" class="owner-img">
+            <div class="owner-text">
+                <b id="owner-name">Professional Service by SPEED</b><br>
+                <span id="owner-txt">"Don't let the night end early. We turn your car into a private luxury ride. Drink, enjoy, and leave the driving to us."</span>
             </div>
-        </div>
-
-        <div style="text-align: center; font-size: 0.8rem; color: #999; margin: 30px 0;">
-            *Booking Fee: ¥3,000 (via Square link) required to secure.
         </div>
         <div class="spacer"></div>
     </div>
 
     <div class="footer-cta">
-        <a id="wa-link" href="https://wa.me/818096401844?text=Hi%20Speed!%20I'm%20at%20[Location]%20and%20need%20a%20ride." class="btn-wa">
+        <a id="wa-link" href="https://wa.me/818096401844?text=Hi%20Speed!%20I'm%20at%20[Location]%20and%20need%20a%20ride%20to%20[Hotel].%20Car:" class="btn-wa">
             <i class="fab fa-whatsapp"></i> <span id="btn-text">Book via WhatsApp</span>
         </a>
     </div>
 
     <script>
         function switchLang(lang) {
-            // Hide all sections
-            document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.lang-content').forEach(c => c.classList.remove('active'));
             document.querySelectorAll('.lang-switcher a').forEach(a => a.classList.remove('active'));
-            
-            // Show selected section
-            document.getElementById('lang-' + lang).classList.add('active');
+            document.getElementById('content-' + lang).classList.add('active');
             document.getElementById('btn-' + lang).classList.add('active');
 
-            // Update shared elements
             const t = {
-                en: { h1: "Freedom Drive", sub: "Your Rental Car. Our Pro Driver.", btn: "Book via WhatsApp", driver: '"Enjoy Miyazaki\'s nightlife. We handle the driving."', wa: "Hi Speed! I need a driver." },
-                ko: { h1: "미야자키 프리덤 드라이브", sub: "렌터카는 그대로, 운전은 전문가에게.", btn: "WhatsApp으로 예약하기", driver: '"미야자키의 술과 밤을 즐기세요. 운전은 저희가 책임집니다."', wa: "안녕하세요! 대리운전 예약하고 싶습니다." },
-                zh: { h1: "宮崎自由駕駛服務", sub: "您的租車，由我們專業代駕。", btn: "透過 WhatsApp 預約", driver: '"盡情享受宮崎美酒與之夜。由我們為您專業代駕。"', wa: "您好！我想預約代駕服務。" }
+                en: { h1: "Your Private Driver", sub: "Don't wait. Use your car. Enjoy the night.", btn: "Book via WhatsApp", ptitle: "One-Way Fixed Rates", wa: "Hi Speed! I need a ride from [Location] to [Hotel]. Car:", disc: "*Service available for standard-sized passenger cars only (up to 10 seats).<br>*Includes parking assistance & insurance. Booking fee ¥3,000 required to secure." },
+                ko: { h1: "전용 기사 서비스", sub: "기다리지 마세요. 본인의 차로 밤을 즐기세요.", btn: "WhatsApp으로 예약하기", ptitle: "구간별 정찰제 요금", wa: "안녕하세요! 대리운전 예약하고 싶습니다. 위치: [Location] 목적지: [Hotel] 차종:", disc: "*일반 승용차(10인승 이하)만 서비스 이용이 가능합니다.<br>*주차 지원 및 보험 포함. 예약금 3,000엔이 필요합니다." },
+                zh: { h1: "您的專屬私人司機", sub: "無需等待。駕駛您的座車，盡情享受夜晚。", btn: "透過 WhatsApp 預約", ptitle: "固定收費標準 (單程)", wa: "您好！我想預約代駕服務。目前位置: [Location] 前往飯店: [Hotel] 車型:", disc: "*本服務僅適用於普通乘用車（10人座以下）。<br>*包含停車支援及保險。需支付 3,000 日圓預約金。" }
             };
-            
             document.getElementById('hero-title').innerText = t[lang].h1;
             document.getElementById('hero-sub').innerText = t[lang].sub;
             document.getElementById('btn-text').innerText = t[lang].btn;
-            document.getElementById('driver-txt').innerText = t[lang].driver;
+            document.getElementById('price-title').innerText = t[lang].ptitle;
+            document.getElementById('disclaimer-text').innerHTML = t[lang].disc;
             document.getElementById('wa-link').href = "https://wa.me/818096401844?text=" + encodeURIComponent(t[lang].wa);
         }
     </script>

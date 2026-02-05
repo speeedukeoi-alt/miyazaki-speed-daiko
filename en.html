@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miyazaki City Freedom Drive | SPEED Premium Private Driver Service</title>
+    <title>SPEED DAIKO | Premium Designated Driver Service in Miyazaki</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --main-navy: #001a3d; --main-gold: #b38e44; --bg-light: #f4f7f9; --accent-red: #c53030; }
@@ -15,11 +15,11 @@
 
         .official-badge { background: var(--main-navy); color: #fff; text-align: center; padding: 6px 0; font-size: 0.7rem; letter-spacing: 1px; }
 
-        .hero { background: linear-gradient(rgba(0,26,61,0.6), rgba(0,26,61,0.6)), url('hero.jpg.png'); background-size: cover; background-position: center; height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
-        .hero .brand-label { font-size: 0.7rem; letter-spacing: 5px; margin-bottom: 15px; color: var(--main-gold); font-weight: bold; }
-        .hero h1 { font-size: 2.2rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); line-height: 1.2; }
-        .hero .sub-box { border: 1px solid var(--main-gold); padding: 10px 20px; background: rgba(0,0,0,0.3); border-radius: 4px; }
-        .hero p { font-size: 1rem; margin: 0; }
+        .hero { background: linear-gradient(rgba(0,26,61,0.7), rgba(0,26,61,0.7)), url('hero.jpg.png'); background-size: cover; background-position: center; height: 65vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff; text-align: center; padding: 0 20px; }
+        .hero .brand-label { font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 5px; color: #fff; font-weight: bold; }
+        .hero .service-tag { font-size: 0.7rem; color: var(--main-gold); letter-spacing: 2px; margin-bottom: 20px; text-transform: uppercase; font-weight: bold; }
+        .hero h1 { font-size: 2.4rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; line-height: 1.1; }
+        .hero .hero-desc { font-size: 1rem; max-width: 500px; line-height: 1.4; border-top: 1px solid rgba(255,255,255,0.3); padding-top: 15px; }
 
         .container { max-width: 650px; margin: auto; padding: 40px 20px; }
         .section-title { font-size: 1.4rem; color: var(--main-navy); text-align: center; margin: 40px 0 25px; border-bottom: 2px solid var(--main-gold); display: inline-block; width: 100%; padding-bottom: 10px; font-weight: bold; }
@@ -31,7 +31,7 @@
         .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 40px; }
         .feature-card { background: var(--bg-light); padding: 20px; border-radius: 12px; text-align: center; border: 1px solid #e2e8f0; }
         .feature-card i { color: var(--main-gold); font-size: 1.5rem; margin-bottom: 10px; }
-        .feature-card h3 { font-size: 0.95rem; margin: 10px 0 5px; color: var(--main-navy); }
+        .feature-card h3 { font-size: 0.9rem; margin: 10px 0 5px; color: var(--main-navy); text-transform: uppercase; }
         .feature-card p { font-size: 0.75rem; color: #666; margin: 0; line-height: 1.4; }
 
         /* Pricing Card */
@@ -39,12 +39,13 @@
         .pricing-header { background: var(--main-navy); color: #fff; padding: 15px; text-align: center; font-weight: bold; }
         .price-row { display: flex; justify-content: space-between; padding: 15px 25px; border-bottom: 1px solid #eee; background: #fff; font-weight: bold; align-items: center; }
         .price-val { color: var(--main-gold); font-size: 1.3rem; }
-        .price-note { text-align: center; background: #fff9eb; padding: 10px; font-size: 0.85rem; color: #856404; font-weight: bold; border-top: 1px solid var(--main-gold); }
+        .price-note { text-align: center; background: #fff9eb; padding: 12px; font-size: 0.85rem; color: #856404; font-weight: bold; border-top: 1px solid var(--main-gold); }
 
-        /* Step Flow */
+        /* Flow Box */
         .flow-box { background: var(--bg-light); padding: 25px; border-radius: 15px; border-left: 5px solid var(--main-navy); margin-bottom: 40px; }
         .flow-step { margin-bottom: 20px; }
-        .flow-step b { color: var(--main-navy); display: block; font-size: 1.1rem; }
+        .flow-step b { color: var(--main-navy); display: block; font-size: 1.1rem; margin-bottom: 5px; }
+        .flow-step p { margin: 0; font-size: 0.95rem; color: #444; }
 
         /* Owner Message */
         .owner-wish { background: var(--main-navy); color: #fff; padding: 40px 30px; border-radius: 20px; margin-top: 60px; text-align: center; }
@@ -53,16 +54,17 @@
         .owner-wish img { width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 3px solid var(--main-gold); margin-bottom: 15px; }
 
         /* Footer CTA */
-        .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 15px 0; text-align: center; z-index: 100; box-shadow: 0 -5px 15px rgba(0,0,0,0.05); }
-        .footer-btns { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 400px; margin: auto; }
-        .btn-wa { background: #25d366; color: #fff; padding: 14px 0; width: 90%; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1rem; display: flex; justify-content: center; align-items: center; gap: 8px; }
-        .btn-sq { background: var(--main-gold); color: #fff; padding: 14px 0; width: 90%; border-radius: 30px; text-decoration: none; font-weight: bold; font-size: 1rem; display: flex; justify-content: center; align-items: center; gap: 8px; }
+        .footer-cta { position: fixed; bottom: 0; left: 0; width: 100%; background: #fff; border-top: 1px solid #eee; padding: 12px 0; text-align: center; z-index: 100; box-shadow: 0 -5px 15px rgba(0,0,0,0.08); }
+        .footer-btns { display: flex; flex-direction: column; align-items: center; gap: 8px; max-width: 450px; margin: auto; }
+        .btn-wa { background: #25d366; color: #fff; padding: 14px 0; width: 92%; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 1rem; display: flex; justify-content: center; align-items: center; gap: 10px; }
+        .btn-sq { background: var(--main-gold); color: #fff; padding: 14px 0; width: 92%; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 1rem; display: flex; justify-content: center; align-items: center; gap: 10px; }
 
-        .spacer { height: 180px; }
-        .alert { background: #fff5f5; border: 1px solid #feb2b2; padding: 15px; border-radius: 8px; color: var(--accent-red); margin-bottom: 30px; font-weight: bold; font-size: 0.85rem; }
+        .spacer { height: 200px; }
+        .alert { background: #fff5f5; border: 1px solid #feb2b2; padding: 15px; border-radius: 10px; color: var(--accent-red); margin-bottom: 35px; font-weight: bold; font-size: 0.85rem; text-align: center; }
         
         @media (max-width: 480px) {
-            .hero h1 { font-size: 1.6rem; }
+            .hero h1 { font-size: 1.8rem; }
+            .hero .brand-label { font-size: 1.2rem; }
             .feature-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -78,79 +80,76 @@
     <div class="official-badge">OFFICIAL LICENSED DRIVING AGENCY #477 | MIYAZAKI CITY GOVERNMENT</div>
 
     <div class="hero">
-        <div class="brand-label">SPEED PREMIUM DRIVING</div>
-        <h1 id="hero-title">MIYAZAKI FREEDOM DRIVE</h1>
-        <div class="sub-box">
-            <p id="hero-sub">Your Rental Car. Our Professional Driver.</p>
+        <div class="brand-label">SPEED DAIKO</div>
+        <div class="service-tag" id="hero-tag">Premium Designated Driver Service</div>
+        <h1 id="hero-title">No Taxis?<br>No Problem.</h1>
+        <div class="hero-desc">
+            <p id="hero-desc">Drive your rental car to the city. Our professional driver will take you and your car back to your hotel safely.</p>
         </div>
     </div>
 
     <div class="container">
         
-        <p style="text-align: center; margin-bottom: 30px;" id="intro-text">
-            No Taxis? No Problem. Drive your rental car to the city, and our professional driver will take you back to your hotel safely.
-        </p>
-
         <div class="alert">
-            <i class="fas fa-exclamation-triangle"></i> <span id="alert-text">Zero Tolerance Policy: Drunk driving in Japan results in immediate arrest. Don't risk it.</span>
+            <i class="fas fa-exclamation-triangle"></i> <span id="alert-text">Zero Tolerance: Drunk driving in Japan results in immediate arrest. Don't risk your trip.</span>
         </div>
 
-        <!-- WHY SPEED -->
-        <div class="section-title" id="why-title">Why Choose Speed?</div>
+        <!-- WHY SPEED DAIKO -->
+        <div class="section-title" id="why-title">Why Choose SPEED DAIKO?</div>
         <div class="feature-grid" id="feature-content">
             <div class="feature-card">
                 <i class="fas fa-user-tie"></i>
                 <h3>Suit-Wearing Pro</h3>
-                <p>Uniformed, polite, and safe professional drivers.</p>
+                <p>Uniformed, polite, and safe professional drivers for your premium car.</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-history"></i>
+                <i class="fas fa-clock"></i>
                 <h3>No Waiting Time</h3>
-                <p>Pre-book to avoid the taxi shortage (60+ min wait elsewhere).</p>
+                <p>Avoid the 60+ min taxi shortage in Miyazaki. We arrive on time.</p>
             </div>
             <div class="feature-card">
-                <i class="fas fa-credit-card"></i>
+                <i class="fas fa-parking"></i>
                 <h3>Cashless Parking</h3>
-                <p>We pay the cash-only parking for you and add it to your bill.</p>
+                <p>We pay for the parking and add it to your final card bill. No cash needed.</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-shield-alt"></i>
                 <h3>Fully Insured</h3>
-                <p>JD-Kyosai coverage for your vehicle's safety.</p>
+                <p>Your vehicle is covered by JD-Kyosai during our service.</p>
             </div>
         </div>
 
         <!-- PRICING -->
         <div class="section-title" id="price-title">One-Way Fixed Rates</div>
         <div class="pricing-card">
-            <div class="pricing-header">From Miyazaki Downtown to:</div>
+            <div class="pricing-header" id="price-header">From Miyazaki Downtown to:</div>
             <div class="price-row"><span>City Center Hotels</span><span class="price-val">¥7,000</span></div>
             <div class="price-row"><span>Seagaia Area</span><span class="price-val">¥12,000</span></div>
             <div class="price-row"><span>Aoshima Area</span><span class="price-val">¥18,000</span></div>
             <div class="price-row"><span>Other Areas</span><span class="price-val">+ ¥1,000 / km</span></div>
             <div class="price-note" id="price-note">
-                <i class="fas fa-info-circle"></i> The ¥3,000 booking fee is deducted from the final price.
+                <i class="fas fa-info-circle"></i> The ¥3,000 booking fee is deducted from these prices.
             </div>
         </div>
         <p style="text-align: center; color: #777; font-size: 0.8rem;" id="disclaimer">
             *Fixed rates include professional driver service & consumption tax.<br>
-            *Actual parking fee will be added to the final bill.
+            *Minimum charge is ¥7,000. Parking fee is added as actual cost.
         </p>
 
-        <!-- OPERATION FLOW -->
+        <!-- HOW TO BOOK -->
         <div class="section-title" id="flow-title">How to Book</div>
         <div class="flow-box" id="flow-content">
             <div class="flow-step">
-                <b>1. Consult Availability</b>
-                Contact us via WhatsApp to check if a driver is available for your time.
+                <b id="step1-h">1. Check Availability</b>
+                <p id="step1-p">Contact us via WhatsApp to see if we can cover your time.</p>
             </div>
             <div class="flow-step">
-                <b>2. Secure Your Driver</b>
-                Pay the ¥3,000 booking fee via Square. Once paid, your ride is 100% confirmed.
+                <b id="step2-h">2. Secure Your Driver</b>
+                <p id="step2-p">Pay the ¥3,000 booking fee via Square link. Your ride is then 100% confirmed.</p>
             </div>
             <div class="flow-step">
-                <b>3. Enjoy Your Night</b>
-                Drive to the city. When you're ready to go back, we'll be waiting at your car.
+                <b id="step3-h">3. Safe Return</b>
+                <p id="step3-p">Meet our driver at your car. We drive you and your vehicle back to your destination.</p>
             </div>
         </div>
 
@@ -158,8 +157,8 @@
         <div class="owner-wish">
             <img src="driver.jpg.png" alt="Speed Owner">
             <h2 id="wish-title">A Message for You</h2>
-            <p id="wish-text">"Don't let taxi shortages ruin your Miyazaki night. We provide the essential infrastructure for a worry-free trip. We look forward to serving you."</p>
-            <div style="font-weight: bold; margin-top: 15px;">- Driving Agency SPEED</div>
+            <p id="wish-text">"Don't let taxi shortages ruin your Miyazaki night. We provide a premium, designated driver experience so you can focus on the fun. We are your local partners in Miyazaki."</p>
+            <div style="font-weight: bold; margin-top: 15px;">- SPEED DAIKO Service Team</div>
             <div style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">
                 <i class="fas fa-envelope"></i> speeedukeoi@gmail.com
             </div>
@@ -177,7 +176,7 @@
             <a href="https://square.link/u/Tw8Lsm5w" class="btn-sq">
                 <i class="fas fa-credit-card"></i> <span id="sq-btn-text">STEP 2: Pay Booking Fee</span>
             </a>
-            <div style="font-size: 0.7rem; color: #cc0000; font-weight: bold;" id="wa-warning">
+            <div style="font-size: 0.7rem; color: #cc0000; font-weight: bold; margin-top: 2px;" id="wa-warning">
                 *Please message us BEFORE paying the booking fee.
             </div>
         </div>
@@ -190,29 +189,38 @@
             document.getElementById('btn-' + lang).classList.add('active');
 
             const t = {
-                en: { h1: "MIYAZAKI FREEDOM DRIVE", sub: "Your Rental Car. Our Professional Driver.", wa_btn: "STEP 1: Check Availability", sq_btn: "STEP 2: Pay Booking Fee", p_note: '<i class="fas fa-info-circle"></i> The ¥3,000 booking fee is deducted from the final price.', intro: "No Taxis? No Problem. Drive your rental car to the city, and our professional driver will take you back to your hotel safely.", alert: "Zero Tolerance Policy: Drunk driving in Japan results in immediate arrest.", why: "Why Choose Speed?", wish_h: "A Message for You", ptitle: "One-Way Fixed Rates", flow: "How to Book", 
-                    flow_c: '<div class="flow-step"><b>1. Consult Availability</b>Contact us via WhatsApp to check if a driver is available for your time.</div><div class="flow-step"><b>2. Secure Your Driver</b>Pay the ¥3,000 booking fee via Square. Once paid, your ride is 100% confirmed.</div><div class="flow-step"><b>3. Enjoy Your Night</b>Drive to the city. When you\'re ready to go back, we\'ll be waiting at your car.</div>',
-                    warn: "*Please message us BEFORE paying the booking fee." },
-                ko: { h1: "미야자키 프리덤 드라이브", sub: "고객님의 렌터카를 전문 기사가 운전해 드립니다.", wa_btn: "STEP 1: 예약 가능 여부 확인", sq_btn: "STEP 2: 예약금 결제 (3,000엔)", p_note: '<i class="fas fa-info-circle"></i> 3,000엔 예약금은 최종 요금에서 차감됩니다.', intro: "택시 부족 걱정 끝! 렌터카로 자유롭게 시내에 나오시고, 돌아가실 때는 SPEED 전문 기사에게 맡기세요.", alert: "음주운전 절대 금지: 일본에서는 즉시 체포 및 엄중 처벌 대상입니다.", why: "왜 SPEED인가?", wish_h: "고객님께 드리는 메시지", ptitle: "구간별 정찰제 요금", flow: "이용 방법", 
-                    flow_c: '<div class="flow-step"><b>1. 예약 가능 확인</b>WhatsApp으로 연락하여 원하시는 시간에 예약이 가능한지 확인하세요.</div><div class="flow-step"><b>2. 예약 확정</b>Square 링크로 예약금 3,000엔을 결제하시면 기사가 배정됩니다.</div><div class="flow-step"><b>3. 즐거운 밤</b>렌터카로 시내 이동 후, 돌아가실 때 차량이 있는 곳에서 기사를 만나시면 됩니다.</div>',
-                    warn: "*결제 전 반드시 메시지로 먼저 문의해 주세요." },
-                zh: { h1: "宮崎市自由駕駛服務", sub: "您的租車，由我們的專業司機為您駕駛。", wa_btn: "STEP 1: 諮詢預約空檔", sq_btn: "STEP 2: 支付預約金 (3,000日圓)", p_note: '<i class="fas fa-info-circle"></i> 3,000日圓預約金將從最終費用中扣除。', intro: "叫不到計程車？沒問題。開租車前往市中心，回程由專業司機為您安全駕駛回飯店。", alert: "嚴禁酒駕：在日本喝一杯也會被逮捕。請勿以身試法。", why: "為什麼選擇 Speed?", wish_h: "給您的一封信", ptitle: "固定收費標準", flow: "預約流程", 
-                    flow_c: '<div class="flow-step"><b>1. 諮詢預約</b>透過 WhatsApp 聯繫我們，確認您預定的時間是否有司機。</div><div class="flow-step"><b>2. 確保車輛</b>支付 3,000 日圓預約金後即可確保預約成功。</div><div class="flow-step"><b>3. 享受旅程</b>開車前往市中心。準備回程時，我們將在您的座車處等候。</div>',
-                    warn: "*支付預約金前，請務必先傳訊息諮詢。" }
+                en: { h1: "No Taxis?<br>No Problem.", tag: "Premium Designated Driver Service", desc: "Drive your rental car to the city. Our professional driver will take you and your car back to your hotel safely.", wa_btn: "STEP 1: Check Availability", sq_btn: "STEP 2: Pay Booking Fee", p_note: '<i class="fas fa-info-circle"></i> The ¥3,000 booking fee is deducted from these prices.', alert: "Zero Tolerance: Drunk driving in Japan results in immediate arrest.", why: "Why Choose SPEED DAIKO?", wish_h: "A Message for You", ptitle: "One-Way Fixed Rates", flow: "How to Book", warn: "*Please message us BEFORE paying the booking fee.", p_head: "From Miyazaki Downtown to:",
+                    s1h: "1. Check Availability", s1p: "Contact us via WhatsApp to see if we can cover your time.",
+                    s2h: "2. Secure Your Driver", s2p: "Pay the ¥3,000 booking fee via Square link. Your ride is then 100% confirmed.",
+                    s3h: "3. Safe Return", s3p: "Meet our driver at your car. We drive you and your vehicle back to your destination." },
+                ko: { h1: "택시가 없나요?<br>걱정 마세요.", tag: "미야자키 프리미엄 운전대행 서비스", desc: "렌터카로 시내에 나오시고, 돌아가실 때는 전문 기사가 고객님과 차량을 호텔까지 안전하게 모셔다 드립니다.", wa_btn: "STEP 1: 예약 가능 여부 확인", sq_btn: "STEP 2: 예약금 결제 (3,000엔)", p_note: '<i class="fas fa-info-circle"></i> 3,000엔 예약금은 최종 요금에서 차감됩니다.', alert: "음주운전 금지: 일본에서는 즉시 체포 및 엄중 처벌 대상입니다.", why: "왜 SPEED DAIKO인가?", wish_h: "고객님께 드리는 메시지", ptitle: "구간별 정찰제 요금", flow: "이용 방법", warn: "*결제 전 반드시 메시지로 먼저 문의해 주세요.", p_head: "미야자키 시내 출발 기준:",
+                    s1h: "1. 예약 가능 확인", s1p: "WhatsApp으로 연락하여 원하시는 시간에 예약이 가능한지 확인하세요.",
+                    s2h: "2. 예약 확정", s2p: "Square 링크로 예약금 3,000엔을 결제하시면 기사가 배정됩니다.",
+                    s3h: "3. 안전 귀가", s3p: "차량이 있는 곳에서 기사를 만나시면 됩니다. 목적지까지 안전하게 모십니다." },
+                zh: { h1: "叫不到計程車？<br>交給我們。", tag: "宮崎尊榮代駕服務", desc: "開租車前往市中心，回程由專業司機為您及座車提供安全代駕，直接送達飯店。", wa_btn: "STEP 1: 諮詢預約空檔", sq_btn: "STEP 2: 支付預約金 (3,000日圓)", p_note: '<i class="fas fa-info-circle"></i> 3,000日圓預約金將從最終費用中扣除。', alert: "嚴禁酒駕：在日本哪怕只喝一杯也會面臨逮捕。", why: "為什麼選擇 SPEED DAIKO?", wish_h: "給您的一封信", ptitle: "固定收費標準 (單程)", flow: "預約流程", warn: "*支付預約金前，請務必先傳訊息諮詢。", p_head: "從宮崎市中心出發：",
+                    s1h: "1. 諮詢預約", s1p: "透過 WhatsApp 聯繫我們，確認您預定的時間是否有司機。",
+                    s2h: "2. 確保車輛", s2p: "支付 3,000 日圓預約金後即可確保預約成功。",
+                    s3h: "3. 安全回程", s3p: "專業司機將在您的座車處等候。為您駕駛座車返回目的地。" }
             };
-            document.getElementById('hero-title').innerText = t[lang].h1;
-            document.getElementById('hero-sub').innerText = t[lang].sub;
+            document.getElementById('hero-title').innerHTML = t[lang].h1;
+            document.getElementById('hero-tag').innerText = t[lang].tag;
+            document.getElementById('hero-desc').innerText = t[lang].desc;
             document.getElementById('wa-btn-text').innerText = t[lang].wa_btn;
             document.getElementById('sq-btn-text').innerText = t[lang].sq_btn;
             document.getElementById('price-note').innerHTML = t[lang].p_note;
-            document.getElementById('intro-text').innerText = t[lang].intro;
             document.getElementById('alert-text').innerText = t[lang].alert;
             document.getElementById('why-title').innerText = t[lang].why;
             document.getElementById('wish-title').innerText = t[lang].wish_h;
             document.getElementById('price-title').innerText = t[lang].ptitle;
+            document.getElementById('price-header').innerText = t[lang].p_head;
             document.getElementById('flow-title').innerText = t[lang].flow;
-            document.getElementById('flow-content').innerHTML = t[lang].flow_c;
             document.getElementById('wa-warning').innerText = t[lang].warn;
+            document.getElementById('step1-h').innerText = t[lang].s1h;
+            document.getElementById('step1-p').innerText = t[lang].s1p;
+            document.getElementById('step2-h').innerText = t[lang].s2h;
+            document.getElementById('step2-p').innerText = t[lang].s2p;
+            document.getElementById('step3-h').innerText = t[lang].s3h;
+            document.getElementById('step3-p').innerText = t[lang].s3p;
         }
     </script>
 </body>
